@@ -1091,6 +1091,7 @@
     .plan-name{font-size: 20px;}
     .plan-price{font-size: 32px;}
     .plan-badge{font-size: 12px;}
+    .plan-features{min-height: 77px;}
   }
 
   .faq-section{
