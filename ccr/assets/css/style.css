@@ -885,7 +885,7 @@
 
     .hero {
       height: auto;
-      min-height: 800px;
+      min-height: 100svh;
       padding: 0 0 56px 0;
       display: flex;
       align-items: flex-end;
@@ -896,6 +896,10 @@
         linear-gradient(180deg, rgba(0,67,100,0) 40%, rgba(0,58,84,0.85) 65%, rgba(0,58,84,1) 80%),
         url('../images/9efb911a9352ac92b52f372e73e3ab67eb7b11cd.png') center top/cover no-repeat;
       background-position: 80% 0%;
+    }
+
+    .hero-play-txt{
+      font-size: 14px;
     }
 
     .hero-content {
