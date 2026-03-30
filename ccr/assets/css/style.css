@@ -382,6 +382,15 @@
     flex-direction: column;
     gap: 10px;
   }
+  .tab-desc p{
+    font-family: var(--font-intro-regular);
+  }
+  .tab-desc ul {
+    padding-left: 20px;
+  }
+  .tab-desc ul li {
+    /* margin-bottom: 8px; */
+  }
 
   .banks-image {
     flex: 1;
@@ -481,6 +490,8 @@
   .ccr-section {
     padding: 64px 0 80px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
   }
 
   .ccr-header {
