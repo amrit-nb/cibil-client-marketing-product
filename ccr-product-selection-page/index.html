@@ -181,6 +181,7 @@
   </div>
 </section>
 
+
 <!-- FAQ -->
 <section class="faq-section">
   <div class="container">
@@ -230,7 +231,7 @@
   </div>
 </section>
 
-<script>
+<script>  
   // CCR accordion (mobile only)
   function toggleCcr(header) {
     const item = header.closest('.ccr-item');
@@ -279,6 +280,16 @@
       }
     });
   });
+
+  // FAQ tab switching
+  function switchFaqTab(el, idx) {
+    document.querySelectorAll('.faq-tab-btn').forEach(b => b.classList.remove('active'));
+    el.classList.add('active');
+
+    document.querySelectorAll('.faq-list').forEach(list => {
+      list.style.display = list.dataset.faqTab == idx ? 'block' : 'none';
+    });
+  }
 </script>
 </body>
 </html>
