@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -o assets/images/ccr-icon-rank.png \"https://www.figma.com/api/mcp/asset/30e9892d-7b41-4a8f-b9a7-94aac3e06bb7\")",
+      "Bash(curl -s -o assets/images/ccr-icon-profile.png \"https://www.figma.com/api/mcp/asset/f34d6c04-dbbb-451c-ac43-aef4ee4c35ea\")",
+      "Bash(curl -s -o assets/images/ccr-icon-facilities.png \"https://www.figma.com/api/mcp/asset/c48e3a59-2e59-47dc-8963-8ac16ce5b83c\")",
+      "Bash(curl -s -o assets/images/ccr-icon-enquiries.png \"https://www.figma.com/api/mcp/asset/39be32c9-15ab-48c2-8d88-e205e176c3fc\")",
+      "Bash(curl -s -o assets/images/ccr-icon-utilization.png \"https://www.figma.com/api/mcp/asset/a23def6d-13ca-43ed-b9ff-bd48e2d014f7\")",
+      "mcp__Claude_Preview__preview_start",
+      "mcp__claude_ai_Figma__get_design_context",
+      "Bash(curl -s -o assets/images/plan-icon-rank.png \"https://www.figma.com/api/mcp/asset/a593c195-39f4-4d19-bdbe-5ab965a5f4f0\")",
+      "Bash(curl -s -o assets/images/plan-icon-monitor.png \"https://www.figma.com/api/mcp/asset/ce16117a-5fd9-4258-a559-3bb8d54ce1a1\")",
+      "Bash(curl -s -o assets/images/plan-icon-book.png \"https://www.figma.com/api/mcp/asset/9d720e4a-af26-48df-a954-2260572bf0cf\")"
+    ]
+  }
+}
