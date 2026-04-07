@@ -352,6 +352,7 @@ p {
   color: var(--mid);
   line-height: 1.5;
   letter-spacing: 0.02em;
+  max-width: 80%;
 }
 
 .plan-subtext strong {
@@ -600,6 +601,7 @@ p {
   .plan-subtext {
     font-size: 14px;
     letter-spacing: 0.02em;
+    max-width: 100%;
   }
 
   .plan-subscribe-link {
