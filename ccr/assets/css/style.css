@@ -176,9 +176,7 @@ p {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(-55deg, rgba(0,67,100,0) 36%, rgba(0,67,100,0.94) 70%),
-    url('../images/9efb911a9352ac92b52f372e73e3ab67eb7b11cd.png') center/cover no-repeat;
+  background: url('../images/banner-image.png') center/cover no-repeat;
   background-position: 80% center;
 }
 
@@ -947,9 +945,7 @@ p {
   }
 
   .hero-bg {
-    background:
-      linear-gradient(180deg, rgba(0,67,100,0) 40%, rgba(0,58,84,0.85) 65%, rgba(0,58,84,1) 80%),
-      url('../images/9efb911a9352ac92b52f372e73e3ab67eb7b11cd.png') center top/cover no-repeat;
+    background: url('../images/banner-mobile.png') center top/cover no-repeat;
     background-position: 80% 0%;
   }
 
@@ -1047,6 +1043,15 @@ p {
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 2px 16px rgba(0,34,51,0.08);
+  }
+
+  .banks-mobile-card.expanded:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(7deg, rgba(0, 0, 0, 0.80) 47.42%, rgba(0, 0, 0, 0.00) 94.75%);
+    background-blend-mode: multiply;
   }
 
   .banks-mobile-card-img {

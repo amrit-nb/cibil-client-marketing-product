@@ -1,623 +1,654 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>CIBIL Business – CIBIL Rank & Company Credit Report</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-<link rel="stylesheet" href="./assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CIBIL Business – CIBIL Rank & Company Credit Report</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
 
-<!-- VIDEO POPUP -->
-<div class="video-popup" id="videoPopup">
-  <div class="video-popup-overlay"></div>
-  <div class="video-popup-content">
-    <button class="video-popup-close" onclick="closeVideoPopup()">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M15 5L5 15M5 5l10 10" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
-    </button>
-    <video id="popupVideo" playsinline>
-      <source src="assets/video/cibil-rank.mp4" type="video/mp4"/>
-    </video>
-  </div>
-</div>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="container">
-    <div class="hero-content">
-      <p class="hero-label">Looking for a Business Loan?</p>
-      <p class="hero-headline"><strong>CIBIL Rank &amp; CCR</strong> can help you stay loan ready</p>
-      <div class="hero-cta">Get Loan-Ready Now</div>
-      <div class="hero-play">
-      <div class="hero-play-icon">
-        <svg viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
-      </div>
-      <span class="hero-play-txt">Play Video</span>
-    </div>
+  <!-- VIDEO POPUP -->
+  <div class="video-popup" id="videoPopup">
+    <div class="video-popup-overlay"></div>
+    <div class="video-popup-content">
+      <button class="video-popup-close" onclick="closeVideoPopup()">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M15 5L5 15M5 5l10 10" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+      <video id="popupVideo" playsinline>
+        <source src="assets/video/cibil-rank.mp4" type="video/mp4" />
+      </video>
     </div>
   </div>
-  
-</section>
 
-<!-- WHAT BANKS CHECK -->
-
-<section class="banks-section">
-  <div class="container">
-    <div class="banks-sticky-wrap">
-      <div class="banks-header">
-        <h2 class="section-title">What do banks check while<br>approving your business loans?</h2>
-        <p class="banks-subtitle">Banks look at these to approve loans or decide loan terms.<br>A CIBIL plan helps you track and improve them over time.</p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-label">Looking for a Business Loan?</p>
+        <p class="hero-headline"><strong>CIBIL Rank &amp; CCR</strong> can help you stay loan ready</p>
+        <div class="hero-cta">Get Loan-Ready Now</div>
+        <div class="hero-play">
+          <div class="hero-play-icon">
+            <svg viewBox="0 0 24 24" fill="white">
+              <polygon points="5,3 19,12 5,21" />
+            </svg>
+          </div>
+          <span class="hero-play-txt">Play Video</span>
+        </div>
       </div>
-      <div class="banks-layout">
-        <div class="banks-tabs">
-          <div class="banks-tab active" onclick="setTab(0)">
-            <div class="bank-tab-inner">
-              <div class="tab-bar blue"></div>
-              <div class="tab-body">
-                <div class="tab-details">
-                  <div class="tab-title">Company Credit Report (CCR)</div>
-                  <div class="tab-desc">
-                    <p>CIBIL CCR is a record of your company’s credit history, created from data submitted to CIBIL by lending institutions across India.</p>
-                    <p>The past payment behavior of a company is a strong indication of its future behavior. It is, therefore, important to understand that the CCR is heavily relied on by loan providers to evaluate and approve loan applications.</p>
+    </div>
+
+  </section>
+
+  <!-- WHAT BANKS CHECK -->
+
+  <section class="banks-section">
+    <div class="container">
+      <div class="banks-sticky-wrap">
+        <div class="banks-header">
+          <h2 class="section-title">What do banks check while<br>approving your business loans?</h2>
+          <p class="banks-subtitle">Banks look at these to approve loans or decide loan terms.<br>A CIBIL plan helps you
+            track and improve them over time.</p>
+        </div>
+        <div class="banks-layout">
+          <div class="banks-tabs">
+            <div class="banks-tab active" onclick="setTab(0)">
+              <div class="bank-tab-inner">
+                <div class="tab-bar blue"></div>
+                <div class="tab-body">
+                  <div class="tab-details">
+                    <div class="tab-title">Company Credit Report (CCR)</div>
+                    <div class="tab-desc">
+                      <p>CIBIL CCR is a record of your company’s credit history, created from data submitted to CIBIL by
+                        lending institutions across India.</p>
+                      <p>The past payment behavior of a company is a strong indication of its future behavior. It is,
+                        therefore, important to understand that the CCR is heavily relied on by loan providers to
+                        evaluate and approve loan applications.</p>
+                    </div>
                   </div>
                 </div>
               </div>
+              <div class="banks-image">
+                <img src="assets/images/accordion-1.jpg" alt="Company Credit Report Preview" />
+              </div>
             </div>
-            <div class="banks-image">
-              <img src="assets/images/accordion-1.png" alt="Company Credit Report Preview"/>
-            </div>
-          </div>
-          <div class="banks-tab inactive" onclick="setTab(1)">
-            <div class="bank-tab-inner">
-              <div class="tab-bar blue"></div>
-              <div class="tab-body">
-                <div class="tab-details">
-                  <div class="tab-title">CIBIL Rank</div>
-                  <div class="tab-desc">
-                    <p>CIBIL RANK, summarizes your CCR in the form of one number. The rank is similar to the CIBIL Score provided for individuals.</p>
-                    <ul>
-                      <li>Ranges from a scale of 1 to 10. The closer your rank is to 1, the better are your chances of securing a loan.</li>
-                      <li>CIBIL Rank is available for commercial borrowers with a credit exposure up to INR 50 crores.</li>
-                      <li>Indicates the repayment behavior of your company which is one of the key factors considered by a lender while evaluating a loan application.</li>
-                    </ul>
+            <div class="banks-tab inactive" onclick="setTab(1)">
+              <div class="bank-tab-inner">
+                <div class="tab-bar blue"></div>
+                <div class="tab-body">
+                  <div class="tab-details">
+                    <div class="tab-title">CIBIL Rank</div>
+                    <div class="tab-desc">
+                      <p>CIBIL RANK, summarizes your CCR in the form of one number. The rank is similar to the CIBIL
+                        Score provided for individuals.</p>
+                      <ul>
+                        <li>Ranges from a scale of 1 to 10. The closer your rank is to 1, the better are your chances of
+                          securing a loan.</li>
+                        <li>CIBIL Rank is available for commercial borrowers with a credit exposure up to INR 50 crores.
+                        </li>
+                        <li>Indicates the repayment behavior of your company which is one of the key factors considered
+                          by a lender while evaluating a loan application.</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
+              <div class="banks-image">
+                <img src="assets/images/accordion-2.jpg" alt="Company Credit Report Preview" />
+              </div>
             </div>
-            <div class="banks-image">
-              <img src="assets/images/accordion-2.png" alt="Company Credit Report Preview"/>
-            </div>
-          </div>
-          <div class="banks-tab inactive" onclick="setTab(2)">
-            <div class="bank-tab-inner">
-              <div class="tab-bar blue"></div>
-              <div class="tab-body">
-                <div class="tab-details">
-                  <div class="tab-title">Monitor CIBIL Rank &amp; CCR</div>
-                  <div class="tab-desc">
-                    <ul>
-                      <li><strong>Get better Loan Terms For Your Business</strong>
-                        <br>A healthy CIBIL Rank may help you get lower interest rates and faster approvals while applying for business loan.</strong><br>
-                          Showcase your company’s financial strength while submitting project proposals and business partnerships.</li>
+            <div class="banks-tab inactive" onclick="setTab(2)">
+              <div class="bank-tab-inner">
+                <div class="tab-bar blue"></div>
+                <div class="tab-body">
+                  <div class="tab-details">
+                    <div class="tab-title">Monitor CIBIL Rank &amp; CCR</div>
+                    <div class="tab-desc">
+                      <ul>
+                        <li><strong>Get better Loan Terms For Your Business</strong>
+                          <br>A healthy CIBIL Rank may help you get lower interest rates and faster approvals while
+                          applying for business loan.</strong><br>
+                          Showcase your company’s financial strength while submitting project proposals and business
+                          partnerships.
+                        </li>
                         <li><strong>Always Be Loan Ready</strong>
-                          <br>Monitor your company’s credit health with CIBIL Rank & CCR to always be loan ready.</li>
-                    </ul>
+                          <br>Monitor your company’s credit health with CIBIL Rank & CCR to always be loan ready.
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="banks-image">
-              <img src="assets/images/accordion-3.png" alt="Company Credit Report Preview"/>
+              <div class="banks-image">
+                <img src="assets/images/accordion-3.jpg" alt="Company Credit Report Preview" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="banks-progress">
-        <div class="banks-progress-track">
-          <div class="banks-progress-fill"></div>
-          <div class="banks-progress-dot"></div>
+        <div class="banks-progress">
+          <div class="banks-progress-track">
+            <div class="banks-progress-fill"></div>
+            <div class="banks-progress-dot"></div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- WHAT BANKS CHECK — MOBILE -->
-<section class="banks-mobile">
-  <div class="trusted-badge">
-    <img src="assets/images/trusted-star.svg" alt="" srcset="">
-    <span>Trusted by 1.5 Crore Indian businesses</span>
-  </div>
-  <div class="container">
-    <h2 class="banks-mobile-title">What do banks check while approving your business loans?</h2>
-    <p class="banks-mobile-subtitle">Banks look at these to approve loans or decide loan terms. A CIBIL plan helps you track and improve them over time.</p>
-    <div class="banks-mobile-cards">
-      <div class="banks-mobile-card">
-        <div class="banks-mobile-card-img">
-          <img src="assets/images/accordion-1.png" alt="Company Credit Report Preview"/>
+  <!-- WHAT BANKS CHECK — MOBILE -->
+  <section class="banks-mobile">
+    <div class="trusted-badge">
+      <img src="assets/images/trusted-star.svg" alt="" srcset="">
+      <span>Trusted by 1.5 Crore Indian businesses</span>
+    </div>
+    <div class="container">
+      <h2 class="banks-mobile-title">What do banks check while approving your business loans?</h2>
+      <p class="banks-mobile-subtitle">Banks look at these to approve loans or decide loan terms. A CIBIL plan helps you
+        track and improve them over time.</p>
+      <div class="banks-mobile-cards">
+        <div class="banks-mobile-card">
+          <div class="banks-mobile-card-img">
+            <img src="assets/images/accordion-1.jpg" alt="Company Credit Report Preview" />
+          </div>
+          <div class="banks-mobile-card-body">
+            <h3 class="banks-mobile-card-title">Company Credit Report (CCR)</h3>
+            <p class="banks-mobile-card-desc">CIBIL CCR is a record of your company's credit history, created from data
+              submitted to CIBIL by lending institutions across India.</p>
+            <p class="banks-mobile-card-desc banks-hidden">The past payment behavior of a company is a strong indication
+              of its future behavior. It is, therefore, important to understand that the CCR is heavily relied on by
+              loan providers to evaluate and approve loan applications.</p>
+          </div>
         </div>
-        <div class="banks-mobile-card-body">
-          <h3 class="banks-mobile-card-title">Company Credit Report (CCR)</h3>
-          <p class="banks-mobile-card-desc">CIBIL CCR is a record of your company's credit history, created from data submitted to CIBIL by lending institutions across India.</p>
-          <p class="banks-mobile-card-desc banks-hidden">The past payment behavior of a company is a strong indication of its future behavior. It is, therefore, important to understand that the CCR is heavily relied on by loan providers to evaluate and approve loan applications.</p>
-        </div>
-      </div>
-      <div class="banks-mobile-card">
-        <div class="banks-mobile-card-img">
-          <img src="assets/images/accordion-2.png" alt="CIBIL Rank Preview"/>
-        </div>
-        <div class="banks-mobile-card-body">
-          <h3 class="banks-mobile-card-title">CIBIL Rank</h3>
-          <p class="banks-mobile-card-desc">CIBIL RANK, summarizes your CCR in the form of one number. The rank is similar to the CIBIL Score provided for individuals.</p>
-          <ul class="banks-mobile-card-list banks-hidden">
-            <li>Ranges from a scale of 1 to 10. The closer your rank is to 1, the better are your chances of securing a loan.</li>
-            <li>CIBIL Rank is available for commercial borrowers with a credit exposure up to INR 50 crores.</li>
-            <li>Indicates the repayment behavior of your company which is one of the key factors considered by a lender while evaluating a loan application.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="banks-mobile-card">
-        <div class="banks-mobile-card-img">
-          <img src="assets/images/accordion-3.png" alt="Monitor CIBIL Rank Preview"/>
-        </div>
-        <div class="banks-mobile-card-body">
-          <h3 class="banks-mobile-card-title">Monitor CIBIL Rank &amp; CCR</h3>
-          <ul class="banks-mobile-card-list">
-            <li><strong>Get better Loan Terms For Your Business</strong><br>A healthy CIBIL Rank may help you get lower interest rates and faster approvals while applying for business loan.</li>
-              <li class="banks-hidden"><strong>Submission Of Project Proposals</strong><br>Showcase your company's financial strength while submitting project proposals and business partnerships.</li>
-              <li class="banks-hidden"><strong>Always Be Loan Ready</strong><br>Monitor your company's credit health with CIBIL Rank & CCR to always be loan ready.</li>
+        <div class="banks-mobile-card">
+          <div class="banks-mobile-card-img">
+            <img src="assets/images/accordion-2.jpg" alt="CIBIL Rank Preview" />
+          </div>
+          <div class="banks-mobile-card-body">
+            <h3 class="banks-mobile-card-title">CIBIL Rank</h3>
+            <p class="banks-mobile-card-desc">CIBIL RANK, summarizes your CCR in the form of one number. The rank is
+              similar to the CIBIL Score provided for individuals.</p>
+            <ul class="banks-mobile-card-list banks-hidden">
+              <li>Ranges from a scale of 1 to 10. The closer your rank is to 1, the better are your chances of securing
+                a loan.</li>
+              <li>CIBIL Rank is available for commercial borrowers with a credit exposure up to INR 50 crores.</li>
+              <li>Indicates the repayment behavior of your company which is one of the key factors considered by a
+                lender while evaluating a loan application.</li>
             </ul>
-          </ul>
+          </div>
+        </div>
+        <div class="banks-mobile-card">
+          <div class="banks-mobile-card-img">
+            <img src="assets/images/accordion-3.jpg" alt="Monitor CIBIL Rank Preview" />
+          </div>
+          <div class="banks-mobile-card-body">
+            <h3 class="banks-mobile-card-title">Monitor CIBIL Rank &amp; CCR</h3>
+            <ul class="banks-mobile-card-list">
+              <li><strong>Get better Loan Terms For Your Business</strong><br>A healthy CIBIL Rank may help you get
+                lower interest rates and faster approvals while applying for business loan.</li>
+              <li class="banks-hidden"><strong>Submission Of Project Proposals</strong><br>Showcase your company's
+                financial strength while submitting project proposals and business partnerships.</li>
+              <li class="banks-hidden"><strong>Always Be Loan Ready</strong><br>Monitor your company's credit health
+                with CIBIL Rank & CCR to always be loan ready.</li>
+            </ul>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- WHAT IS IN YOUR CCR -->
-<section class="ccr-section">
-  <div class="container">
+  <!-- WHAT IS IN YOUR CCR -->
+  <section class="ccr-section">
+    <div class="container">
       <h2 class="ccr-header">What is in your<br><strong>Company Credit Report (CCR)?</strong></h2>
       <div class="ccr-layout">
         <div class="ccr-list">
           <div class="ccr-item active" onclick="setCcrItem(0)">
             <div class="ccr-item-header">
               <div class="ccr-item-title">CIBIL Rank</div>
-              <img src="assets/images/icon-minus-mobile.svg" alt="" class="ccr-toggle-icon"/>
+              <img src="assets/images/icon-minus-mobile.svg" alt="" class="ccr-toggle-icon" />
             </div>
-            <div class="ccr-item-desc">CIBIL MSME Rank summarizes Company Credit Report (CCR) in one number on a scale of 1 to 10, where 1 is the best rank.</div>
-            <div class="ccr-item-img"><img src="assets/images/ccr-1.png" alt="CCR Report Sample"/></div>
+            <div class="ccr-item-desc">CIBIL MSME Rank summarizes Company Credit Report (CCR) in one number on a scale
+              of 1 to 10, where 1 is the best rank.</div>
+            <div class="ccr-item-img"><img src="assets/images/ccr-1.png" alt="CCR Report Sample" /></div>
           </div>
           <div class="ccr-divider"></div>
           <div class="ccr-item" onclick="setCcrItem(1)">
             <div class="ccr-item-header">
               <div class="ccr-item-title">Company Profile</div>
-              <img src="assets/images/icon-plus-mobile.svg" alt="" class="ccr-toggle-icon"/>
+              <img src="assets/images/icon-plus-mobile.svg" alt="" class="ccr-toggle-icon" />
             </div>
-            <div class="ccr-item-desc">Key firmographic information such as company name, address and key contacts.</div>
-            <div class="ccr-item-img"><img src="assets/images/ccr-2.jpg" alt="CCR Report Sample"/></div>
+            <div class="ccr-item-desc">Key firmographic information such as company name, address and key contacts.
+            </div>
+            <div class="ccr-item-img"><img src="assets/images/ccr-2.jpg" alt="CCR Report Sample" /></div>
           </div>
           <div class="ccr-divider"></div>
           <div class="ccr-item" onclick="setCcrItem(2)">
             <div class="ccr-item-header">
               <div class="ccr-item-title">Credit Facilities</div>
-              <img src="assets/images/icon-plus-mobile.svg" alt="" class="ccr-toggle-icon"/>
+              <img src="assets/images/icon-plus-mobile.svg" alt="" class="ccr-toggle-icon" />
             </div>
-            <div class="ccr-item-desc">Bank-wise loan details of all active and inactive facilities, sanctioned amount and payment history.</div>
-            <div class="ccr-item-img"><img src="assets/images/ccr-3.jpg" alt="CCR Report Sample"/></div>
+            <div class="ccr-item-desc">Bank-wise loan details of all active and inactive facilities, sanctioned amount
+              and payment history.</div>
+            <div class="ccr-item-img"><img src="assets/images/ccr-3.jpg" alt="CCR Report Sample" /></div>
           </div>
           <div class="ccr-divider"></div>
           <div class="ccr-item" onclick="setCcrItem(3)">
             <div class="ccr-item-header">
               <div class="ccr-item-title">Credit Facilities Guaranteed by you</div>
-              <img src="assets/images/icon-plus-mobile.svg" alt="" class="ccr-toggle-icon"/>
+              <img src="assets/images/icon-plus-mobile.svg" alt="" class="ccr-toggle-icon" />
             </div>
-            <div class="ccr-item-desc">Consolidated report of utilization across all working capital loans, sanctioned limits and drawing power.</div>
-            <div class="ccr-item-img"><img src="assets/images/ccr-4.jpg" alt="CCR Report Sample"/></div>
+            <div class="ccr-item-desc">Consolidated report of utilization across all working capital loans, sanctioned
+              limits and drawing power.</div>
+            <div class="ccr-item-img"><img src="assets/images/ccr-4.jpg" alt="CCR Report Sample" /></div>
           </div>
           <div class="ccr-divider"></div>
           <div class="ccr-item" onclick="setCcrItem(4)">
             <div class="ccr-item-header">
               <div class="ccr-item-title">Enquiries</div>
-              <img src="assets/images/icon-plus-mobile.svg" alt="" class="ccr-toggle-icon"/>
+              <img src="assets/images/icon-plus-mobile.svg" alt="" class="ccr-toggle-icon" />
             </div>
             <div class="ccr-item-desc">Details of all enquiries made and loans applied by the business.</div>
-            <div class="ccr-item-img"><img src="assets/images/ccr-5.jpg" alt="CCR Report Sample"/></div>
+            <div class="ccr-item-img"><img src="assets/images/ccr-5.jpg" alt="CCR Report Sample" /></div>
           </div>
           <div class="ccr-divider"></div>
           <div class="ccr-item" onclick="setCcrItem(5)">
             <div class="ccr-item-header">
               <div class="ccr-item-title">GST Report*</div>
-              <img src="assets/images/icon-plus-mobile.svg" alt="" class="ccr-toggle-icon"/>
+              <img src="assets/images/icon-plus-mobile.svg" alt="" class="ccr-toggle-icon" />
             </div>
-            <div class="ccr-item-desc">Detailed report of GST returns in an easy-to-read format<br>*GST report is available only for users who opt for GSTIN based authentication.</div>
-            <div class="ccr-item-img"><img src="assets/images/ccr-6.jpg" alt="CCR Report Sample"/></div>
+            <div class="ccr-item-desc">Detailed report of GST returns in an easy-to-read format<br>*GST report is
+              available only for users who opt for GSTIN based authentication.</div>
+            <div class="ccr-item-img"><img src="assets/images/ccr-6.jpg" alt="CCR Report Sample" /></div>
           </div>
         </div>
         <div class="ccr-image">
-          <img src="assets/images/ccr-1.png" alt="CCR Report Sample" class="img-responsive"/>
-          <img src="assets/images/ccr-2.jpg" alt="CCR Report Sample" class="img-responsive"/>
-          <img src="assets/images/ccr-3.jpg" alt="CCR Report Sample" class="img-responsive"/>
-          <img src="assets/images/ccr-4.jpg" alt="CCR Report Sample" class="img-responsive"/>
-          <img src="assets/images/ccr-5.jpg" alt="CCR Report Sample" class="img-responsive"/>
-          <img src="assets/images/ccr-6.jpg" alt="CCR Report Sample" class="img-responsive"/>
+          <img src="assets/images/ccr-1.png" alt="CCR Report Sample" class="img-responsive" />
+          <img src="assets/images/ccr-2.jpg" alt="CCR Report Sample" class="img-responsive" />
+          <img src="assets/images/ccr-3.jpg" alt="CCR Report Sample" class="img-responsive" />
+          <img src="assets/images/ccr-4.jpg" alt="CCR Report Sample" class="img-responsive" />
+          <img src="assets/images/ccr-5.jpg" alt="CCR Report Sample" class="img-responsive" />
+          <img src="assets/images/ccr-6.jpg" alt="CCR Report Sample" class="img-responsive" />
         </div>
-      </div>
-  </div>
-</section>
-
-<!-- PLANS -->
-<section class="plans-section">
-  <div class="container">
-    <h2 class="plans-title">Choose a plan that works for you!</h2>
-    <div class="plans-grid">
-      <!-- Premium Duo -->
-      <div class="plan-card featured">
-        <div class="position-relative">
-          <div class="plan-name">Premium Duo</div>
-          <div class="plan-badge">2 members · 12 months</div>
-        </div>
-        <div class="plan-price">₹19,999</div>
-        <div class="plan-features">
-          <div class="plan-feature">
-            <div class="plan-feature-icon"></div>
-            <span>Weekly refresh of CIBIL Rank &amp; CCR</span>
-          </div>
-          <div class="plan-feature">
-            <div class="plan-feature-icon"></div>
-            <span>Access to dashboard</span>
-          </div>
-          <div class="plan-feature">
-            <div class="plan-feature-icon"></div>
-            <span>CIBIL Saksham</span>
-          </div>
-        </div>
-        <button class="plan-btn">Subscribe Now</button>
-      </div>
-      <!-- Premium -->
-      <div class="plan-card">
-        <div>
-          <div class="plan-name">Premium</div>
-          <div class="plan-badge light">12 months</div>
-        </div>
-        <div class="plan-price">₹12,499</div>
-        <div class="plan-features">
-          <div class="plan-feature">
-            <div class="plan-feature-icon"></div>
-            <span>Weekly refresh of CIBIL Rank &amp; CCR</span>
-          </div>
-          <div class="plan-feature">
-            <div class="plan-feature-icon"></div>
-            <span>Access to dashboard</span>
-          </div>
-          <div class="plan-feature">
-            <div class="plan-feature-icon"></div>
-            <span>CIBIL Saksham</span>
-          </div>
-        </div>
-        <a href="https://cibilrankccr.cibil.com/CreditView/enrollGSTN.page?enterprise=CIBILCOMM&offer=PRM01" class="plan-btn" target="_blank">Subscribe Now</a>
-      </div>
-      <!-- Standard -->
-      <div class="plan-card">
-        <div>
-          <div class="plan-name">Standard</div>
-          <div class="plan-badge light">6 months</div>
-        </div>
-        <div class="plan-price">₹6,499</div>
-        <div class="plan-features">
-          <div class="plan-feature">
-            <div class="plan-feature-icon"></div>
-            <span>Weekly refresh of CIBIL Rank &amp; CCR</span>
-          </div>
-          <div class="plan-feature">
-            <div class="plan-feature-icon"></div>
-            <span>Access to dashboard</span>
-          </div>
-          <div class="plan-feature">
-            <div class="plan-feature-icon"></div>
-            <span>CIBIL Saksham</span>
-          </div>
-        </div>
-        <a href="https://cibilrankccr.cibil.com/CreditView/enrollGSTN.page?enterprise=CIBILCOMM&offer=STD01" class="plan-btn" target="_blank">Subscribe Now</a>
-      </div>
-      <!-- Basic -->
-      <div class="plan-card">
-        <div>
-          <div class="plan-name">Basic</div>
-          <div class="plan-badge light">1 month</div>
-        </div>
-        <div class="plan-price">₹2,999</div>
-        <div class="plan-features">
-          <div class="plan-feature">
-            <div class="plan-feature-icon"></div>
-            <span>Weekly refresh of CIBIL Rank &amp; CCR</span>
-          </div>
-          <div class="plan-feature">
-            <div class="plan-feature-icon"></div>
-            <span>Access to dashboard</span>
-          </div>
-        </div>
-        <a href="https://cibilrankccr.cibil.com/CreditView/enrollGSTN.page?enterprise=CIBILCOMM&offer=BAS01&_gl=1*77lquc*_gcl_aw*R0NMLjE3NzI1MjE0MDMuQ2p3S0NBaUFoNVhOQmhBQUVpd0FfQnU4Rll6eUJfdGtNV0lEdWxTRGNHNGdjbzlNTWkzU05kajZlUk84ei1JaERBNVE1RWJ4eVl2RjdSb0NqMTBRQXZEX0J3RQ..*_gcl_au*MTYwODA5OTkwMy4xNzcxNTg3NjAw*_ga*OTM1NDgxNjM4LjE3NzE1ODc2MDE.*_ga_WVCRSGNX36*czE3NzQ4NTAxMzckbzEwJGcxJHQxNzc0ODUwMzA5JGo1MCRsMCRoMA..*_ga_GGL6JJ79K2*czE3NzQ4NTAxMzckbzEwJGcxJHQxNzc0ODUwMTc2JGoyMSRsMCRoMA..&_ga=2.144302709.1901416691.1774850140-935481638.1771587601" class="plan-btn" target="_blank">Subscribe Now</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PLANS MOBILE -->
-<section class="plans-mobile">
-  <div class="container">
-    <h2 class="plans-title">Choose a plan that works for you!</h2>
-    <div class="swiper plans-swiper">
-      <div class="swiper-wrapper">
-        <div class="plan-card swiper-slide featured">
+  <!-- PLANS -->
+  <section class="plans-section">
+    <div class="container">
+      <h2 class="plans-title">Choose a plan that works for you!</h2>
+      <div class="plans-grid">
+        <!-- Premium Duo -->
+        <div class="plan-card featured">
           <div class="position-relative">
             <div class="plan-name">Premium Duo</div>
             <div class="plan-badge">2 members · 12 months</div>
           </div>
           <div class="plan-price">₹19,999</div>
           <div class="plan-features">
-            <div class="plan-feature"><div class="plan-feature-icon"></div><span>Weekly refresh of CIBIL Rank &amp; CCR</span></div>
-            <div class="plan-feature"><div class="plan-feature-icon"></div><span>Access to dashboard</span></div>
-            <div class="plan-feature"><div class="plan-feature-icon"></div><span>CIBIL Saksham</span></div>
+            <div class="plan-feature">
+              <div class="plan-feature-icon"></div>
+              <span>Weekly refresh of CIBIL Rank &amp; CCR</span>
+            </div>
+            <div class="plan-feature">
+              <div class="plan-feature-icon"></div>
+              <span>Access to dashboard</span>
+            </div>
+            <div class="plan-feature">
+              <div class="plan-feature-icon"></div>
+              <span>CIBIL Saksham</span>
+            </div>
           </div>
           <button class="plan-btn">Subscribe Now</button>
         </div>
-        <div class="plan-card swiper-slide">
+        <!-- Premium -->
+        <div class="plan-card">
           <div>
             <div class="plan-name">Premium</div>
             <div class="plan-badge light">12 months</div>
           </div>
           <div class="plan-price">₹12,499</div>
           <div class="plan-features">
-            <div class="plan-feature"><div class="plan-feature-icon"></div><span>Weekly refresh of CIBIL Rank &amp; CCR</span></div>
-            <div class="plan-feature"><div class="plan-feature-icon"></div><span>Access to dashboard</span></div>
-            <div class="plan-feature"><div class="plan-feature-icon"></div><span>CIBIL Saksham</span></div>
+            <div class="plan-feature">
+              <div class="plan-feature-icon"></div>
+              <span>Weekly refresh of CIBIL Rank &amp; CCR</span>
+            </div>
+            <div class="plan-feature">
+              <div class="plan-feature-icon"></div>
+              <span>Access to dashboard</span>
+            </div>
+            <div class="plan-feature">
+              <div class="plan-feature-icon"></div>
+              <span>CIBIL Saksham</span>
+            </div>
           </div>
-          <a href="https://cibilrankccr.cibil.com/CreditView/enrollGSTN.page?enterprise=CIBILCOMM&offer=PRM01" class="plan-btn" target="_blank">Subscribe Now</a>
+          <a href="https://cibilrankccr.cibil.com/CreditView/enrollGSTN.page?enterprise=CIBILCOMM&offer=PRM01"
+            class="plan-btn" target="_blank">Subscribe Now</a>
         </div>
-        <div class="plan-card swiper-slide">
+        <!-- Standard -->
+        <div class="plan-card">
           <div>
             <div class="plan-name">Standard</div>
             <div class="plan-badge light">6 months</div>
           </div>
           <div class="plan-price">₹6,499</div>
           <div class="plan-features">
-            <div class="plan-feature"><div class="plan-feature-icon"></div><span>Weekly refresh of CIBIL Rank &amp; CCR</span></div>
-            <div class="plan-feature"><div class="plan-feature-icon"></div><span>Access to dashboard</span></div>
-            <div class="plan-feature"><div class="plan-feature-icon"></div><span>CIBIL Saksham</span></div>
+            <div class="plan-feature">
+              <div class="plan-feature-icon"></div>
+              <span>Weekly refresh of CIBIL Rank &amp; CCR</span>
+            </div>
+            <div class="plan-feature">
+              <div class="plan-feature-icon"></div>
+              <span>Access to dashboard</span>
+            </div>
+            <div class="plan-feature">
+              <div class="plan-feature-icon"></div>
+              <span>CIBIL Saksham</span>
+            </div>
           </div>
-          <a href="https://cibilrankccr.cibil.com/CreditView/enrollGSTN.page?enterprise=CIBILCOMM&offer=STD01" class="plan-btn" target="_blank">Subscribe Now</a>
+          <a href="https://cibilrankccr.cibil.com/CreditView/enrollGSTN.page?enterprise=CIBILCOMM&offer=STD01"
+            class="plan-btn" target="_blank">Subscribe Now</a>
         </div>
-        <div class="plan-card swiper-slide">
+        <!-- Basic -->
+        <div class="plan-card">
           <div>
             <div class="plan-name">Basic</div>
             <div class="plan-badge light">1 month</div>
           </div>
           <div class="plan-price">₹2,999</div>
           <div class="plan-features">
-            <div class="plan-feature"><div class="plan-feature-icon"></div><span>Weekly refresh of CIBIL Rank &amp; CCR</span></div>
-            <div class="plan-feature"><div class="plan-feature-icon"></div><span>Access to dashboard</span></div>
+            <div class="plan-feature">
+              <div class="plan-feature-icon"></div>
+              <span>Weekly refresh of CIBIL Rank &amp; CCR</span>
+            </div>
+            <div class="plan-feature">
+              <div class="plan-feature-icon"></div>
+              <span>Access to dashboard</span>
+            </div>
           </div>
-          <a href="https://cibilrankccr.cibil.com/CreditView/enrollGSTN.page?enterprise=CIBILCOMM&offer=BAS01" class="plan-btn" target="_blank">Subscribe Now</a>
-        </div>
-      </div>
-      <div class="plans-swiper-nav">
-        <span class="plans-counter">01/04</span>
-        <div class="plans-dots"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq-section">
-  <div class="container">
-    <div class="faq-inner">
-      <h2 class="faq-title">Frequently Asked Questions</h2>
-      <div class="faq-tabs">
-        <button class="faq-tab-btn active" onclick="switchFaqTab(this, 0)">Subscription Related Queries</button>
-        <button class="faq-tab-btn" onclick="switchFaqTab(this, 1)">Post Purchase Queries</button>
-      </div>
-      <div class="faq-list" data-faq-tab="0">
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            <img src="assets/images/icon-minus.svg" alt="" class="faq-toggle-icon"/>
-            <span class="faq-q-text">What are the different subscription plans that I can choose from?</span>
-          </div>
-          <div class="faq-answer open">
-            <p>Gain regular access to your business' credit profile and financial wellbeing with our Company Credit Report subscription plans:</p>
-            <ul>
-              <li><strong>Premium Plan</strong> (includes 12 GST reports refreshed monthly, with a weekly refresh of CIBIL Rank and Company Credit Report, Dashboard) – valid for 12 months</li>
-              <li><strong>Standard Plan</strong> (includes 6 GST reports refreshed monthly, with a weekly refresh of CIBIL Rank and Company Credit Report, Dashboard) – valid for 6 months</li>
-              <li><strong>Basic Plan</strong> (includes 1 GST report with a weekly refresh of CIBIL Rank and Company Credit Report, Dashboard) – valid for 1 month</li>
-            </ul>
-            <p class="mt-10"><a href="#">Click here</a> to subscribe now.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            <img src="assets/images/icon-plus.svg" alt="" class="faq-toggle-icon"/>
-            <span class="faq-q-text">I could not complete the GSTIN-based authentication during the request process. Can I still access my GST Report?</span>
-          </div>
-          <div class="faq-answer">
-            <p>Yes, you can still access your CIBIL Rank and Company Credit Report even if GSTIN authentication was not completed. However, the GST Report will only be available once GSTIN authentication is successfully completed.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            <img src="assets/images/icon-plus.svg" alt="" class="faq-toggle-icon"/>
-            <span class="faq-q-text">I do not wish to access the GST Report for my business. Do I still need to provide GSTIN during the sign-up process?</span>
-          </div>
-          <div class="faq-answer">
-            <p>No, providing GSTIN is optional during sign-up. If you do not wish to access the GST Report, you may skip the GSTIN step. You will still be able to access your CIBIL Rank and Company Credit Report.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            <img src="assets/images/icon-plus.svg" alt="" class="faq-toggle-icon"/>
-            <span class="faq-q-text">I do not have a GSTIN for my business. Will I be able to access CIBIL Rank and Company Credit Report?</span>
-          </div>
-          <div class="faq-answer">
-            <p>Yes. GSTIN is not mandatory to access your CIBIL Rank and Company Credit Report. The GST Report is an additional feature available to businesses with a valid GSTIN.</p>
-          </div>
-        </div>
-      </div>
-      <div class="faq-list" data-faq-tab="1" style="display: none;">
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            <img src="assets/images/icon-minus.svg" alt="" class="faq-toggle-icon"/>
-            <span class="faq-q-text">How can I refresh the Company Credit Report, CIBIL Rank and GST Report?</span>
-          </div>
-          <div class="faq-answer open">
-            <p><a href="http://cibilrank.cibil.com/login/auth/login?_gl=1*1sht4dw*_gcl_aw*R0NMLjE3NzI1MjE0MDMuQ2p3S0NBaUFoNVhOQmhBQUVpd0FfQnU4Rll6eUJfdGtNV0lEdWxTRGNHNGdjbzlNTWkzU05kajZlUk84ei1JaERBNVE1RWJ4eVl2RjdSb0NqMTBRQXZEX0J3RQ..*_gcl_au*MTYwODA5OTkwMy4xNzcxNTg3NjAw*_ga*OTM1NDgxNjM4LjE3NzE1ODc2MDE.*_ga_WVCRSGNX36*czE3NzQ1OTQwOTQkbzkkZzAkdDE3NzQ1OTQwOTQkajYwJGwwJGgw*_ga_GGL6JJ79K2*czE3NzQ1OTQwOTQkbzkkZzAkdDE3NzQ1OTQwOTQkajYwJGwwJGgw&_ga=2.12484850.794299492.1774500885-935481638.1771587601" target="_blank">Log in to your dashboard</a> and click on the “Refresh” button to view your refreshed reports. Your CIBIL Rank and Company Credit Report can be refreshed every 7 days during the validity of the subscription. You can refresh your GST Report once every month for the duration of the subscription plan. Please note that you will need to complete the GSTIN-based authentication every time you refresh your GST Report.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            <img src="assets/images/icon-plus.svg" alt="" class="faq-toggle-icon"/>
-            <span class="faq-q-text">Can I download the copy of GST Report?</span>
-          </div>
-          <div class="faq-answer">
-            <p>Yes, you can download a copy of your business’ GST Report from your dashboard.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            <img src="assets/images/icon-plus.svg" alt="" class="faq-toggle-icon"/>
-            <span class="faq-q-text">Where can I read and understand more about all the terms and expressions used in the GST Report?</span>
-          </div>
-          <div class="faq-answer">
-            <p>You can read more about various terminologies used in GST Report by clicking <a href="https://www.gst.gov.in/help/helpmodules/" target="_blank">here.</a></p>
-          </div>
+          <a href="https://cibilrankccr.cibil.com/CreditView/enrollGSTN.page?enterprise=CIBILCOMM&offer=BAS01&_gl=1*77lquc*_gcl_aw*R0NMLjE3NzI1MjE0MDMuQ2p3S0NBaUFoNVhOQmhBQUVpd0FfQnU4Rll6eUJfdGtNV0lEdWxTRGNHNGdjbzlNTWkzU05kajZlUk84ei1JaERBNVE1RWJ4eVl2RjdSb0NqMTBRQXZEX0J3RQ..*_gcl_au*MTYwODA5OTkwMy4xNzcxNTg3NjAw*_ga*OTM1NDgxNjM4LjE3NzE1ODc2MDE.*_ga_WVCRSGNX36*czE3NzQ4NTAxMzckbzEwJGcxJHQxNzc0ODUwMzA5JGo1MCRsMCRoMA..*_ga_GGL6JJ79K2*czE3NzQ4NTAxMzckbzEwJGcxJHQxNzc0ODUwMTc2JGoyMSRsMCRoMA..&_ga=2.144302709.1901416691.1774850140-935481638.1771587601"
+            class="plan-btn" target="_blank">Subscribe Now</a>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollToPlugin.min.js"></script>
-<script src="assets/js/banks-scroll.js"></script>
-<script src="assets/js/scroll-animations.js"></script>
-<script>
+  <!-- PLANS MOBILE -->
+  <section class="plans-mobile">
+    <div class="container">
+      <h2 class="plans-title">Choose a plan that works for you!</h2>
+      <div class="swiper plans-swiper">
+        <div class="swiper-wrapper">
+          <div class="plan-card swiper-slide featured">
+            <div class="position-relative">
+              <div class="plan-name">Premium Duo</div>
+              <div class="plan-badge">2 members · 12 months</div>
+            </div>
+            <div class="plan-price">₹19,999</div>
+            <div class="plan-features">
+              <div class="plan-feature">
+                <div class="plan-feature-icon"></div><span>Weekly refresh of CIBIL Rank &amp; CCR</span>
+              </div>
+              <div class="plan-feature">
+                <div class="plan-feature-icon"></div><span>Access to dashboard</span>
+              </div>
+              <div class="plan-feature">
+                <div class="plan-feature-icon"></div><span>CIBIL Saksham</span>
+              </div>
+            </div>
+            <button class="plan-btn">Subscribe Now</button>
+          </div>
+          <div class="plan-card swiper-slide">
+            <div>
+              <div class="plan-name">Premium</div>
+              <div class="plan-badge light">12 months</div>
+            </div>
+            <div class="plan-price">₹12,499</div>
+            <div class="plan-features">
+              <div class="plan-feature">
+                <div class="plan-feature-icon"></div><span>Weekly refresh of CIBIL Rank &amp; CCR</span>
+              </div>
+              <div class="plan-feature">
+                <div class="plan-feature-icon"></div><span>Access to dashboard</span>
+              </div>
+              <div class="plan-feature">
+                <div class="plan-feature-icon"></div><span>CIBIL Saksham</span>
+              </div>
+            </div>
+            <a href="https://cibilrankccr.cibil.com/CreditView/enrollGSTN.page?enterprise=CIBILCOMM&offer=PRM01"
+              class="plan-btn" target="_blank">Subscribe Now</a>
+          </div>
+          <div class="plan-card swiper-slide">
+            <div>
+              <div class="plan-name">Standard</div>
+              <div class="plan-badge light">6 months</div>
+            </div>
+            <div class="plan-price">₹6,499</div>
+            <div class="plan-features">
+              <div class="plan-feature">
+                <div class="plan-feature-icon"></div><span>Weekly refresh of CIBIL Rank &amp; CCR</span>
+              </div>
+              <div class="plan-feature">
+                <div class="plan-feature-icon"></div><span>Access to dashboard</span>
+              </div>
+              <div class="plan-feature">
+                <div class="plan-feature-icon"></div><span>CIBIL Saksham</span>
+              </div>
+            </div>
+            <a href="https://cibilrankccr.cibil.com/CreditView/enrollGSTN.page?enterprise=CIBILCOMM&offer=STD01"
+              class="plan-btn" target="_blank">Subscribe Now</a>
+          </div>
+          <div class="plan-card swiper-slide">
+            <div>
+              <div class="plan-name">Basic</div>
+              <div class="plan-badge light">1 month</div>
+            </div>
+            <div class="plan-price">₹2,999</div>
+            <div class="plan-features">
+              <div class="plan-feature">
+                <div class="plan-feature-icon"></div><span>Weekly refresh of CIBIL Rank &amp; CCR</span>
+              </div>
+              <div class="plan-feature">
+                <div class="plan-feature-icon"></div><span>Access to dashboard</span>
+              </div>
+            </div>
+            <a href="https://cibilrankccr.cibil.com/CreditView/enrollGSTN.page?enterprise=CIBILCOMM&offer=BAS01"
+              class="plan-btn" target="_blank">Subscribe Now</a>
+          </div>
+        </div>
+        <div class="plans-swiper-nav">
+          <span class="plans-counter">01/04</span>
+          <div class="plans-dots"></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  // Video popup
-  function openVideoPopup() {
-    const popup = document.getElementById('videoPopup');
-    const video = document.getElementById('popupVideo');
-    popup.classList.add('active');
-    video.currentTime = 0;
-    video.play();
-    document.body.style.overflow = 'hidden';
-  }
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="faq-inner">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        <div class="faq-tabs">
+          <button class="faq-tab-btn active" onclick="switchFaqTab(this, 0)">Subscription Related Queries</button>
+          <button class="faq-tab-btn" onclick="switchFaqTab(this, 1)">Post Purchase Queries</button>
+        </div>
+        <div class="faq-list" data-faq-tab="0">
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <img src="assets/images/icon-minus.svg" alt="" class="faq-toggle-icon" />
+              <span class="faq-q-text">What are the different subscription plans that I can choose from?</span>
+            </div>
+            <div class="faq-answer open">
+              <p>Gain regular access your business’ credit profile and financial wellbeing with our&nbsp;<a
+                  target="_blank" href="http://www.cibil.com/cibilrank">Company Credit Report subscription plans</a>:
+              </p>
+              <ul>
+                <li>Premium Plan&nbsp;(includes a weekly refresh of CIBIL Rank and Company Credit Report, Dashboard) –
+                  valid for 12 months</li>
+                <li>Standard Plan&nbsp;(includes a weekly refresh of CIBIL Rank and Company Credit Report, Dashboard) –
+                  valid for 6 months</li>
+                <li>Basic Plan&nbsp;(includes a weekly refresh of CIBIL Rank and Company Credit Report, Dashboard) –
+                  valid for 1 month</li>
+              </ul>
+              <p class="mt-10"><a target="_blank" href="https://cibilrank.cibil.com/">Click here</a>&nbsp;to subscribe now.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <img src="assets/images/icon-plus.svg" alt="" class="faq-toggle-icon" />
+              <span class="faq-q-text">I do not have a GSTIN for my business. Will I be able to access CIBIL Rank and Company Credit Report?</span>
+            </div>
+            <div class="faq-answer">
+              <p>If your business does not have a GSTIN, you can still go ahead and complete the request process without the GSTIN. Instead, you will need to upload&nbsp;identity documents to authenticate your request, and you will receive a notification once your documents have been verified. After this, you will be able to view your CIBIL Rank and CCR.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-list" data-faq-tab="1" style="display: none;">
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <img src="assets/images/icon-minus.svg" alt="" class="faq-toggle-icon" />
+              <span class="faq-q-text">How can I refresh the Company Credit Report and CIBIL Rank ?</span>
+            </div>
+            <div class="faq-answer open">
+              <p><a target="_blank" href="http://cibilrank.cibil.com/login/auth/login">Log in to your dashboard</a>&nbsp;and click on the “Refresh” button to view your refreshed reports. Your CIBIL Rank and Company Credit Report can be refreshed every 7 days during the validity of the subscription.&nbsp;</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  function closeVideoPopup() {
-    const popup = document.getElementById('videoPopup');
-    const video = document.getElementById('popupVideo');
-    popup.classList.remove('active');
-    video.pause();
-    video.currentTime = 0;
-    document.body.style.overflow = '';
-  }
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollToPlugin.min.js"></script>
+  <script src="assets/js/banks-scroll.js"></script>
+  <script src="assets/js/scroll-animations.js"></script>
+  <script>
 
-  document.querySelector('.video-popup-overlay').addEventListener('click', closeVideoPopup);
+    // Video popup
+    function openVideoPopup() {
+      const popup = document.getElementById('videoPopup');
+      const video = document.getElementById('popupVideo');
+      popup.classList.add('active');
+      video.currentTime = 0;
+      video.play();
+      document.body.style.overflow = 'hidden';
+    }
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeVideoPopup();
-  });
+    function closeVideoPopup() {
+      const popup = document.getElementById('videoPopup');
+      const video = document.getElementById('popupVideo');
+      popup.classList.remove('active');
+      video.pause();
+      video.currentTime = 0;
+      document.body.style.overflow = '';
+    }
 
-  document.querySelector('.hero-play').addEventListener('click', openVideoPopup);
+    document.querySelector('.video-popup-overlay').addEventListener('click', closeVideoPopup);
 
-  // Plans swiper — mobile only
-  if (window.innerWidth <= 767) {
-    const plansSwiper = new Swiper('.plans-swiper', {
-      slidesPerView: 'auto',
-      spaceBetween: 20,
-      pagination: {
-        el: '.plans-dots',
-        clickable: true,
-      },
-      on: {
-        init: function () {
-          updatePlanCounter(this);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeVideoPopup();
+    });
+
+    document.querySelector('.hero-play').addEventListener('click', openVideoPopup);
+
+    // Plans swiper — mobile only
+    if (window.innerWidth <= 767) {
+      const plansSwiper = new Swiper('.plans-swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        pagination: {
+          el: '.plans-dots',
+          clickable: true,
         },
-        slideChange: function () {
-          updatePlanCounter(this);
+        on: {
+          init: function () {
+            updatePlanCounter(this);
+          },
+          slideChange: function () {
+            updatePlanCounter(this);
+          }
         }
+      });
+
+      function updatePlanCounter(swiper) {
+        const current = String(swiper.activeIndex + 1).padStart(2, '0');
+        const total = String(swiper.slides.length).padStart(2, '0');
+        document.querySelector('.plans-counter').textContent = current + '/' + total;
       }
-    });
-
-    function updatePlanCounter(swiper) {
-      const current = String(swiper.activeIndex + 1).padStart(2, '0');
-      const total = String(swiper.slides.length).padStart(2, '0');
-      document.querySelector('.plans-counter').textContent = current + '/' + total;
     }
-  }
 
-  // Banks mobile card toggle
-  document.querySelectorAll('.banks-mobile-card').forEach(card => {
-    card.addEventListener('click', () => {
-      card.classList.toggle('expanded');
+    // Banks mobile card toggle
+    document.querySelectorAll('.banks-mobile-card').forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('expanded');
+      });
     });
-  });
 
-  // CCR accordion
-  function setCcrItem(idx) {
-    const items = document.querySelectorAll('.ccr-item');
-    const images = document.querySelectorAll('.ccr-image img');
-    const isMobile = window.innerWidth <= 767;
+    // CCR accordion
+    function setCcrItem(idx) {
+      const items = document.querySelectorAll('.ccr-item');
+      const images = document.querySelectorAll('.ccr-image img');
+      const isMobile = window.innerWidth <= 767;
 
-    items.forEach((item, i) => {
-      const isActive = isMobile ? (i === idx ? !item.classList.contains('active') : false) : (i === idx);
-      item.classList.toggle('active', isActive);
+      items.forEach((item, i) => {
+        const isActive = isMobile ? (i === idx ? !item.classList.contains('active') : false) : (i === idx);
+        item.classList.toggle('active', isActive);
 
-      const icon = item.querySelector('.ccr-toggle-icon');
-      if (icon) {
-        icon.src = isActive ? 'assets/images/icon-minus-mobile.svg' : 'assets/images/icon-plus-mobile.svg';
+        const icon = item.querySelector('.ccr-toggle-icon');
+        if (icon) {
+          icon.src = isActive ? 'assets/images/icon-minus-mobile.svg' : 'assets/images/icon-plus-mobile.svg';
+        }
+      });
+
+      const imgIdx = Math.min(idx, images.length - 1);
+      images.forEach((img, i) => img.classList.toggle('active', i === imgIdx));
+    }
+
+    // Set first image active on load
+    document.addEventListener('DOMContentLoaded', () => {
+      const firstImg = document.querySelector('.ccr-image img');
+      if (firstImg) firstImg.classList.add('active');
+    });
+
+    // FAQ accordion
+    function toggleFaq(el) {
+      const answer = el.nextElementSibling;
+      const isOpen = answer.classList.contains('open');
+
+      // Close all and reset icons to plus
+      document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+      document.querySelectorAll('.faq-toggle-icon').forEach(img => {
+        img.src = 'assets/images/icon-plus.svg';
+      });
+
+      if (!isOpen) {
+        answer.classList.add('open');
+        const icon = el.querySelector('.faq-toggle-icon');
+        if (icon) icon.src = 'assets/images/icon-minus.svg';
       }
-    });
-
-    const imgIdx = Math.min(idx, images.length - 1);
-    images.forEach((img, i) => img.classList.toggle('active', i === imgIdx));
-  }
-
-  // Set first image active on load
-  document.addEventListener('DOMContentLoaded', () => {
-    const firstImg = document.querySelector('.ccr-image img');
-    if (firstImg) firstImg.classList.add('active');
-  });
-
-  // FAQ accordion
-  function toggleFaq(el) {
-    const answer = el.nextElementSibling;
-    const isOpen = answer.classList.contains('open');
-
-    // Close all and reset icons to plus
-    document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
-    document.querySelectorAll('.faq-toggle-icon').forEach(img => {
-      img.src = 'assets/images/icon-plus.svg';
-    });
-
-    if (!isOpen) {
-      answer.classList.add('open');
-      const icon = el.querySelector('.faq-toggle-icon');
-      if (icon) icon.src = 'assets/images/icon-minus.svg';
     }
-  }
 
-  // FAQ tab switching
-  function switchFaqTab(el, idx) {
-    document.querySelectorAll('.faq-tab-btn').forEach(b => b.classList.remove('active'));
-    el.classList.add('active');
+    // FAQ tab switching
+    function switchFaqTab(el, idx) {
+      document.querySelectorAll('.faq-tab-btn').forEach(b => b.classList.remove('active'));
+      el.classList.add('active');
 
-    document.querySelectorAll('.faq-list').forEach(list => {
-      list.style.display = list.dataset.faqTab == idx ? 'block' : 'none';
-    });
-  }
-</script>
+      document.querySelectorAll('.faq-list').forEach(list => {
+        list.style.display = list.dataset.faqTab == idx ? 'block' : 'none';
+      });
+    }
+  </script>
 </body>
+
 </html>
