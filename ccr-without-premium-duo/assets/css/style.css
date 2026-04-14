@@ -677,7 +677,7 @@ p {
   width: 100%;
   top: 0;
   left: 0;
-  height: 140%;
+  height: 110%;
   z-index: -1;
 }
 
@@ -714,8 +714,8 @@ p {
   font-weight: 700;
   color: #fff;
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 20px;
+  right: 30px;
 }
 
 .plan-features {
