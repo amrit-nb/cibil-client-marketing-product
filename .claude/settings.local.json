@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git pull:*)",
+      "Bash(git push:*)",
+      "Bash(git rebase:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(rm -f /Users/nb-mac32/Documents/NB-Projects/CIBIL/CCR/landing-pages/cibil-client-marketing-product/.git/HEAD.lock)",
+      "Bash(ls /Users/nb-mac32/Documents/NB-Projects/CIBIL/CCR/landing-pages/cibil-client-marketing-product/.git/*.lock)",
+      "Bash(find /Users/nb-mac32/Documents/NB-Projects/CIBIL/CCR/landing-pages/cibil-client-marketing-product/.git -name \"*.lock*\" -delete)",
+      "Bash(git checkout:*)"
+    ]
+  }
+}
