@@ -159,7 +159,7 @@
 
           <!-- Decorative circle · top-left -->
           <div class="hero-circle-tl"
-               style="position:absolute;left:-10px;top:-20px;width:150px;height:150px;
+               style="position:absolute;left:-50px;top:-50px;width:220px;height:220px;
                       background-image:url('assets/hero-circle-tl.png');
                       background-size:cover;pointer-events:none;">
           </div>
@@ -188,24 +188,8 @@
             </div>
 
             <!-- CIBIL Report illustration -->
-            <div style="position:relative;width:150px;height:110px;flex-shrink:0;margin-left:16px; bottom: -53px;">
-              <!-- Report card body (dark blue) -->
-              <div style="position:absolute;right:0;bottom:0;width:117px;height:160px;background-color:#004364;border-radius:4px;"></div>
-              <!-- White paper -->
-              <div style="position:absolute;right:5px;bottom:4px;width:107px;height:152px;background-color:#ffffff;"></div>
-              <!-- CIBIL logo on paper -->
-              <img src="assets/report-logo.png"
-                   width="46" height="21" alt=""
-                   style="position:absolute;right:36px;top:-62px;">
-              <!-- Score gauge -->
-              <img src="assets/report-gauge.png"
-                   width="80" height="39" alt=""
-                   style="position:absolute;right:14px;bottom:80px;">
-              <!-- Placeholder lines -->
-              <div style="position:absolute;right:14px;bottom:67px;width:80px;height:4px;background:#ccedfa;border-radius:4px;"></div>
-              <div style="position:absolute;right:14px;bottom:55px;width:80px;height:4px;background:#ccedfa;border-radius:4px;"></div>
-              <div style="position:absolute;right:14px;bottom:43px;width:80px;height:4px;background:#ccedfa;border-radius:4px;"></div>
-              <div style="position:absolute;right:14px;bottom:31px;width:48px;height:4px;background:#ccedfa;border-radius:4px;"></div>
+            <div style="position:relative;width:160px;height:110px;flex-shrink:0;margin-left:16px;">
+              <img src="assets/cibil-report.png" alt="" srcset="">
             </div>
 
           </div>
@@ -251,11 +235,11 @@
               </span>
               <div style="display:flex;flex-direction:column;padding-bottom:12px;padding-left:18px;">
                 <span class="discount-num"
-                      style="font-size:90px;font-weight:700;color:#005f8d;letter-spacing:-8px;line-height:1;">
+                      style="font-size:97px;font-weight:700;color:#005f8d;letter-spacing:-8px;line-height:normal;">
                   %
                 </span>
                 <span class="discount-num"
-                      style="font-size:28px;font-weight:900;color:#005f8d;text-align:center;letter-spacing:2px;line-height:1;margin-top:2px;">
+                      style="font-size:30px;font-weight:900;color:#005f8d;text-align:center;letter-spacing:2px;line-height:normal;margin-top:-16px;">
                   OFF
                 </span>
               </div>
@@ -275,9 +259,10 @@
               <div class="plan-col"
                    style="display:flex;flex-direction:column;align-items:center;flex:1;max-width:175px;">
                 <div style="display:flex;align-items:center;justify-content:center;
-                            width:42px;height:42px;background-color:#00a6ca;border-radius:50%;
+                            width:42px;height:42px;border-radius:50%;
                             position:relative;z-index:2;margin-bottom:-21px;flex-shrink:0;">
-                  <img src="assets/badge-check.png" width="24" height="24" alt="">
+                  <img src="assets/badge-check.png" width="42" height="42" alt="" class="logo-light">
+                  <img src="assets/badge-check-dark.png" width="42" height="42" alt="" class="logo-dark" style="display:none;">
                 </div>
                 <div class="plan-card-bg plan-card-basic"
                      style="width:150px;height:137px;
@@ -293,18 +278,19 @@
                     <span class="plan-disc"
                           style="font-size:20px;font-weight:800;color:#004364;">&#8377;495</span>
                   </div>
+                  <p class="plan-dur"
+                   style="font-size:14px;font-weight:400;color:#262626;text-align:center;">1 Month</p>
                 </div>
-                <p class="plan-dur"
-                   style="font-size:14px;font-weight:400;color:#262626;margin-top:6px;text-align:center;">1 Month</p>
               </div>
 
               <!-- STANDARD -->
               <div class="plan-col"
                    style="display:flex;flex-direction:column;align-items:center;flex:1;max-width:175px;">
                 <div style="display:flex;align-items:center;justify-content:center;
-                            width:42px;height:42px;background-color:#00a6ca;border-radius:50%;
+                            width:42px;height:42px;border-radius:50%;
                             position:relative;z-index:2;margin-bottom:-21px;flex-shrink:0;">
-                  <img src="assets/badge-star.png" width="24" height="24" alt="">
+                  <img src="assets/badge-star.png" width="42" height="42" alt="" class="logo-light">
+                  <img src="assets/badge-star-dark.png" width="42" height="42" alt="" class="logo-dark" style="display:none;">
                 </div>
                 <div class="plan-card-bg plan-card-std"
                      style="width:150px;height:137px;
@@ -320,18 +306,19 @@
                     <span class="plan-disc"
                           style="font-size:20px;font-weight:800;color:#004364;">&#8377;720</span>
                   </div>
-                </div>
-                <p class="plan-dur"
-                   style="font-size:14px;font-weight:400;color:#262626;margin-top:6px;text-align:center;">6 Months</p>
+                  <p class="plan-dur"
+                   style="font-size:14px;font-weight:400;color:#262626;text-align:center;">6 Months</p>
+                </div>                
               </div>
 
               <!-- PREMIUM -->
               <div class="plan-col"
                    style="display:flex;flex-direction:column;align-items:center;flex:1;max-width:175px;">
                 <div style="display:flex;align-items:center;justify-content:center;
-                            width:42px;height:42px;background-color:#00a6ca;border-radius:50%;
+                            width:42px;height:42px;border-radius:50%;
                             position:relative;z-index:2;margin-bottom:-21px;flex-shrink:0;">
-                  <img src="assets/badge-crown.png" width="24" height="24" alt="">
+                  <img src="assets/badge-crown.png" width="42" height="42" alt="" class="logo-light">
+                  <img src="assets/badge-crown-dark.png" width="42" height="42" alt="" class="logo-dark" style="display:none;">
                 </div>
                 <div class="plan-card-bg plan-card-std"
                      style="width:150px;height:137px;
@@ -347,9 +334,9 @@
                     <span class="plan-disc"
                           style="font-size:20px;font-weight:800;color:#004364;">&#8377;1080</span>
                   </div>
+                  <p class="plan-dur"
+                   style="font-size:14px;font-weight:400;color:#262626;text-align:center;">12 Months</p>
                 </div>
-                <p class="plan-dur"
-                   style="font-size:14px;font-weight:400;color:#262626;margin-top:6px;text-align:center;">12 Months</p>
               </div>
 
             </div><!-- /plans row -->
@@ -405,7 +392,7 @@
           <!-- Header row -->
           <div class="starter-hdr"
                style="display:flex;align-items:center;justify-content:space-between;
-                      padding:16px 24px;background-color:#ccedfa;">
+                      padding:24px 32px;background-color:#ccedfa;">
             <span class="starter-title"
                   style="font-size:20px;font-weight:700;color:#262626;line-height:32px;">
               Starter Plan
@@ -452,7 +439,7 @@
 
             <!-- Note banner -->
             <div class="starter-note-bg"
-                 style="background-color:#e6f6fa;border-radius:8px;padding:5px 16px 6px;">
+                 style="background-color:#e6f6fa;border-radius:8px;padding:5px 16px 6px; margin:0 -16px;">
               <p class="starter-note-txt"
                  style="font-size:14px;font-weight:400;font-style:italic;color:#262626;
                         line-height:24px;letter-spacing:0.28px;">
