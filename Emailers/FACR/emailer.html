@@ -65,6 +65,9 @@
       .badge-light            { display:none !important; }
       .badge-dark             { display:inline-block !important; }
 
+      .plan-card-bg-light     { display:none !important; }
+      .plan-card-bg-dark      { display:block !important; }
+
       .note-txt               { color:#fafafa !important; }
 
       .starter-card-td        { background-color:#005f8d !important; border-color:#005f8d !important; }
@@ -315,9 +318,12 @@
                               <div style="width:150px;height:137px;border-radius:8px;overflow:hidden;
                                           position:relative;display:inline-block;vertical-align:top;">
                                 <!--[if !mso]><!-->
-                                <img src="assets/plan-card-basic.png" width="150" height="137" alt=""
+                                <img src="assets/plan-card-basic.png" class="plan-card-bg-light" width="150" height="137" alt=""
                                      style="position:absolute;top:0;left:0;width:150px;height:137px;
                                             display:block;z-index:0;">
+                                <img src="assets/plan-card-dark.png" class="plan-card-bg-dark" width="150" height="137" alt=""
+                                     style="position:absolute;top:0;left:0;width:150px;height:137px;
+                                            display:none;z-index:0;">
                                 <!--<![endif]-->
                                 <table width="150" height="137" cellpadding="0" cellspacing="0" border="0"
                                        role="presentation" style="position:relative;z-index:1;">
