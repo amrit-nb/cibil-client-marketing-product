@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <title>CIBIL – Exclusive 10% Discount Offer</title>
+
+  <style>
+    /* ── Google Fonts ───────────────────────── */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    @font-face {
+      font-family: 'Intro';
+      src: url(assets/IntroRegular.ttf) format('truetype');
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    /* ── Reset ─────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body   { background-color: #f0f2f5; font-family: 'Roboto', Arial, Helvetica, sans-serif; }
+    img    { border: 0; display: block; }
+    a      { text-decoration: none; }
+
+    /* Stop iOS / Gmail auto-linking addresses, phones, dates */
+    a[x-apple-data-detectors], u + #body a, #MessageViewBody a {
+      color: inherit !important; text-decoration: none !important;
+    }
+
+    /* ── Dark Mode ──────────────────────────── */
+    @media (prefers-color-scheme: dark) {
+      body                   { background-color: #1a1a1a !important; }
+      .email-bg              { background-color: #262626 !important; }
+      .header-wrap           { background-color: #262626 !important; }
+      .logo-light            { display: none !important; }
+      .logo-dark             { display: block !important; }
+      .login-btn             { border-color: #ffffff !important; color: #ffffff !important; }
+
+      /* Hero */
+      .hero-card             { background-color: #004364 !important; border-color: #004364 !important; }
+      .hero-circle-tl        { background-image: url('assets/hero-circle-tl-dark.png') !important; }
+      .hero-circle-br        { background-image: url('assets/hero-circle-br-dark.png') !important; }
+      .hero-title            { color: #00a6ca !important; }
+      .hero-body             { color: #fafafa !important; }
+
+      /* Discount */
+      .discount-card         { background-color: #005f8d !important; }
+      .disc-circle-tl        { background-image: url('assets/discount-circle-dark.png') !important; }
+      .disc-circle-br        { background-image: url('assets/discount-circle-dark.png') !important; }
+      .discount-intro        { color: #fafafa !important; }
+      .discount-num          { color: #99dbea !important; }
+      .discount-plans        { color: #fafafa !important; }
+      .plan-card-basic       { background-image: url('assets/plan-card-basic-dark.png') !important; }
+      .plan-card-std         { background-image: url('assets/plan-card-std-dark.png') !important; }
+      .plan-name             { color: #f2f2f2 !important; }
+      .plan-orig             { color: #f2f2f2 !important; }
+      .plan-disc             { color: #00a6ca !important; }
+      .plan-dur              { color: #fafafa !important; }
+      .use-code-label        { color: #f2f2f2 !important; }
+      .use-code-val          { color: #fafafa !important; }
+      .validity-txt          { color: #f2f2f2 !important; }
+
+      /* Starter feature icons: swap to dark versions */
+      .feat-check            { content: url('assets/feature-check-dark.png') !important; }
+      .feat-cross            { content: url('assets/feature-cross-dark.png') !important; }
+      .feat-check-2          { content: url('assets/feature-check-2-dark.png') !important; }
+
+      /* Note */
+      .note-txt              { color: #fafafa !important; }
+
+      /* Starter plan */
+      .starter-card          { background-color: #005f8d !important; border-color: #005f8d !important; }
+      .starter-hdr           { background-color: #005f8d !important; }
+      .starter-title         { color: #fafafa !important; }
+      .starter-price         { color: #fafafa !important; }
+      .starter-body          { background-color: #004364 !important; }
+      .starter-feat          { color: #fafafa !important; }
+      .starter-note-bg       { background-color: #005f8d !important; }
+      .starter-note-txt      { color: #fafafa !important; }
+
+      /* Footer */
+      .footer-upper          { background-color: #004364 !important; }
+      .footer-app-title      { color: #fafafa !important; }
+      .footer-app-body       { color: #fafafa !important; }
+      .footer-lower          { background-color: #ccedfa !important; }
+      .footer-company        { color: #262626 !important; }
+      .footer-addr           { color: #262626 !important; }
+      .footer-follow-lbl     { color: #262626 !important; }
+    }
+
+    /* ── Responsive ─────────────────────────── */
+    @media only screen and (max-width: 640px) {
+      .email-bg              { width: 100% !important; }
+      .header-wrap           { padding: 20px 16px !important; }
+      .sp                    { padding-left: 16px !important; padding-right: 16px !important; }
+      .hero-content          { padding: 20px !important; }
+      .discount-intro-p      { padding-left: 20px !important; padding-right: 20px !important; }
+      .plans-row             { gap: 6px !important; padding: 12px 10px 0 !important; }
+      .plan-col              { max-width: 33% !important; }
+      .plan-card-bg          { width: 100% !important; min-height: 110px !important; }
+      .starter-section       { padding: 0 16px !important; }
+      .footer-row            { flex-direction: column !important; gap: 14px !important; }
+      .footer-store-row      { justify-content: flex-start !important; }
+    }
+  </style>
+</head>
+
+<body id="body" style="margin:0;padding:0;background-color:#f0f2f5;">
+
+  <!-- Hidden pre-header text -->
+  <div aria-hidden="true" style="display:none;font-size:1px;color:#f0f2f5;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">
+    Exclusive 10% OFF on ALL CIBIL Subscription Plans. Use Code: DISC10. Valid until 31st March 2025.&#847;&#8199;&#65279;
+  </div>
+
+  <!-- ░░ EMAIL SHELL ░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <div style="width:100%;background-color:#f0f2f5;">
+    <div class="email-bg" style="max-width:640px;margin:0 auto;background-color:#fafafa;">
+
+
+      <!-- ═══════════════════════════════════
+           HEADER
+      ═══════════════════════════════════ -->
+      <div class="header-wrap" style="display:flex;align-items:center;justify-content:space-between;padding:28px 40px 20px;background-color:#fafafa;">
+
+        <!-- Logo -->
+        <div>
+          <!-- Light logo (default) -->
+          <div class="logo-light">
+            <img src="assets/logo-light.png"
+                 width="90" height="25" alt="CIBIL">
+            <img src="assets/logo-light-strapline.png"
+                 width="90" height="8" alt="Part of TransUnion" style="margin-top:3px;">
+          </div>
+          <!-- Dark logo -->
+          <div class="logo-dark" style="display:none;">
+            <img src="assets/logo-dark.png"
+                 width="90" height="25" alt="CIBIL">
+            <img src="assets/logo-dark-strapline.png"
+                 width="90" height="8" alt="Part of TransUnion" style="margin-top:3px;">
+          </div>
+        </div>
+
+        <!-- Login button -->
+        <a href="#" class="login-btn"
+           style="display:inline-block;border:1.5px solid #00a6ca;border-radius:25px;padding:10px 30px;font-size:16px;font-weight:700;color:#00a6ca;letter-spacing:0.32px;white-space:nowrap;">
+          Login
+        </a>
+
+      </div><!-- /header -->
+
+
+      <!-- ═══════════════════════════════════
+           HERO CARD — "Dear User"
+      ═══════════════════════════════════ -->
+      <div class="sp" style="padding:0 40px;">
+        <div class="hero-card"
+             style="background-color:#e6f6fa;border:1px solid #ccedfa;border-radius:16px;overflow:hidden;position:relative;min-height:189px;">
+
+          <!-- Decorative circle · top-left -->
+          <div class="hero-circle-tl"
+               style="position:absolute;left:-50px;top:-50px;width:220px;height:220px;
+                      background-image:url('assets/hero-circle-tl.png');
+                      background-size:cover;pointer-events:none;">
+          </div>
+
+          <!-- Decorative circle · bottom-right -->
+          <div class="hero-circle-br"
+               style="position:absolute;right:0;bottom:-15px;width:150px;height:149px;
+                      background-image:url('assets/hero-circle-br.png');
+                      background-size:cover;pointer-events:none;">
+          </div>
+
+          <!-- Content -->
+          <div class="hero-content"
+               style="display:flex;align-items:flex-end;justify-content:space-between;padding:28px 34px;position:relative;z-index:1;">
+
+            <!-- Text -->
+            <div>
+              <h1 class="hero-title"
+                  style="font-size:32px;font-weight:600;color:#004364;line-height:1.3;margin-bottom:8px;">
+                Dear User,
+              </h1>
+              <p class="hero-body"
+                 style="font-size:16px;font-weight:400;color:#262626;line-height:1.5;max-width:318px;">
+                We hope you've found the FREE CIBIL Score &amp; Report insightful.
+              </p>
+            </div>
+
+            <!-- CIBIL Report illustration -->
+            <div style="position:relative;width:160px;height:110px;flex-shrink:0;margin-left:16px;">
+              <img src="assets/cibil-report.png" alt="" srcset="">
+            </div>
+
+          </div>
+        </div>
+      </div><!-- /hero -->
+
+
+      <!-- ═══════════════════════════════════
+           DISCOUNT CARD — 10% OFF
+      ═══════════════════════════════════ -->
+      <div class="sp" style="padding:16px 40px 0;">
+        <div class="discount-card"
+             style="background-color:#fff9d9;border-radius:16px;overflow:hidden;position:relative;">
+
+          <!-- Decorative circle · top-left -->
+          <div class="disc-circle-tl"
+               style="position:absolute;left:-85px;top:-62px;width:331px;height:331px;
+                      background-image:url('assets/discount-circle.png');
+                      background-size:cover;pointer-events:none;">
+          </div>
+
+          <!-- Decorative circle · bottom-right -->
+          <div class="disc-circle-br"
+               style="position:absolute;right:-171px;bottom:-140px;width:331px;height:331px;
+                      background-image:url('assets/discount-circle.png');
+                      background-size:cover;pointer-events:none;">
+          </div>
+
+          <!-- Inner content above circles -->
+          <div style="position:relative;z-index:1;">
+
+            <!-- Intro text -->
+            <p class="discount-intro discount-intro-p"
+               style="font-size:18px;font-weight:400;color:#262626;line-height:24px;text-align:center;padding:40px 60px 0;">
+              To help you get started on your credit monitoring journey, we'd like to offer you an exclusive
+            </p>
+
+            <!-- ── Big "10 % OFF" ── -->
+            <div style="display:flex;align-items:flex-end;justify-content:center;line-height:1;padding:10px 0 0;">
+              <span class="discount-num"
+                    style="font-size:148px;font-weight:900;color:#005f8d;letter-spacing:-20px;line-height:1;padding-bottom:12px;">
+                10
+              </span>
+              <div style="display:flex;flex-direction:column;padding-bottom:12px;padding-left:18px;">
+                <span class="discount-num"
+                      style="font-size:97px;font-weight:700;color:#005f8d;letter-spacing:-8px;line-height:normal;">
+                  %
+                </span>
+                <span class="discount-num"
+                      style="font-size:30px;font-weight:900;color:#005f8d;text-align:center;letter-spacing:2px;line-height:normal;margin-top:-16px;">
+                  OFF
+                </span>
+              </div>
+            </div>
+
+            <!-- Sub-text -->
+            <p class="discount-plans discount-intro-p"
+               style="font-size:18px;font-weight:400;color:#262626;line-height:24px;text-align:center;padding:4px 60px 0;">
+              on ALL CIBIL Subscription Plans.
+            </p>
+
+            <!-- ── Plan Cards Row ── -->
+            <div class="plans-row"
+                 style="display:flex;justify-content:space-around;align-items:flex-start;padding:20px 20px 0;gap:12px;">
+
+              <!-- BASIC -->
+              <div class="plan-col"
+                   style="display:flex;flex-direction:column;align-items:center;flex:1;max-width:175px;">
+                <div style="display:flex;align-items:center;justify-content:center;
+                            width:42px;height:42px;border-radius:50%;
+                            position:relative;z-index:2;margin-bottom:-21px;flex-shrink:0;">
+                  <img src="assets/badge-check.png" width="42" height="42" alt="" class="logo-light">
+                  <img src="assets/badge-check-dark.png" width="42" height="42" alt="" class="logo-dark" style="display:none;">
+                </div>
+                <div class="plan-card-bg plan-card-basic"
+                     style="width:150px;height:137px;
+                            background-image:url('assets/plan-card-basic.png');
+                            background-size:100% 100%;background-repeat:no-repeat;
+                            display:flex;flex-direction:column;align-items:center;justify-content:center;
+                            gap:5px;border-radius:8px;position:relative;z-index:1;">
+                  <span class="plan-name"
+                        style="font-size:13px;font-weight:500;color:#595959;letter-spacing:0.4px;">BASIC</span>
+                  <div style="display:flex;align-items:baseline;gap:4px;">
+                    <span class="plan-orig"
+                          style="font-size:15px;font-weight:400;color:#595959;text-decoration:line-through;">&#8377;550</span>
+                    <span class="plan-disc"
+                          style="font-size:20px;font-weight:800;color:#004364;">&#8377;495</span>
+                  </div>
+                  <p class="plan-dur"
+                   style="font-size:14px;font-weight:400;color:#262626;text-align:center;">1 Month</p>
+                </div>
+              </div>
+
+              <!-- STANDARD -->
+              <div class="plan-col"
+                   style="display:flex;flex-direction:column;align-items:center;flex:1;max-width:175px;">
+                <div style="display:flex;align-items:center;justify-content:center;
+                            width:42px;height:42px;border-radius:50%;
+                            position:relative;z-index:2;margin-bottom:-21px;flex-shrink:0;">
+                  <img src="assets/badge-star.png" width="42" height="42" alt="" class="logo-light">
+                  <img src="assets/badge-star-dark.png" width="42" height="42" alt="" class="logo-dark" style="display:none;">
+                </div>
+                <div class="plan-card-bg plan-card-std"
+                     style="width:150px;height:137px;
+                            background-image:url('assets/plan-card-std.png');
+                            background-size:100% 100%;background-repeat:no-repeat;
+                            display:flex;flex-direction:column;align-items:center;justify-content:center;
+                            gap:5px;border-radius:8px;position:relative;z-index:1;">
+                  <span class="plan-name"
+                        style="font-size:13px;font-weight:500;color:#595959;letter-spacing:0.4px;">STANDARD</span>
+                  <div style="display:flex;align-items:baseline;gap:4px;">
+                    <span class="plan-orig"
+                          style="font-size:15px;font-weight:400;color:#595959;text-decoration:line-through;">&#8377;800</span>
+                    <span class="plan-disc"
+                          style="font-size:20px;font-weight:800;color:#004364;">&#8377;720</span>
+                  </div>
+                  <p class="plan-dur"
+                   style="font-size:14px;font-weight:400;color:#262626;text-align:center;">6 Months</p>
+                </div>                
+              </div>
+
+              <!-- PREMIUM -->
+              <div class="plan-col"
+                   style="display:flex;flex-direction:column;align-items:center;flex:1;max-width:175px;">
+                <div style="display:flex;align-items:center;justify-content:center;
+                            width:42px;height:42px;border-radius:50%;
+                            position:relative;z-index:2;margin-bottom:-21px;flex-shrink:0;">
+                  <img src="assets/badge-crown.png" width="42" height="42" alt="" class="logo-light">
+                  <img src="assets/badge-crown-dark.png" width="42" height="42" alt="" class="logo-dark" style="display:none;">
+                </div>
+                <div class="plan-card-bg plan-card-std"
+                     style="width:150px;height:137px;
+                            background-image:url('assets/plan-card-std.png');
+                            background-size:100% 100%;background-repeat:no-repeat;
+                            display:flex;flex-direction:column;align-items:center;justify-content:center;
+                            gap:5px;border-radius:8px;position:relative;z-index:1;">
+                  <span class="plan-name"
+                        style="font-size:13px;font-weight:500;color:#595959;letter-spacing:0.4px;">PREMIUM</span>
+                  <div style="display:flex;align-items:baseline;gap:4px;">
+                    <span class="plan-orig"
+                          style="font-size:15px;font-weight:400;color:#595959;text-decoration:line-through;">&#8377;1200</span>
+                    <span class="plan-disc"
+                          style="font-size:20px;font-weight:800;color:#004364;">&#8377;1080</span>
+                  </div>
+                  <p class="plan-dur"
+                   style="font-size:14px;font-weight:400;color:#262626;text-align:center;">12 Months</p>
+                </div>
+              </div>
+
+            </div><!-- /plans row -->
+
+            <!-- Use Code -->
+            <div style="display:flex;align-items:center;justify-content:center;gap:8px;padding:28px 0 0;">
+              <span class="use-code-label"
+                    style="font-size:20px;font-weight:400;color:#595959;">Use Code:</span>
+              <span class="use-code-val"
+                    style="font-size:20px;font-weight:600;color:#262626;letter-spacing:0.4px;">DISC10</span>
+            </div>
+
+            <!-- CTA Button -->
+            <div style="text-align:center;padding:16px 0 0;">
+              <a href="#"
+                 style="display:inline-block;background-color:#fcd800;border-radius:25px;
+                        padding:17px 40px;min-width:300px;
+                        font-size:16px;font-weight:700;color:#262626;
+                        letter-spacing:0.32px;text-transform:uppercase;text-align:center;">
+                EXPLORE CIBIL PLANS
+              </a>
+            </div>
+
+            <!-- Validity -->
+            <p class="validity-txt"
+               style="font-size:14px;font-weight:400;color:#595959;text-align:center;
+                      padding:12px 0 32px;letter-spacing:0.28px;">
+              Valid until 31<sup style="font-size:9px;">st</sup> March 2025
+            </p>
+
+          </div><!-- /discount inner -->
+        </div>
+      </div><!-- /discount -->
+
+
+      <!-- ═══════════════════════════════════
+           NOTE TEXT
+      ═══════════════════════════════════ -->
+      <p class="note-txt"
+         style="font-size:16px;font-weight:400;color:#262626;line-height:24px;
+                text-align:center;padding:24px 99px;">
+        Note: You can also download one credit report by availing our one-time subscription of Starter Plan at just Rs.&nbsp;118.
+      </p>
+
+
+      <!-- ═══════════════════════════════════
+           STARTER PLAN CARD
+      ═══════════════════════════════════ -->
+      <div class="starter-section" style="padding:0 97px;">
+        <div class="starter-card"
+             style="background-color:#ccedfa;border:1px solid #ccedfa;border-radius:12px;overflow:hidden;">
+
+          <!-- Header row -->
+          <div class="starter-hdr"
+               style="display:flex;align-items:center;justify-content:space-between;
+                      padding:24px 32px;background-color:#ccedfa;">
+            <span class="starter-title"
+                  style="font-size:20px;font-weight:700;color:#262626;line-height:32px;">
+              Starter Plan
+            </span>
+            <span class="starter-price"
+                  style="font-size:32px;font-weight:600;color:#262626;line-height:48px;letter-spacing:-0.32px;">
+              &#8377;118
+            </span>
+          </div>
+
+          <!-- Features body -->
+          <div class="starter-body"
+               style="background-color:#f7f9fa;padding:24px 32px 16px;border-radius:0 0 12px 12px;">
+
+            <!-- ✓ Credit Report -->
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <img class="feat-check" src="assets/feature-check.png"
+                   width="14" height="10" alt="Yes" style="flex-shrink:0;">
+              <span class="starter-feat"
+                    style="font-size:16px;font-weight:400;color:#262626;line-height:24px;">
+                Credit Report
+              </span>
+            </div>
+
+            <!-- ✗ CIBIL Score -->
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+              <img class="feat-cross" src="assets/feature-cross.png"
+                   width="12" height="12" alt="No" style="flex-shrink:0;">
+              <span class="starter-feat"
+                    style="font-size:16px;font-weight:400;color:#262626;line-height:24px;">
+                CIBIL Score
+              </span>
+            </div>
+
+            <!-- ✓ One-time access -->
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;">
+              <img class="feat-check-2" src="assets/feature-check-2.png"
+                   width="14" height="10" alt="Yes" style="flex-shrink:0;">
+              <span class="starter-feat"
+                    style="font-size:16px;font-weight:400;color:#262626;line-height:24px;">
+                One-time access to your credit report
+              </span>
+            </div>
+
+            <!-- Note banner -->
+            <div class="starter-note-bg"
+                 style="background-color:#e6f6fa;border-radius:8px;padding:5px 16px 6px; margin:0 -16px;">
+              <p class="starter-note-txt"
+                 style="font-size:14px;font-weight:400;font-style:italic;color:#262626;
+                        line-height:24px;letter-spacing:0.28px;">
+                Note: No discount code is applicable on starter plan.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div><!-- /starter -->
+
+
+      <!-- ═══════════════════════════════════
+           SECOND CTA BUTTON
+      ═══════════════════════════════════ -->
+      <div style="text-align:center;padding:24px 40px 32px;">
+        <a href="#"
+           style="display:inline-block;background-color:#fcd800;border-radius:25px;
+                  padding:17px 40px;min-width:300px;
+                  font-size:16px;font-weight:700;color:#262626;
+                  letter-spacing:0.32px;text-transform:uppercase;text-align:center;">
+          EXPLORE CIBIL PLANS
+        </a>
+      </div>
+
+
+      <!-- ═══════════════════════════════════
+           FOOTER — App download strip
+      ═══════════════════════════════════ -->
+      <div class="footer-upper" style="background-color:#ccedfa;padding:21px 40px 16px;">
+        <div class="footer-row"
+             style="display:flex;align-items:center;justify-content:space-between;gap:16px;">
+
+          <!-- Promo text -->
+          <div>
+            <p class="footer-app-title"
+               style="font-size:16px;font-weight:700;color:#262626;line-height:16px;margin-bottom:8px;">
+              Download the CIBIL App Today!
+            </p>
+            <p class="footer-app-body"
+               style="font-size:10px;font-weight:300;color:#262626;line-height:1.4;max-width:280px;">
+              Track how your credit decisions impact your credit profile. Explore CIBIL Subscription Plans.
+            </p>
+          </div>
+
+          <!-- Store buttons -->
+          <div class="footer-store-row" style="display:flex;gap:10px;flex-shrink:0;">
+
+            <!-- Google Play -->
+            <img src="assets/play-store.png" width="126" height="36" alt="" srcset="">
+
+            <!-- App Store -->
+            <img src="assets/app-store.png" width="126" height="36" alt="" srcset="">
+
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOTER — Address + Social -->
+      <div class="footer-lower" style="background-color:#004364;padding:20px 40px 24px;">
+        <div class="footer-row"
+             style="display:flex;align-items:center;justify-content:space-between;gap:16px;">
+
+          <!-- Address -->
+          <div>
+            <p class="footer-company"
+               style="font-family:'Intro',sans-serif;font-size:12px;font-weight:700;color:#fff;line-height:16px;margin-bottom:6px;">
+              TransUnion CIBIL Limited
+            </p>
+            <p class="footer-addr"
+               style="font-size:10px;font-weight:300;color:#fff;line-height:1.5;">
+              One World Centre, Tower 2,<br>
+              19th Floor, Senapati Bapat Marg, Elphinstone Road,<br>
+              Mumbai &ndash; 400013<br>
+              Tel: 022-66384600&nbsp;&nbsp;Fax: 022-66384666
+            </p>
+          </div>
+
+          <!-- Vertical divider -->
+          <div style="width:1px;height:60px;background-color:#00a6ca;flex-shrink:0;"></div>
+
+          <!-- Social -->
+          <div style="text-align:left;flex-shrink:0;">
+            <p class="footer-follow-lbl"
+               style="font-family:'Intro',sans-serif;font-size:12px;font-weight:700;color:#fff;line-height:16px;margin-bottom:12px;">
+              Follow us on
+            </p>
+            <div style="display:flex;gap:4px;justify-content:flex-end;">
+
+              <a href="#" style="text-decoration:none;">
+                <div style="width:36px;height:36px;background:#fff;border:1px solid #e6edf1;
+                            border-radius:50%;display:flex;align-items:center;justify-content:center;">
+                  <img src="assets/social-linkedin.png" width="18" height="18" alt="LinkedIn">
+                </div>
+              </a>
+
+              <a href="#" style="text-decoration:none;">
+                <div style="width:36px;height:36px;background:#fff;border:1px solid #e6edf1;
+                            border-radius:50%;display:flex;align-items:center;justify-content:center;">
+                  <img src="assets/social-facebook.png" width="18" height="18" alt="Facebook">
+                </div>
+              </a>
+
+              <a href="#" style="text-decoration:none;">
+                <div style="width:36px;height:36px;background:#fff;border:1px solid #e6edf1;
+                            border-radius:50%;display:flex;align-items:center;justify-content:center;">
+                  <img src="assets/social-youtube.png" width="18" height="18" alt="YouTube">
+                </div>
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /footer lower -->
+
+
+    </div><!-- /email-bg -->
+  </div><!-- /outer shell -->
+
+</body>
+</html>

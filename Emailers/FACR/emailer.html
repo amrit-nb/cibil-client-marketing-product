@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="light dark">
   <meta name="supported-color-schemes" content="light dark">
+  <!--[if mso]>
+  <noscript><xml>
+    <o:OfficeDocumentSettings>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+  </xml></noscript>
+  <![endif]-->
   <title>CIBIL – Exclusive 10% Discount Offer</title>
 
   <style>
@@ -18,90 +25,75 @@
     }
 
     /* ── Reset ─────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body   { background-color: #f0f2f5; font-family: 'Roboto', Arial, Helvetica, sans-serif; }
-    img    { border: 0; display: block; }
-    a      { text-decoration: none; }
+    body   { margin:0; padding:0; background-color:#f0f2f5; font-family:'Roboto',Arial,Helvetica,sans-serif; }
+    img    { border:0; display:block; }
+    a      { text-decoration:none; }
+    table  { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+    td, th { font-family:'Roboto',Arial,Helvetica,sans-serif; }
 
-    /* Stop iOS / Gmail auto-linking addresses, phones, dates */
+    /* Stop iOS / Gmail auto-linking */
     a[x-apple-data-detectors], u + #body a, #MessageViewBody a {
-      color: inherit !important; text-decoration: none !important;
+      color:inherit !important; text-decoration:none !important;
     }
 
     /* ── Dark Mode ──────────────────────────── */
     @media (prefers-color-scheme: dark) {
-      body                   { background-color: #1a1a1a !important; }
-      .email-bg              { background-color: #262626 !important; }
-      .header-wrap           { background-color: #262626 !important; }
-      .logo-light            { display: none !important; }
-      .logo-dark             { display: block !important; }
-      .login-btn             { border-color: #ffffff !important; color: #ffffff !important; }
+      body                    { background-color:#1a1a1a !important; }
+      .email-bg               { background-color:#262626 !important; }
+      .header-td              { background-color:#262626 !important; }
+      .logo-light             { display:none !important; }
+      .logo-dark              { display:block !important; }
+      .login-btn              { border-color:#ffffff !important; color:#ffffff !important; }
 
-      /* Hero */
-      .hero-card             { background-color: #004364 !important; border-color: #004364 !important; }
-      .hero-circle-tl        { background-image: url('assets/hero-circle-tl-dark.png') !important; }
-      .hero-circle-br        { background-image: url('assets/hero-circle-br-dark.png') !important; }
-      .hero-title            { color: #00a6ca !important; }
-      .hero-body             { color: #fafafa !important; }
+      .hero-card-wrap         { background-color:#004364 !important; border-color:#004364 !important; }
+      .hero-title             { color:#00a6ca !important; }
+      .hero-body-txt          { color:#fafafa !important; }
 
-      /* Discount */
-      .discount-card         { background-color: #005f8d !important; }
-      .disc-circle-tl        { background-image: url('assets/discount-circle-dark.png') !important; }
-      .disc-circle-br        { background-image: url('assets/discount-circle-dark.png') !important; }
-      .discount-intro        { color: #fafafa !important; }
-      .discount-num          { color: #99dbea !important; }
-      .discount-plans        { color: #fafafa !important; }
-      .plan-card-basic       { background-image: url('assets/plan-card-basic-dark.png') !important; }
-      .plan-card-std         { background-image: url('assets/plan-card-std-dark.png') !important; }
-      .plan-name             { color: #f2f2f2 !important; }
-      .plan-orig             { color: #f2f2f2 !important; }
-      .plan-disc             { color: #00a6ca !important; }
-      .plan-dur              { color: #fafafa !important; }
-      .use-code-label        { color: #f2f2f2 !important; }
-      .use-code-val          { color: #fafafa !important; }
-      .validity-txt          { color: #f2f2f2 !important; }
+      .discount-wrap          { background-color:#005f8d !important; }
+      .discount-intro         { color:#fafafa !important; }
+      .discount-num           { color:#99dbea !important; }
+      .discount-plans         { color:#fafafa !important; }
+      .use-code-label         { color:#f2f2f2 !important; }
+      .use-code-val           { color:#fafafa !important; }
+      .validity-txt           { color:#f2f2f2 !important; }
 
-      /* Starter feature icons: swap to dark versions */
-      .feat-check            { content: url('assets/feature-check-dark.png') !important; }
-      .feat-cross            { content: url('assets/feature-cross-dark.png') !important; }
-      .feat-check-2          { content: url('assets/feature-check-2-dark.png') !important; }
+      .plan-name              { color:#f2f2f2 !important; }
+      .plan-orig              { color:#f2f2f2 !important; }
+      .plan-disc              { color:#00a6ca !important; }
+      .plan-dur               { color:#fafafa !important; }
 
-      /* Note */
-      .note-txt              { color: #fafafa !important; }
+      .badge-light            { display:none !important; }
+      .badge-dark             { display:block !important; }
 
-      /* Starter plan */
-      .starter-card          { background-color: #005f8d !important; border-color: #005f8d !important; }
-      .starter-hdr           { background-color: #005f8d !important; }
-      .starter-title         { color: #fafafa !important; }
-      .starter-price         { color: #fafafa !important; }
-      .starter-body          { background-color: #004364 !important; }
-      .starter-feat          { color: #fafafa !important; }
-      .starter-note-bg       { background-color: #005f8d !important; }
-      .starter-note-txt      { color: #fafafa !important; }
+      .note-txt               { color:#fafafa !important; }
 
-      /* Footer */
-      .footer-upper          { background-color: #004364 !important; }
-      .footer-app-title      { color: #fafafa !important; }
-      .footer-app-body       { color: #fafafa !important; }
-      .footer-lower          { background-color: #ccedfa !important; }
-      .footer-company        { color: #262626 !important; }
-      .footer-addr           { color: #262626 !important; }
-      .footer-follow-lbl     { color: #262626 !important; }
+      .starter-card-td        { background-color:#005f8d !important; border-color:#005f8d !important; }
+      .starter-hdr-td         { background-color:#005f8d !important; }
+      .starter-title          { color:#fafafa !important; }
+      .starter-price          { color:#fafafa !important; }
+      .starter-body-td        { background-color:#004364 !important; }
+      .starter-feat           { color:#fafafa !important; }
+      .starter-note-td        { background-color:#005f8d !important; }
+      .starter-note-txt       { color:#fafafa !important; }
+
+      .footer-upper-td        { background-color:#004364 !important; }
+      .footer-app-title       { color:#fafafa !important; }
+      .footer-app-body        { color:#fafafa !important; }
+      .footer-lower-td        { background-color:#ccedfa !important; }
+      .footer-company         { color:#262626 !important; }
+      .footer-addr            { color:#262626 !important; }
+      .footer-follow-lbl      { color:#262626 !important; }
     }
 
     /* ── Responsive ─────────────────────────── */
-    @media only screen and (max-width: 640px) {
-      .email-bg              { width: 100% !important; }
-      .header-wrap           { padding: 20px 16px !important; }
-      .sp                    { padding-left: 16px !important; padding-right: 16px !important; }
-      .hero-content          { padding: 20px !important; }
-      .discount-intro-p      { padding-left: 20px !important; padding-right: 20px !important; }
-      .plans-row             { gap: 6px !important; padding: 12px 10px 0 !important; }
-      .plan-col              { max-width: 33% !important; }
-      .plan-card-bg          { width: 100% !important; min-height: 110px !important; }
-      .starter-section       { padding: 0 16px !important; }
-      .footer-row            { flex-direction: column !important; gap: 14px !important; }
-      .footer-store-row      { justify-content: flex-start !important; }
+    @media only screen and (max-width:640px) {
+      .email-bg               { width:100% !important; }
+      .header-td              { padding:20px 16px !important; }
+      .sp-td                  { padding-left:16px !important; padding-right:16px !important; }
+      .hero-content-td        { padding:20px !important; }
+      .disc-intro-td          { padding-left:20px !important; padding-right:20px !important; }
+      .plan-col-td            { width:33% !important; }
+      .starter-outer-td       { padding-left:16px !important; padding-right:16px !important; }
     }
   </style>
 </head>
@@ -113,452 +105,782 @@
     Exclusive 10% OFF on ALL CIBIL Subscription Plans. Use Code: DISC10. Valid until 31st March 2025.&#847;&#8199;&#65279;
   </div>
 
-  <!-- ░░ EMAIL SHELL ░░░░░░░░░░░░░░░░░░░░░░░░ -->
-  <div style="width:100%;background-color:#f0f2f5;">
-    <div class="email-bg" style="max-width:640px;margin:0 auto;background-color:#fafafa;">
+  <!-- ░░ OUTER SHELL ░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" style="background-color:#f0f2f5;">
+    <tr>
+      <td align="center">
+
+        <!-- ░░ EMAIL BODY ░░ -->
+        <table class="email-bg" width="640" cellpadding="0" cellspacing="0" border="0" role="presentation"
+               style="max-width:640px;background-color:#fafafa;">
 
 
-      <!-- ═══════════════════════════════════
-           HEADER
-      ═══════════════════════════════════ -->
-      <div class="header-wrap" style="display:flex;align-items:center;justify-content:space-between;padding:28px 40px 20px;background-color:#fafafa;">
+          <!-- ═══════════════════════════════════
+               HEADER
+          ═══════════════════════════════════ -->
+          <tr>
+            <td>
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                <tr>
+                  <!-- Logo -->
+                  <td class="header-td" valign="middle" align="left"
+                      style="padding:28px 40px 20px;background-color:#fafafa;">
+                    <div class="logo-light">
+                      <img src="assets/logo-light.png" width="90" height="25" alt="CIBIL" style="display:block;">
+                      <img src="assets/logo-light-strapline.png" width="90" height="8" alt="Part of TransUnion"
+                           style="display:block;margin-top:3px;">
+                    </div>
+                    <div class="logo-dark" style="display:none;">
+                      <img src="assets/logo-dark.png" width="90" height="25" alt="CIBIL" style="display:block;">
+                      <img src="assets/logo-dark-strapline.png" width="90" height="8" alt="Part of TransUnion"
+                           style="display:block;margin-top:3px;">
+                    </div>
+                  </td>
+                  <!-- Login Button -->
+                  <td class="header-td" valign="middle" align="right"
+                      style="padding:28px 40px 20px;background-color:#fafafa;white-space:nowrap;">
+                    <a href="#" class="login-btn"
+                       style="display:inline-block;border:1.5px solid #00a6ca;border-radius:25px;
+                              padding:10px 30px;font-size:16px;font-weight:700;color:#00a6ca;
+                              letter-spacing:0.32px;white-space:nowrap;text-decoration:none;
+                              font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                      Login
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
 
-        <!-- Logo -->
-        <div>
-          <!-- Light logo (default) -->
-          <div class="logo-light">
-            <img src="assets/logo-light.png"
-                 width="90" height="25" alt="CIBIL">
-            <img src="assets/logo-light-strapline.png"
-                 width="90" height="8" alt="Part of TransUnion" style="margin-top:3px;">
-          </div>
-          <!-- Dark logo -->
-          <div class="logo-dark" style="display:none;">
-            <img src="assets/logo-dark.png"
-                 width="90" height="25" alt="CIBIL">
-            <img src="assets/logo-dark-strapline.png"
-                 width="90" height="8" alt="Part of TransUnion" style="margin-top:3px;">
-          </div>
-        </div>
 
-        <!-- Login button -->
-        <a href="#" class="login-btn"
-           style="display:inline-block;border:1.5px solid #00a6ca;border-radius:25px;padding:10px 30px;font-size:16px;font-weight:700;color:#00a6ca;letter-spacing:0.32px;white-space:nowrap;">
-          Login
-        </a>
+          <!-- ═══════════════════════════════════
+               HERO CARD
+          ═══════════════════════════════════ -->
+          <tr>
+            <td class="sp-td" style="padding:0 40px;">
 
-      </div><!-- /header -->
+              <!-- Hero card wrapper — position:relative for circle overlays -->
+              <div class="hero-card-wrap"
+                   style="background-color:#e6f6fa;border:1px solid #ccedfa;border-radius:16px;
+                          overflow:hidden;position:relative;min-height:189px;">
+
+                <!-- Decorative circles as <img> (non-Outlook; Outlook shows plain card bg) -->
+                <!--[if !mso]><!-->
+                <img src="assets/hero-circle-tl.png" width="220" height="220" alt=""
+                     style="position:absolute;left:-50px;top:-50px;display:block;pointer-events:none;z-index:0;">
+                <img src="assets/hero-circle-br.png" width="150" height="149" alt=""
+                     style="position:absolute;right:0;bottom:-15px;display:block;pointer-events:none;z-index:0;">
+                <!--<![endif]-->
+
+                <!-- Content table — z-index above circles -->
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation"
+                       style="position:relative;z-index:1;">
+                  <tr>
+                    <td class="hero-content-td" valign="bottom"
+                        style="padding:28px 34px;">
+                      <h1 class="hero-title"
+                          style="font-size:32px;font-weight:600;color:#004364;line-height:1.3;
+                                 margin:0 0 8px 0;font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                        Dear User,
+                      </h1>
+                      <p class="hero-body-txt"
+                         style="font-size:16px;font-weight:400;color:#262626;line-height:1.5;
+                                max-width:318px;margin:0;font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                        We hope you've found the FREE CIBIL Score &amp; Report insightful.
+                      </p>
+                    </td>
+                    <!-- CIBIL Report illustration -->
+                    <td valign="bottom" align="right"
+                        style="padding:28px 34px 28px 0;width:176px;">
+                      <img src="assets/cibil-report.png" width="160" height="110" alt=""
+                           style="display:block;">
+                    </td>
+                  </tr>
+                </table>
+
+              </div>
+            </td>
+          </tr>
 
 
-      <!-- ═══════════════════════════════════
-           HERO CARD — "Dear User"
-      ═══════════════════════════════════ -->
-      <div class="sp" style="padding:0 40px;">
-        <div class="hero-card"
-             style="background-color:#e6f6fa;border:1px solid #ccedfa;border-radius:16px;overflow:hidden;position:relative;min-height:189px;">
+          <!-- ═══════════════════════════════════
+               DISCOUNT CARD — 10% OFF
+          ═══════════════════════════════════ -->
+          <tr>
+            <td class="sp-td" style="padding:16px 40px 0;">
 
-          <!-- Decorative circle · top-left -->
-          <div class="hero-circle-tl"
-               style="position:absolute;left:-50px;top:-50px;width:220px;height:220px;
-                      background-image:url('assets/hero-circle-tl.png');
-                      background-size:cover;pointer-events:none;">
-          </div>
+              <!-- Discount card wrapper -->
+              <div class="discount-wrap"
+                   style="background-color:#fff9d9;border-radius:16px;overflow:hidden;position:relative;">
 
-          <!-- Decorative circle · bottom-right -->
-          <div class="hero-circle-br"
-               style="position:absolute;right:0;bottom:-15px;width:150px;height:149px;
-                      background-image:url('assets/hero-circle-br.png');
-                      background-size:cover;pointer-events:none;">
-          </div>
+                <!-- Decorative circles (non-Outlook) -->
+                <!--[if !mso]><!-->
+                <img src="assets/discount-circle.png" width="331" height="331" alt=""
+                     style="position:absolute;left:-85px;top:-62px;display:block;pointer-events:none;z-index:0;">
+                <img src="assets/discount-circle.png" width="331" height="331" alt=""
+                     style="position:absolute;right:-171px;bottom:-140px;display:block;pointer-events:none;z-index:0;">
+                <!--<![endif]-->
 
-          <!-- Content -->
-          <div class="hero-content"
-               style="display:flex;align-items:flex-end;justify-content:space-between;padding:28px 34px;position:relative;z-index:1;">
+                <!-- Inner content — z-index above circles -->
+                <div style="position:relative;z-index:1;">
 
-            <!-- Text -->
-            <div>
-              <h1 class="hero-title"
-                  style="font-size:32px;font-weight:600;color:#004364;line-height:1.3;margin-bottom:8px;">
-                Dear User,
-              </h1>
-              <p class="hero-body"
-                 style="font-size:16px;font-weight:400;color:#262626;line-height:1.5;max-width:318px;">
-                We hope you've found the FREE CIBIL Score &amp; Report insightful.
+                  <!-- Intro text -->
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                    <tr>
+                      <td class="disc-intro-td" align="center" style="padding:40px 60px 0;">
+                        <p class="discount-intro"
+                           style="font-size:18px;font-weight:400;color:#262626;line-height:24px;
+                                  text-align:center;margin:0;font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                          To help you get started on your credit monitoring journey,<br>we'd like to offer you an exclusive
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!-- ── Big 10 % OFF ── -->
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                    <tr>
+                      <td align="center" style="padding:10px 0 0;">
+                        <table cellpadding="0" cellspacing="0" border="0" role="presentation">
+                          <tr>
+                            <!-- "10" -->
+                            <td valign="bottom" style="padding-bottom:12px;line-height:1;">
+                              <span class="discount-num"
+                                    style="font-size:148px;font-weight:900;color:#005f8d;
+                                           letter-spacing:-20px;line-height:1;
+                                           font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                                10
+                              </span>
+                            </td>
+                            <!-- "% OFF" stacked -->
+                            <td valign="bottom" style="padding-bottom:12px;padding-left:18px;">
+                              <table cellpadding="0" cellspacing="0" border="0" role="presentation">
+                                <tr>
+                                  <td>
+                                    <span class="discount-num"
+                                          style="font-size:97px;font-weight:700;color:#005f8d;
+                                                 letter-spacing:-8px;line-height:normal;
+                                                 font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                                      %
+                                    </span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td align="center">
+                                    <span class="discount-num"
+                                          style="font-size:30px;font-weight:900;color:#005f8d;
+                                                 letter-spacing:2px;line-height:normal;
+                                                 display:block;text-align:center;margin-top:-16px;
+                                                 font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                                      OFF
+                                    </span>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!-- Sub-text -->
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                    <tr>
+                      <td class="disc-intro-td" align="center" style="padding:4px 60px 0;">
+                        <p class="discount-plans"
+                           style="font-size:18px;font-weight:400;color:#262626;line-height:24px;
+                                  text-align:center;margin:0;font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                          on ALL CIBIL Subscription Plans.
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!-- ── Plan Cards Row ── -->
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                    <tr>
+                      <td style="padding:20px 20px 0;">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                          <tr>
+
+                            <!-- ── BASIC ── -->
+                            <td class="plan-col-td" align="center" valign="top" style="width:33.33%;">
+
+                              <!-- Badge — non-Outlook overlaps card; Outlook sits above neatly -->
+                              <!--[if !mso]><!-->
+                              <div style="text-align:center;position:relative;z-index:2;margin-bottom:-21px;line-height:0;">
+                                <img src="assets/badge-check.png" class="badge-light" width="42" height="42" alt=""
+                                     style="display:inline-block;">
+                                <img src="assets/badge-check-dark.png" class="badge-dark" width="42" height="42" alt=""
+                                     style="display:none;">
+                              </div>
+                              <!--<![endif]-->
+                              <!--[if mso]>
+                              <div style="text-align:center;padding-bottom:4px;">
+                                <img src="assets/badge-check.png" width="42" height="42" alt="" style="display:inline-block;">
+                              </div>
+                              <![endif]-->
+
+                              <!-- Plan card — bg image via <img> (non-Outlook) + VML (Outlook) -->
+                              <!--[if mso]>
+                              <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false"
+                                      style="width:150px;height:137px;border-radius:8px;">
+                                <v:fill type="frame" src="assets/plan-card-basic.png" color="#e8f4f8"/>
+                                <v:textbox inset="0,0,0,0" style="mso-fit-shape-to-text:false;">
+                              <![endif]-->
+                              <div style="width:150px;height:137px;border-radius:8px;overflow:hidden;
+                                          position:relative;display:inline-block;vertical-align:top;">
+                                <!--[if !mso]><!-->
+                                <img src="assets/plan-card-basic.png" width="150" height="137" alt=""
+                                     style="position:absolute;top:0;left:0;width:150px;height:137px;
+                                            display:block;z-index:0;">
+                                <!--<![endif]-->
+                                <table width="150" height="137" cellpadding="0" cellspacing="0" border="0"
+                                       role="presentation" style="position:relative;z-index:1;">
+                                  <tr>
+                                    <td align="center" valign="middle" style="padding-top:10px;">
+                                      <span class="plan-name"
+                                            style="font-size:13px;font-weight:500;color:#595959;
+                                                   letter-spacing:0.4px;display:block;
+                                                   font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                                        BASIC
+                                      </span>
+                                      <table cellpadding="0" cellspacing="0" border="0" role="presentation"
+                                             style="margin:5px auto 0;">
+                                        <tr>
+                                          <td style="padding-right:4px;">
+                                            <span class="plan-orig"
+                                                  style="font-size:15px;font-weight:400;color:#595959;
+                                                         text-decoration:line-through;
+                                                         font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                                              &#8377;550
+                                            </span>
+                                          </td>
+                                          <td>
+                                            <span class="plan-disc"
+                                                  style="font-size:20px;font-weight:800;color:#004364;
+                                                         font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                                              &#8377;495
+                                            </span>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                      <p class="plan-dur"
+                                         style="font-size:14px;font-weight:400;color:#262626;
+                                                text-align:center;margin:5px 0 0;
+                                                font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                                        1 Month
+                                      </p>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </div>
+                              <!--[if mso]>
+                                </v:textbox>
+                              </v:rect>
+                              <![endif]-->
+
+                            </td>
+
+                            <!-- Column spacer -->
+                            <td style="width:12px;"></td>
+
+                            <!-- ── STANDARD ── -->
+                            <td class="plan-col-td" align="center" valign="top" style="width:33.33%;">
+
+                              <!--[if !mso]><!-->
+                              <div style="text-align:center;position:relative;z-index:2;margin-bottom:-21px;line-height:0;">
+                                <img src="assets/badge-star.png" class="badge-light" width="42" height="42" alt=""
+                                     style="display:inline-block;">
+                                <img src="assets/badge-star-dark.png" class="badge-dark" width="42" height="42" alt=""
+                                     style="display:none;">
+                              </div>
+                              <!--<![endif]-->
+                              <!--[if mso]>
+                              <div style="text-align:center;padding-bottom:4px;">
+                                <img src="assets/badge-star.png" width="42" height="42" alt="" style="display:inline-block;">
+                              </div>
+                              <![endif]-->
+
+                              <!--[if mso]>
+                              <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false"
+                                      style="width:150px;height:137px;border-radius:8px;">
+                                <v:fill type="frame" src="assets/plan-card-std.png" color="#e8f0f8"/>
+                                <v:textbox inset="0,0,0,0" style="mso-fit-shape-to-text:false;">
+                              <![endif]-->
+                              <div style="width:150px;height:137px;border-radius:8px;overflow:hidden;
+                                          position:relative;display:inline-block;vertical-align:top;">
+                                <!--[if !mso]><!-->
+                                <img src="assets/plan-card-std.png" width="150" height="137" alt=""
+                                     style="position:absolute;top:0;left:0;width:150px;height:137px;
+                                            display:block;z-index:0;">
+                                <!--<![endif]-->
+                                <table width="150" height="137" cellpadding="0" cellspacing="0" border="0"
+                                       role="presentation" style="position:relative;z-index:1;">
+                                  <tr>
+                                    <td align="center" valign="middle" style="padding-top:10px;">
+                                      <span class="plan-name"
+                                            style="font-size:13px;font-weight:500;color:#595959;
+                                                   letter-spacing:0.4px;display:block;
+                                                   font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                                        STANDARD
+                                      </span>
+                                      <table cellpadding="0" cellspacing="0" border="0" role="presentation"
+                                             style="margin:5px auto 0;">
+                                        <tr>
+                                          <td style="padding-right:4px;">
+                                            <span class="plan-orig"
+                                                  style="font-size:15px;font-weight:400;color:#595959;
+                                                         text-decoration:line-through;
+                                                         font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                                              &#8377;800
+                                            </span>
+                                          </td>
+                                          <td>
+                                            <span class="plan-disc"
+                                                  style="font-size:20px;font-weight:800;color:#004364;
+                                                         font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                                              &#8377;720
+                                            </span>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                      <p class="plan-dur"
+                                         style="font-size:14px;font-weight:400;color:#262626;
+                                                text-align:center;margin:5px 0 0;
+                                                font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                                        6 Months
+                                      </p>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </div>
+                              <!--[if mso]>
+                                </v:textbox>
+                              </v:rect>
+                              <![endif]-->
+
+                            </td>
+
+                            <!-- Column spacer -->
+                            <td style="width:12px;"></td>
+
+                            <!-- ── PREMIUM ── -->
+                            <td class="plan-col-td" align="center" valign="top" style="width:33.33%;">
+
+                              <!--[if !mso]><!-->
+                              <div style="text-align:center;position:relative;z-index:2;margin-bottom:-21px;line-height:0;">
+                                <img src="assets/badge-crown.png" class="badge-light" width="42" height="42" alt=""
+                                     style="display:inline-block;">
+                                <img src="assets/badge-crown-dark.png" class="badge-dark" width="42" height="42" alt=""
+                                     style="display:none;">
+                              </div>
+                              <!--<![endif]-->
+                              <!--[if mso]>
+                              <div style="text-align:center;padding-bottom:4px;">
+                                <img src="assets/badge-crown.png" width="42" height="42" alt="" style="display:inline-block;">
+                              </div>
+                              <![endif]-->
+
+                              <!--[if mso]>
+                              <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false"
+                                      style="width:150px;height:137px;border-radius:8px;">
+                                <v:fill type="frame" src="assets/plan-card-std.png" color="#e8f0f8"/>
+                                <v:textbox inset="0,0,0,0" style="mso-fit-shape-to-text:false;">
+                              <![endif]-->
+                              <div style="width:150px;height:137px;border-radius:8px;overflow:hidden;
+                                          position:relative;display:inline-block;vertical-align:top;">
+                                <!--[if !mso]><!-->
+                                <img src="assets/plan-card-std.png" width="150" height="137" alt=""
+                                     style="position:absolute;top:0;left:0;width:150px;height:137px;
+                                            display:block;z-index:0;">
+                                <!--<![endif]-->
+                                <table width="150" height="137" cellpadding="0" cellspacing="0" border="0"
+                                       role="presentation" style="position:relative;z-index:1;">
+                                  <tr>
+                                    <td align="center" valign="middle" style="padding-top:10px;">
+                                      <span class="plan-name"
+                                            style="font-size:13px;font-weight:500;color:#595959;
+                                                   letter-spacing:0.4px;display:block;
+                                                   font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                                        PREMIUM
+                                      </span>
+                                      <table cellpadding="0" cellspacing="0" border="0" role="presentation"
+                                             style="margin:5px auto 0;">
+                                        <tr>
+                                          <td style="padding-right:4px;">
+                                            <span class="plan-orig"
+                                                  style="font-size:15px;font-weight:400;color:#595959;
+                                                         text-decoration:line-through;
+                                                         font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                                              &#8377;1200
+                                            </span>
+                                          </td>
+                                          <td>
+                                            <span class="plan-disc"
+                                                  style="font-size:20px;font-weight:800;color:#004364;
+                                                         font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                                              &#8377;1080
+                                            </span>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                      <p class="plan-dur"
+                                         style="font-size:14px;font-weight:400;color:#262626;
+                                                text-align:center;margin:5px 0 0;
+                                                font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                                        12 Months
+                                      </p>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </div>
+                              <!--[if mso]>
+                                </v:textbox>
+                              </v:rect>
+                              <![endif]-->
+
+                            </td>
+
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!-- Use Code -->
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                    <tr>
+                      <td align="center" style="padding:28px 0 0;">
+                        <span class="use-code-label"
+                              style="font-size:20px;font-weight:400;color:#595959;
+                                     font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                          Use Code:&nbsp;
+                        </span>
+                        <span class="use-code-val"
+                              style="font-size:20px;font-weight:600;color:#262626;letter-spacing:0.4px;
+                                     font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                          SAVE10
+                        </span>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!-- CTA Button -->
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                    <tr>
+                      <td align="center" style="padding:16px 0 0;">
+                        <a href="#"
+                           style="display:inline-block;background-color:#fcd800;border-radius:25px;
+                                  padding:17px 40px;min-width:300px;font-size:16px;font-weight:700;
+                                  color:#262626;letter-spacing:0.32px;text-transform:uppercase;
+                                  text-align:center;text-decoration:none;
+                                  font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                          EXPLORE CIBIL PLANS
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!-- Validity -->
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                    <tr>
+                      <td align="center" style="padding:12px 0 32px;">
+                        <p class="validity-txt"
+                           style="font-size:14px;font-weight:400;color:#595959;text-align:center;
+                                  margin:0;letter-spacing:0.28px;
+                                  font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                          Valid until 30<sup style="font-size:9px;">th</sup> April 2026
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+
+                </div><!-- /discount inner -->
+              </div>
+            </td>
+          </tr>
+
+
+          <!-- ═══════════════════════════════════
+               NOTE TEXT
+          ═══════════════════════════════════ -->
+          <tr>
+            <td style="padding:24px 99px;text-align:center;">
+              <p class="note-txt"
+                 style="font-size:16px;font-weight:400;color:#262626;line-height:24px;
+                        text-align:center;margin:0;
+                        font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                Note: You can also download one credit report by availing our one-time subscription of Starter Plan at just Rs.&nbsp;118.
               </p>
-            </div>
-
-            <!-- CIBIL Report illustration -->
-            <div style="position:relative;width:160px;height:110px;flex-shrink:0;margin-left:16px;">
-              <img src="assets/cibil-report.png" alt="" srcset="">
-            </div>
-
-          </div>
-        </div>
-      </div><!-- /hero -->
+            </td>
+          </tr>
 
 
-      <!-- ═══════════════════════════════════
-           DISCOUNT CARD — 10% OFF
-      ═══════════════════════════════════ -->
-      <div class="sp" style="padding:16px 40px 0;">
-        <div class="discount-card"
-             style="background-color:#fff9d9;border-radius:16px;overflow:hidden;position:relative;">
+          <!-- ═══════════════════════════════════
+               STARTER PLAN CARD
+          ═══════════════════════════════════ -->
+          <tr>
+            <td class="starter-outer-td" style="padding:0 97px;">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation"
+                     class="starter-card-td"
+                     style="border:1px solid #ccedfa;border-radius:12px;overflow:hidden;">
 
-          <!-- Decorative circle · top-left -->
-          <div class="disc-circle-tl"
-               style="position:absolute;left:-85px;top:-62px;width:331px;height:331px;
-                      background-image:url('assets/discount-circle.png');
-                      background-size:cover;pointer-events:none;">
-          </div>
+                <!-- Header row -->
+                <tr>
+                  <td class="starter-hdr-td"
+                      style="background-color:#ccedfa;padding:24px 32px;
+                             border-radius:12px 12px 0 0;">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                      <tr>
+                        <td valign="middle">
+                          <span class="starter-title"
+                                style="font-size:20px;font-weight:700;color:#262626;line-height:32px;
+                                       font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                            Starter Plan
+                          </span>
+                        </td>
+                        <td valign="middle" align="right">
+                          <span class="starter-price"
+                                style="font-size:32px;font-weight:600;color:#262626;
+                                       line-height:48px;letter-spacing:-0.32px;
+                                       font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                            &#8377;118
+                          </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
 
-          <!-- Decorative circle · bottom-right -->
-          <div class="disc-circle-br"
-               style="position:absolute;right:-171px;bottom:-140px;width:331px;height:331px;
-                      background-image:url('assets/discount-circle.png');
-                      background-size:cover;pointer-events:none;">
-          </div>
+                <!-- Features body -->
+                <tr>
+                  <td class="starter-body-td"
+                      style="background-color:#f7f9fa;padding:24px 32px 16px;
+                             border-radius:0 0 12px 12px;">
 
-          <!-- Inner content above circles -->
-          <div style="position:relative;z-index:1;">
+                    <!-- ✓ Credit Report -->
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation"
+                           style="margin-bottom:8px;">
+                      <tr>
+                        <td width="22" valign="middle" style="padding-right:8px;">
+                          <img src="assets/feature-check.png" width="14" height="10" alt="✓"
+                               style="display:block;">
+                        </td>
+                        <td valign="middle">
+                          <span class="starter-feat"
+                                style="font-size:16px;font-weight:400;color:#262626;line-height:24px;
+                                       font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                            Credit Report
+                          </span>
+                        </td>
+                      </tr>
+                    </table>
 
-            <!-- Intro text -->
-            <p class="discount-intro discount-intro-p"
-               style="font-size:18px;font-weight:400;color:#262626;line-height:24px;text-align:center;padding:40px 60px 0;">
-              To help you get started on your credit monitoring journey, we'd like to offer you an exclusive
-            </p>
+                    <!-- ✗ CIBIL Score -->
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation"
+                           style="margin-bottom:8px;">
+                      <tr>
+                        <td width="22" valign="middle" style="padding-right:10px;">
+                          <img src="assets/feature-cross.png" width="12" height="12" alt="✗"
+                               style="display:block;">
+                        </td>
+                        <td valign="middle">
+                          <span class="starter-feat"
+                                style="font-size:16px;font-weight:400;color:#262626;line-height:24px;
+                                       font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                            CIBIL Score
+                          </span>
+                        </td>
+                      </tr>
+                    </table>
 
-            <!-- ── Big "10 % OFF" ── -->
-            <div style="display:flex;align-items:flex-end;justify-content:center;line-height:1;padding:10px 0 0;">
-              <span class="discount-num"
-                    style="font-size:148px;font-weight:900;color:#005f8d;letter-spacing:-20px;line-height:1;padding-bottom:12px;">
-                10
-              </span>
-              <div style="display:flex;flex-direction:column;padding-bottom:12px;padding-left:18px;">
-                <span class="discount-num"
-                      style="font-size:97px;font-weight:700;color:#005f8d;letter-spacing:-8px;line-height:normal;">
-                  %
-                </span>
-                <span class="discount-num"
-                      style="font-size:30px;font-weight:900;color:#005f8d;text-align:center;letter-spacing:2px;line-height:normal;margin-top:-16px;">
-                  OFF
-                </span>
-              </div>
-            </div>
+                    <!-- ✓ One-time access -->
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation"
+                           style="margin-bottom:16px;">
+                      <tr>
+                        <td width="22" valign="middle" style="padding-right:8px;">
+                          <img src="assets/feature-check-2.png" width="14" height="10" alt="✓"
+                               style="display:block;">
+                        </td>
+                        <td valign="middle">
+                          <span class="starter-feat"
+                                style="font-size:16px;font-weight:400;color:#262626;line-height:24px;
+                                       font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                            One-time access to your credit report
+                          </span>
+                        </td>
+                      </tr>
+                    </table>
 
-            <!-- Sub-text -->
-            <p class="discount-plans discount-intro-p"
-               style="font-size:18px;font-weight:400;color:#262626;line-height:24px;text-align:center;padding:4px 60px 0;">
-              on ALL CIBIL Subscription Plans.
-            </p>
+                    <!-- Note banner -->
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                      <tr>
+                        <td class="starter-note-td"
+                            style="background-color:#e6f6fa;border-radius:8px;padding:5px 16px 6px;">
+                          <p class="starter-note-txt"
+                             style="font-size:14px;font-weight:400;font-style:italic;color:#262626;
+                                    line-height:24px;letter-spacing:0.28px;margin:0;
+                                    font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                            Note: No discount code is applicable on starter plan.
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
 
-            <!-- ── Plan Cards Row ── -->
-            <div class="plans-row"
-                 style="display:flex;justify-content:space-around;align-items:flex-start;padding:20px 20px 0;gap:12px;">
+                  </td>
+                </tr>
 
-              <!-- BASIC -->
-              <div class="plan-col"
-                   style="display:flex;flex-direction:column;align-items:center;flex:1;max-width:175px;">
-                <div style="display:flex;align-items:center;justify-content:center;
-                            width:42px;height:42px;border-radius:50%;
-                            position:relative;z-index:2;margin-bottom:-21px;flex-shrink:0;">
-                  <img src="assets/badge-check.png" width="42" height="42" alt="" class="logo-light">
-                  <img src="assets/badge-check-dark.png" width="42" height="42" alt="" class="logo-dark" style="display:none;">
-                </div>
-                <div class="plan-card-bg plan-card-basic"
-                     style="width:150px;height:137px;
-                            background-image:url('assets/plan-card-basic.png');
-                            background-size:100% 100%;background-repeat:no-repeat;
-                            display:flex;flex-direction:column;align-items:center;justify-content:center;
-                            gap:5px;border-radius:8px;position:relative;z-index:1;">
-                  <span class="plan-name"
-                        style="font-size:13px;font-weight:500;color:#595959;letter-spacing:0.4px;">BASIC</span>
-                  <div style="display:flex;align-items:baseline;gap:4px;">
-                    <span class="plan-orig"
-                          style="font-size:15px;font-weight:400;color:#595959;text-decoration:line-through;">&#8377;550</span>
-                    <span class="plan-disc"
-                          style="font-size:20px;font-weight:800;color:#004364;">&#8377;495</span>
-                  </div>
-                  <p class="plan-dur"
-                   style="font-size:14px;font-weight:400;color:#262626;text-align:center;">1 Month</p>
-                </div>
-              </div>
+              </table>
+            </td>
+          </tr>
 
-              <!-- STANDARD -->
-              <div class="plan-col"
-                   style="display:flex;flex-direction:column;align-items:center;flex:1;max-width:175px;">
-                <div style="display:flex;align-items:center;justify-content:center;
-                            width:42px;height:42px;border-radius:50%;
-                            position:relative;z-index:2;margin-bottom:-21px;flex-shrink:0;">
-                  <img src="assets/badge-star.png" width="42" height="42" alt="" class="logo-light">
-                  <img src="assets/badge-star-dark.png" width="42" height="42" alt="" class="logo-dark" style="display:none;">
-                </div>
-                <div class="plan-card-bg plan-card-std"
-                     style="width:150px;height:137px;
-                            background-image:url('assets/plan-card-std.png');
-                            background-size:100% 100%;background-repeat:no-repeat;
-                            display:flex;flex-direction:column;align-items:center;justify-content:center;
-                            gap:5px;border-radius:8px;position:relative;z-index:1;">
-                  <span class="plan-name"
-                        style="font-size:13px;font-weight:500;color:#595959;letter-spacing:0.4px;">STANDARD</span>
-                  <div style="display:flex;align-items:baseline;gap:4px;">
-                    <span class="plan-orig"
-                          style="font-size:15px;font-weight:400;color:#595959;text-decoration:line-through;">&#8377;800</span>
-                    <span class="plan-disc"
-                          style="font-size:20px;font-weight:800;color:#004364;">&#8377;720</span>
-                  </div>
-                  <p class="plan-dur"
-                   style="font-size:14px;font-weight:400;color:#262626;text-align:center;">6 Months</p>
-                </div>                
-              </div>
 
-              <!-- PREMIUM -->
-              <div class="plan-col"
-                   style="display:flex;flex-direction:column;align-items:center;flex:1;max-width:175px;">
-                <div style="display:flex;align-items:center;justify-content:center;
-                            width:42px;height:42px;border-radius:50%;
-                            position:relative;z-index:2;margin-bottom:-21px;flex-shrink:0;">
-                  <img src="assets/badge-crown.png" width="42" height="42" alt="" class="logo-light">
-                  <img src="assets/badge-crown-dark.png" width="42" height="42" alt="" class="logo-dark" style="display:none;">
-                </div>
-                <div class="plan-card-bg plan-card-std"
-                     style="width:150px;height:137px;
-                            background-image:url('assets/plan-card-std.png');
-                            background-size:100% 100%;background-repeat:no-repeat;
-                            display:flex;flex-direction:column;align-items:center;justify-content:center;
-                            gap:5px;border-radius:8px;position:relative;z-index:1;">
-                  <span class="plan-name"
-                        style="font-size:13px;font-weight:500;color:#595959;letter-spacing:0.4px;">PREMIUM</span>
-                  <div style="display:flex;align-items:baseline;gap:4px;">
-                    <span class="plan-orig"
-                          style="font-size:15px;font-weight:400;color:#595959;text-decoration:line-through;">&#8377;1200</span>
-                    <span class="plan-disc"
-                          style="font-size:20px;font-weight:800;color:#004364;">&#8377;1080</span>
-                  </div>
-                  <p class="plan-dur"
-                   style="font-size:14px;font-weight:400;color:#262626;text-align:center;">12 Months</p>
-                </div>
-              </div>
-
-            </div><!-- /plans row -->
-
-            <!-- Use Code -->
-            <div style="display:flex;align-items:center;justify-content:center;gap:8px;padding:28px 0 0;">
-              <span class="use-code-label"
-                    style="font-size:20px;font-weight:400;color:#595959;">Use Code:</span>
-              <span class="use-code-val"
-                    style="font-size:20px;font-weight:600;color:#262626;letter-spacing:0.4px;">DISC10</span>
-            </div>
-
-            <!-- CTA Button -->
-            <div style="text-align:center;padding:16px 0 0;">
+          <!-- ═══════════════════════════════════
+               SECOND CTA BUTTON
+          ═══════════════════════════════════ -->
+          <tr>
+            <td align="center" style="padding:24px 40px 32px;">
               <a href="#"
                  style="display:inline-block;background-color:#fcd800;border-radius:25px;
-                        padding:17px 40px;min-width:300px;
-                        font-size:16px;font-weight:700;color:#262626;
-                        letter-spacing:0.32px;text-transform:uppercase;text-align:center;">
+                        padding:17px 40px;min-width:300px;font-size:16px;font-weight:700;
+                        color:#262626;letter-spacing:0.32px;text-transform:uppercase;
+                        text-align:center;text-decoration:none;
+                        font-family:'Roboto',Arial,Helvetica,sans-serif;">
                 EXPLORE CIBIL PLANS
               </a>
-            </div>
-
-            <!-- Validity -->
-            <p class="validity-txt"
-               style="font-size:14px;font-weight:400;color:#595959;text-align:center;
-                      padding:12px 0 32px;letter-spacing:0.28px;">
-              Valid until 31<sup style="font-size:9px;">st</sup> March 2025
-            </p>
-
-          </div><!-- /discount inner -->
-        </div>
-      </div><!-- /discount -->
+            </td>
+          </tr>
 
 
-      <!-- ═══════════════════════════════════
-           NOTE TEXT
-      ═══════════════════════════════════ -->
-      <p class="note-txt"
-         style="font-size:16px;font-weight:400;color:#262626;line-height:24px;
-                text-align:center;padding:24px 99px;">
-        Note: You can also download one credit report by availing our one-time subscription of Starter Plan at just Rs.&nbsp;118.
-      </p>
+          <!-- ═══════════════════════════════════
+               FOOTER — App download strip
+          ═══════════════════════════════════ -->
+          <tr>
+            <td class="footer-upper-td" style="background-color:#ccedfa;padding:21px 40px 16px;">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                <tr>
+
+                  <!-- Promo text -->
+                  <td valign="middle">
+                    <p class="footer-app-title"
+                       style="font-size:16px;font-weight:700;color:#262626;line-height:16px;
+                              margin:0 0 8px 0;font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                      Download the CIBIL App Today!
+                    </p>
+                    <p class="footer-app-body"
+                       style="font-size:10px;font-weight:300;color:#262626;line-height:1.4;
+                              max-width:280px;margin:0;font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                      Track how your credit decisions impact your credit profile. Explore CIBIL Subscription Plans.
+                    </p>
+                  </td>
+
+                  <!-- Store buttons -->
+                  <td valign="middle" align="right" style="white-space:nowrap;">
+                    <table cellpadding="0" cellspacing="0" border="0" role="presentation">
+                      <tr>
+                        <td style="padding-right:10px;">
+                          <img src="assets/play-store.png" width="126" height="36"
+                               alt="Get it on Google Play" style="display:block;">
+                        </td>
+                        <td>
+                          <img src="assets/app-store.png" width="126" height="36"
+                               alt="Download on the App Store" style="display:block;">
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+
+                </tr>
+              </table>
+            </td>
+          </tr>
 
 
-      <!-- ═══════════════════════════════════
-           STARTER PLAN CARD
-      ═══════════════════════════════════ -->
-      <div class="starter-section" style="padding:0 97px;">
-        <div class="starter-card"
-             style="background-color:#ccedfa;border:1px solid #ccedfa;border-radius:12px;overflow:hidden;">
+          <!-- ═══════════════════════════════════
+               FOOTER — Address + Social
+          ═══════════════════════════════════ -->
+          <tr>
+            <td class="footer-lower-td" style="background-color:#004364;padding:20px 40px 24px;">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                <tr>
 
-          <!-- Header row -->
-          <div class="starter-hdr"
-               style="display:flex;align-items:center;justify-content:space-between;
-                      padding:24px 32px;background-color:#ccedfa;">
-            <span class="starter-title"
-                  style="font-size:20px;font-weight:700;color:#262626;line-height:32px;">
-              Starter Plan
-            </span>
-            <span class="starter-price"
-                  style="font-size:32px;font-weight:600;color:#262626;line-height:48px;letter-spacing:-0.32px;">
-              &#8377;118
-            </span>
-          </div>
+                  <!-- Address block -->
+                  <td valign="middle">
+                    <p class="footer-company"
+                       style="font-family:'Intro',Arial,Helvetica,sans-serif;font-size:12px;
+                              font-weight:700;color:#fff;line-height:16px;margin:0 0 6px 0;">
+                      TransUnion CIBIL Limited
+                    </p>
+                    <p class="footer-addr"
+                       style="font-size:10px;font-weight:300;color:#fff;line-height:1.5;
+                              margin:0;font-family:'Roboto',Arial,Helvetica,sans-serif;">
+                      One World Centre, Tower 2,<br>
+                      19th Floor, Senapati Bapat Marg, Elphinstone Road,<br>
+                      Mumbai &ndash; 400013<br>
+                      Tel: 022-66384600&nbsp;&nbsp;Fax: 022-66384666
+                    </p>
+                  </td>
 
-          <!-- Features body -->
-          <div class="starter-body"
-               style="background-color:#f7f9fa;padding:24px 32px 16px;border-radius:0 0 12px 12px;">
+                  <!-- Vertical divider -->
+                  <td width="1" valign="middle" style="padding:0 20px;">
+                    <div style="width:1px;height:60px;background-color:#00a6ca;font-size:0;line-height:0;">
+                      &nbsp;
+                    </div>
+                  </td>
 
-            <!-- ✓ Credit Report -->
-            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
-              <img class="feat-check" src="assets/feature-check.png"
-                   width="14" height="10" alt="Yes" style="flex-shrink:0;">
-              <span class="starter-feat"
-                    style="font-size:16px;font-weight:400;color:#262626;line-height:24px;">
-                Credit Report
-              </span>
-            </div>
+                  <!-- Social block -->
+                  <td valign="middle" align="left" style="white-space:nowrap;">
+                    <p class="footer-follow-lbl"
+                       style="font-family:'Intro',Arial,Helvetica,sans-serif;font-size:12px;
+                              font-weight:700;color:#fff;line-height:16px;margin:0 0 12px 0;">
+                      Follow us on
+                    </p>
+                    <!-- Social icons row -->
+                    <table cellpadding="0" cellspacing="0" border="0" role="presentation">
+                      <tr>
+                        <td style="padding-right:4px;">
+                          <a href="#" style="text-decoration:none;display:block;
+                                             width:36px;height:36px;background:#fff;
+                                             border:1px solid #e6edf1;border-radius:50%;
+                                             text-align:center;line-height:34px;">
+                            <img src="assets/social-linkedin.png" width="18" height="18"
+                                 alt="LinkedIn" style="display:inline-block;vertical-align:middle;">
+                          </a>
+                        </td>
+                        <td style="padding-right:4px;">
+                          <a href="#" style="text-decoration:none;display:block;
+                                             width:36px;height:36px;background:#fff;
+                                             border:1px solid #e6edf1;border-radius:50%;
+                                             text-align:center;line-height:34px;">
+                            <img src="assets/social-facebook.png" width="18" height="18"
+                                 alt="Facebook" style="display:inline-block;vertical-align:middle;">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="#" style="text-decoration:none;display:block;
+                                             width:36px;height:36px;background:#fff;
+                                             border:1px solid #e6edf1;border-radius:50%;
+                                             text-align:center;line-height:34px;">
+                            <img src="assets/social-youtube.png" width="18" height="18"
+                                 alt="YouTube" style="display:inline-block;vertical-align:middle;">
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
 
-            <!-- ✗ CIBIL Score -->
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
-              <img class="feat-cross" src="assets/feature-cross.png"
-                   width="12" height="12" alt="No" style="flex-shrink:0;">
-              <span class="starter-feat"
-                    style="font-size:16px;font-weight:400;color:#262626;line-height:24px;">
-                CIBIL Score
-              </span>
-            </div>
-
-            <!-- ✓ One-time access -->
-            <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;">
-              <img class="feat-check-2" src="assets/feature-check-2.png"
-                   width="14" height="10" alt="Yes" style="flex-shrink:0;">
-              <span class="starter-feat"
-                    style="font-size:16px;font-weight:400;color:#262626;line-height:24px;">
-                One-time access to your credit report
-              </span>
-            </div>
-
-            <!-- Note banner -->
-            <div class="starter-note-bg"
-                 style="background-color:#e6f6fa;border-radius:8px;padding:5px 16px 6px; margin:0 -16px;">
-              <p class="starter-note-txt"
-                 style="font-size:14px;font-weight:400;font-style:italic;color:#262626;
-                        line-height:24px;letter-spacing:0.28px;">
-                Note: No discount code is applicable on starter plan.
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </div><!-- /starter -->
-
-
-      <!-- ═══════════════════════════════════
-           SECOND CTA BUTTON
-      ═══════════════════════════════════ -->
-      <div style="text-align:center;padding:24px 40px 32px;">
-        <a href="#"
-           style="display:inline-block;background-color:#fcd800;border-radius:25px;
-                  padding:17px 40px;min-width:300px;
-                  font-size:16px;font-weight:700;color:#262626;
-                  letter-spacing:0.32px;text-transform:uppercase;text-align:center;">
-          EXPLORE CIBIL PLANS
-        </a>
-      </div>
+                </tr>
+              </table>
+            </td>
+          </tr>
 
 
-      <!-- ═══════════════════════════════════
-           FOOTER — App download strip
-      ═══════════════════════════════════ -->
-      <div class="footer-upper" style="background-color:#ccedfa;padding:21px 40px 16px;">
-        <div class="footer-row"
-             style="display:flex;align-items:center;justify-content:space-between;gap:16px;">
-
-          <!-- Promo text -->
-          <div>
-            <p class="footer-app-title"
-               style="font-size:16px;font-weight:700;color:#262626;line-height:16px;margin-bottom:8px;">
-              Download the CIBIL App Today!
-            </p>
-            <p class="footer-app-body"
-               style="font-size:10px;font-weight:300;color:#262626;line-height:1.4;max-width:280px;">
-              Track how your credit decisions impact your credit profile. Explore CIBIL Subscription Plans.
-            </p>
-          </div>
-
-          <!-- Store buttons -->
-          <div class="footer-store-row" style="display:flex;gap:10px;flex-shrink:0;">
-
-            <!-- Google Play -->
-            <img src="assets/play-store.png" width="126" height="36" alt="" srcset="">
-
-            <!-- App Store -->
-            <img src="assets/app-store.png" width="126" height="36" alt="" srcset="">
-
-          </div>
-        </div>
-      </div>
-
-      <!-- FOOTER — Address + Social -->
-      <div class="footer-lower" style="background-color:#004364;padding:20px 40px 24px;">
-        <div class="footer-row"
-             style="display:flex;align-items:center;justify-content:space-between;gap:16px;">
-
-          <!-- Address -->
-          <div>
-            <p class="footer-company"
-               style="font-family:'Intro',sans-serif;font-size:12px;font-weight:700;color:#fff;line-height:16px;margin-bottom:6px;">
-              TransUnion CIBIL Limited
-            </p>
-            <p class="footer-addr"
-               style="font-size:10px;font-weight:300;color:#fff;line-height:1.5;">
-              One World Centre, Tower 2,<br>
-              19th Floor, Senapati Bapat Marg, Elphinstone Road,<br>
-              Mumbai &ndash; 400013<br>
-              Tel: 022-66384600&nbsp;&nbsp;Fax: 022-66384666
-            </p>
-          </div>
-
-          <!-- Vertical divider -->
-          <div style="width:1px;height:60px;background-color:#00a6ca;flex-shrink:0;"></div>
-
-          <!-- Social -->
-          <div style="text-align:left;flex-shrink:0;">
-            <p class="footer-follow-lbl"
-               style="font-family:'Intro',sans-serif;font-size:12px;font-weight:700;color:#fff;line-height:16px;margin-bottom:12px;">
-              Follow us on
-            </p>
-            <div style="display:flex;gap:4px;justify-content:flex-end;">
-
-              <a href="#" style="text-decoration:none;">
-                <div style="width:36px;height:36px;background:#fff;border:1px solid #e6edf1;
-                            border-radius:50%;display:flex;align-items:center;justify-content:center;">
-                  <img src="assets/social-linkedin.png" width="18" height="18" alt="LinkedIn">
-                </div>
-              </a>
-
-              <a href="#" style="text-decoration:none;">
-                <div style="width:36px;height:36px;background:#fff;border:1px solid #e6edf1;
-                            border-radius:50%;display:flex;align-items:center;justify-content:center;">
-                  <img src="assets/social-facebook.png" width="18" height="18" alt="Facebook">
-                </div>
-              </a>
-
-              <a href="#" style="text-decoration:none;">
-                <div style="width:36px;height:36px;background:#fff;border:1px solid #e6edf1;
-                            border-radius:50%;display:flex;align-items:center;justify-content:center;">
-                  <img src="assets/social-youtube.png" width="18" height="18" alt="YouTube">
-                </div>
-              </a>
-
-            </div>
-          </div>
-
-        </div>
-      </div><!-- /footer lower -->
-
-
-    </div><!-- /email-bg -->
-  </div><!-- /outer shell -->
+        </table><!-- /email-bg -->
+      </td>
+    </tr>
+  </table><!-- /outer shell -->
 
 </body>
 </html>
