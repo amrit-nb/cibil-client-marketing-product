@@ -65,8 +65,7 @@
       .badge-light            { display:none !important; }
       .badge-dark             { display:inline-block !important; }
 
-      .plan-card-bg-light     { display:none !important; }
-      .plan-card-bg-dark      { display:block !important; }
+      .plan-card-box          { background-color:#005f8d !important; }
 
       .note-txt               { color:#fafafa !important; }
 
@@ -308,25 +307,10 @@
                               </div>
                               <![endif]-->
 
-                              <!-- Plan card — bg image via <img> (non-Outlook) + VML (Outlook) -->
-                              <!--[if mso]>
-                              <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false"
-                                      style="width:150px;height:137px;border-radius:8px;">
-                                <v:fill type="frame" src="assets/plan-card-basic.png" color="#e8f4f8"/>
-                                <v:textbox inset="0,0,0,0" style="mso-fit-shape-to-text:false;">
-                              <![endif]-->
-                              <div style="width:150px;height:137px;border-radius:8px;overflow:hidden;
-                                          position:relative;display:inline-block;vertical-align:top;">
-                                <!--[if !mso]><!-->
-                                <img src="assets/plan-card-basic.png" class="plan-card-bg-light" width="150" height="137" alt=""
-                                     style="position:absolute;top:0;left:0;width:150px;height:137px;
-                                            display:block;z-index:0;">
-                                <img src="assets/plan-card-dark.png" class="plan-card-bg-dark" width="150" height="137" alt=""
-                                     style="position:absolute;top:0;left:0;width:150px;height:137px;
-                                            display:none;z-index:0;">
-                                <!--<![endif]-->
+                              <div class="plan-card-box" style="width:150px;height:137px;border-radius:8px;
+                                          background-color:#fff;display:inline-block;vertical-align:top;">
                                 <table width="150" height="137" cellpadding="0" cellspacing="0" border="0"
-                                       role="presentation" style="position:relative;z-index:1;">
+                                       role="presentation">
                                   <tr>
                                     <td align="center" valign="middle" style="padding-top:10px;">
                                       <span class="plan-name"
@@ -356,7 +340,7 @@
                                         </tr>
                                       </table>
                                       <p class="plan-dur"
-                                         style="font-size:14px;font-weight:400;color:#262626;
+                                         style="font-size:14px;font-weight:400;color:#595959;
                                                 text-align:center;margin:5px 0 0;
                                                 font-family:'Roboto',Arial,Helvetica,sans-serif;">
                                         1 Month
@@ -365,10 +349,6 @@
                                   </tr>
                                 </table>
                               </div>
-                              <!--[if mso]>
-                                </v:textbox>
-                              </v:rect>
-                              <![endif]-->
 
                             </td>
 
@@ -392,24 +372,10 @@
                               </div>
                               <![endif]-->
 
-                              <!--[if mso]>
-                              <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false"
-                                      style="width:150px;height:137px;border-radius:8px;">
-                                <v:fill type="frame" src="assets/plan-card-std.png" color="#e8f0f8"/>
-                                <v:textbox inset="0,0,0,0" style="mso-fit-shape-to-text:false;">
-                              <![endif]-->
-                              <div style="width:150px;height:137px;border-radius:8px;overflow:hidden;
-                                          position:relative;display:inline-block;vertical-align:top;">
-                                <!--[if !mso]><!-->
-                                <img src="assets/plan-card-std.png" class="plan-card-bg-light" width="150" height="137" alt=""
-                                     style="position:absolute;top:0;left:0;width:150px;height:137px;
-                                            display:block;z-index:0;">
-                                <img src="assets/plan-card-std-dark.png" class="plan-card-bg-dark" width="150" height="137" alt=""
-                                     style="position:absolute;top:0;left:0;width:150px;height:137px;
-                                            display:none;z-index:0;">
-                                <!--<![endif]-->
+                              <div class="plan-card-box" style="width:150px;height:137px;border-radius:8px;
+                                          background-color:#fff;display:inline-block;vertical-align:top;">
                                 <table width="150" height="137" cellpadding="0" cellspacing="0" border="0"
-                                       role="presentation" style="position:relative;z-index:1;">
+                                       role="presentation">
                                   <tr>
                                     <td align="center" valign="middle" style="padding-top:10px;">
                                       <span class="plan-name"
@@ -439,7 +405,7 @@
                                         </tr>
                                       </table>
                                       <p class="plan-dur"
-                                         style="font-size:14px;font-weight:400;color:#262626;
+                                         style="font-size:14px;font-weight:400;color:#595959;
                                                 text-align:center;margin:5px 0 0;
                                                 font-family:'Roboto',Arial,Helvetica,sans-serif;">
                                         6 Months
@@ -448,10 +414,6 @@
                                   </tr>
                                 </table>
                               </div>
-                              <!--[if mso]>
-                                </v:textbox>
-                              </v:rect>
-                              <![endif]-->
 
                             </td>
 
@@ -475,24 +437,10 @@
                               </div>
                               <![endif]-->
 
-                              <!--[if mso]>
-                              <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false"
-                                      style="width:150px;height:137px;border-radius:8px;">
-                                <v:fill type="frame" src="assets/plan-card-std.png" color="#e8f0f8"/>
-                                <v:textbox inset="0,0,0,0" style="mso-fit-shape-to-text:false;">
-                              <![endif]-->
-                              <div style="width:150px;height:137px;border-radius:8px;overflow:hidden;
-                                          position:relative;display:inline-block;vertical-align:top;">
-                                <!--[if !mso]><!-->
-                                <img src="assets/plan-card-std.png" class="plan-card-bg-light" width="150" height="137" alt=""
-                                     style="position:absolute;top:0;left:0;width:150px;height:137px;
-                                            display:block;z-index:0;">
-                                <img src="assets/plan-card-std-dark.png" class="plan-card-bg-dark" width="150" height="137" alt=""
-                                     style="position:absolute;top:0;left:0;width:150px;height:137px;
-                                            display:none;z-index:0;">
-                                <!--<![endif]-->
+                              <div class="plan-card-box" style="width:150px;height:137px;border-radius:8px;
+                                          background-color:#fff;display:inline-block;vertical-align:top;">
                                 <table width="150" height="137" cellpadding="0" cellspacing="0" border="0"
-                                       role="presentation" style="position:relative;z-index:1;">
+                                       role="presentation">
                                   <tr>
                                     <td align="center" valign="middle" style="padding-top:10px;">
                                       <span class="plan-name"
@@ -522,7 +470,7 @@
                                         </tr>
                                       </table>
                                       <p class="plan-dur"
-                                         style="font-size:14px;font-weight:400;color:#262626;
+                                         style="font-size:14px;font-weight:400;color:#595959;
                                                 text-align:center;margin:5px 0 0;
                                                 font-family:'Roboto',Arial,Helvetica,sans-serif;">
                                         12 Months
@@ -531,10 +479,6 @@
                                   </tr>
                                 </table>
                               </div>
-                              <!--[if mso]>
-                                </v:textbox>
-                              </v:rect>
-                              <![endif]-->
 
                             </td>
 
