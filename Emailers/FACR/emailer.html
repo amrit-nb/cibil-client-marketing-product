@@ -202,12 +202,12 @@
           <tr>
             <td class="sp-td" style="padding:16px 40px 0;">
 
-              <!-- Discount card wrapper -->
-              <div class="discount-wrap"
-                   style="background-color:rgb(255, 249, 217);border-radius:16px;overflow:hidden;">
-
-                <!-- Inner content -->
-                <div>
+              <!-- Discount card wrapper — bgcolor on <td> beats Yahoo Mail's auto-dark transform -->
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation"
+                     style="border-radius:16px;overflow:hidden;">
+                <tr>
+                  <td class="discount-wrap" bgcolor="#fff9d9"
+                      style="background-color:rgb(255, 249, 217);border-radius:16px;">
 
                   <!-- Intro text -->
                   <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
@@ -536,8 +536,9 @@
                     </tr>
                   </table>
 
-                </div><!-- /discount inner -->
-              </div>
+                  </td>
+                </tr>
+              </table>
             </td>
           </tr>
 
