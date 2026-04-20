@@ -63,7 +63,7 @@
       .plan-dur               { color:#fafafa !important; }
 
       .badge-light            { display:none !important; }
-      .badge-dark             { display:block !important; }
+      .badge-dark             { display:inline-block !important; }
 
       .note-txt               { color:#fafafa !important; }
 
@@ -139,7 +139,7 @@
                   <!-- Login Button -->
                   <td class="header-td" valign="middle" align="right"
                       style="padding:28px 40px 20px;background-color:#fafafa;white-space:nowrap;">
-                    <a href="#" class="login-btn"
+                    <a href="https://myscore.cibil.com/CreditView/mobilelogin.page?enterprise=CIBIL&_gl=1*1nvdf35*_gcl_aw*R0NMLjE3NzY2NjYxOTYuQ2owS0NRanctcEhQQmhDZEFSSXNBSFhZV1A5MTl0Tk9UQnVGUWZwUEdrbGJmVEhUcmFqb3ZVY0h6UU1hN1BuajA2M3o2QTh4S0V4eWMxVWFBcktXRUFMd193Y0I.*_gcl_au*MTI4Mjc2MTM0Mi4xNzc2NjY2MTk1*_ga*MTM4ODUwMjE1My4xNzc2NjY2MTk1*_ga_WVCRSGNX36*czE3NzY2NjYxOTUkbzEkZzAkdDE3NzY2NjYxOTUkajYwJGwwJGgw*_ga_GGL6JJ79K2*czE3NzY2NjYxOTYkbzEkZzAkdDE3NzY2NjYxOTYkajYwJGwwJGgw&_ga=2.118343177.106047201.1776666195-1388502153.1776666195&_gac=1.259914360.1776666196.Cj0KCQjw-pHPBhCdARIsAHXYWP919tNOTBuFQfpPGklbfTHTrajovUcHzQMa7Pnj063z6A8xKExyc1UaArKWEALw_wcB" class="login-btn"
                        style="display:inline-block;border:1.5px solid #00a6ca;border-radius:25px;
                               padding:10px 30px;font-size:16px;font-weight:700;color:#00a6ca;
                               letter-spacing:0.32px;white-space:nowrap;text-decoration:none;
@@ -159,22 +159,13 @@
           <tr>
             <td class="sp-td" style="padding:0 40px;">
 
-              <!-- Hero card wrapper — position:relative for circle overlays -->
+              <!-- Hero card -->
               <div class="hero-card-wrap"
                    style="background-color:#e6f6fa;border:1px solid #ccedfa;border-radius:16px;
-                          overflow:hidden;position:relative;min-height:189px;">
+                          overflow:hidden;">
 
-                <!-- Decorative circles as <img> (non-Outlook; Outlook shows plain card bg) -->
-                <!--[if !mso]><!-->
-                <img src="assets/hero-circle-tl.png" width="220" height="220" alt=""
-                     style="position:absolute;left:-50px;top:-50px;display:block;pointer-events:none;z-index:0;">
-                <img src="assets/hero-circle-br.png" width="150" height="149" alt=""
-                     style="position:absolute;right:0;bottom:-15px;display:block;pointer-events:none;z-index:0;">
-                <!--<![endif]-->
-
-                <!-- Content table — z-index above circles -->
-                <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation"
-                       style="position:relative;z-index:1;">
+                <!-- Content table -->
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
                   <tr>
                     <td class="hero-content-td" valign="bottom"
                         style="padding:28px 34px;">
@@ -191,9 +182,9 @@
                     </td>
                     <!-- CIBIL Report illustration -->
                     <td valign="bottom" align="right"
-                        style="padding:28px 34px 28px 0;width:176px;">
+                        style="width:176px;">
                       <img src="assets/cibil-report.png" width="160" height="110" alt=""
-                           style="display:block;">
+                           style="display:block; width: 100%; height: auto;">
                     </td>
                   </tr>
                 </table>
@@ -211,18 +202,10 @@
 
               <!-- Discount card wrapper -->
               <div class="discount-wrap"
-                   style="background-color:#fff9d9;border-radius:16px;overflow:hidden;position:relative;">
+                   style="background-color:#fff9d9;border-radius:16px;overflow:hidden;">
 
-                <!-- Decorative circles (non-Outlook) -->
-                <!--[if !mso]><!-->
-                <img src="assets/discount-circle.png" width="331" height="331" alt=""
-                     style="position:absolute;left:-85px;top:-62px;display:block;pointer-events:none;z-index:0;">
-                <img src="assets/discount-circle.png" width="331" height="331" alt=""
-                     style="position:absolute;right:-171px;bottom:-140px;display:block;pointer-events:none;z-index:0;">
-                <!--<![endif]-->
-
-                <!-- Inner content — z-index above circles -->
-                <div style="position:relative;z-index:1;">
+                <!-- Inner content -->
+                <div>
 
                   <!-- Intro text -->
                   <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
@@ -231,7 +214,7 @@
                         <p class="discount-intro"
                            style="font-size:18px;font-weight:400;color:#262626;line-height:24px;
                                   text-align:center;margin:0;font-family:'Roboto',Arial,Helvetica,sans-serif;">
-                          To help you get started on your credit monitoring journey,<br>we'd like to offer you an exclusive
+                          To help you get started on your credit monitoring<br> journey, we'd like to offer you an exclusive
                         </p>
                       </td>
                     </tr>
@@ -571,9 +554,9 @@
                   <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
                     <tr>
                       <td align="center" style="padding:16px 0 0;">
-                        <a href="#"
+                        <a href="https://www.cibil.com/select-plan"
                            style="display:inline-block;background-color:#fcd800;border-radius:25px;
-                                  padding:17px 40px;min-width:300px;font-size:16px;font-weight:700;
+                                  padding:17px 40px;min-width:50%;font-size:16px;font-weight:700;
                                   color:#262626;letter-spacing:0.32px;text-transform:uppercase;
                                   text-align:center;text-decoration:none;
                                   font-family:'Roboto',Arial,Helvetica,sans-serif;">
@@ -607,7 +590,7 @@
                NOTE TEXT
           ═══════════════════════════════════ -->
           <tr>
-            <td style="padding:24px 99px;text-align:center;">
+            <td style="padding:24px 40px;text-align:center;">
               <p class="note-txt"
                  style="font-size:16px;font-weight:400;color:#262626;line-height:24px;
                         text-align:center;margin:0;
@@ -742,9 +725,9 @@
           ═══════════════════════════════════ -->
           <tr>
             <td align="center" style="padding:24px 40px 32px;">
-              <a href="#"
+              <a href="https://www.cibil.com/select-plan"
                  style="display:inline-block;background-color:#fcd800;border-radius:25px;
-                        padding:17px 40px;min-width:300px;font-size:16px;font-weight:700;
+                        padding:17px 40px;min-width:50%;font-size:16px;font-weight:700;
                         color:#262626;letter-spacing:0.32px;text-transform:uppercase;
                         text-align:center;text-decoration:none;
                         font-family:'Roboto',Arial,Helvetica,sans-serif;">
@@ -781,12 +764,14 @@
                     <table cellpadding="0" cellspacing="0" border="0" role="presentation">
                       <tr>
                         <td style="padding-right:10px;">
+                          <a href="https://play.google.com/store/apps/details?id=com.tuci.cibilindia&pli=1">
                           <img src="assets/play-store.png" width="126" height="36"
-                               alt="Get it on Google Play" style="display:block;">
+                               alt="Get it on Google Play" style="display:block;"></a>
                         </td>
                         <td>
+                          <a href="https://apps.apple.com/ba/app/cibil-score-report/id1501683967">
                           <img src="assets/app-store.png" width="126" height="36"
-                               alt="Download on the App Store" style="display:block;">
+                               alt="Download on the App Store" style="display:block;"></a>
                         </td>
                       </tr>
                     </table>
@@ -841,7 +826,7 @@
                     <table cellpadding="0" cellspacing="0" border="0" role="presentation">
                       <tr>
                         <td style="padding-right:4px;">
-                          <a href="#" style="text-decoration:none;display:block;
+                          <a href="https://www.linkedin.com/company/credit-information-bureau-india-limited" style="text-decoration:none;display:block;
                                              width:36px;height:36px;background:#fff;
                                              border:1px solid #e6edf1;border-radius:50%;
                                              text-align:center;line-height:34px;">
@@ -850,7 +835,7 @@
                           </a>
                         </td>
                         <td style="padding-right:4px;">
-                          <a href="#" style="text-decoration:none;display:block;
+                          <a href="https://www.facebook.com/CIBIL-329225453912063/" style="text-decoration:none;display:block;
                                              width:36px;height:36px;background:#fff;
                                              border:1px solid #e6edf1;border-radius:50%;
                                              text-align:center;line-height:34px;">
@@ -859,7 +844,7 @@
                           </a>
                         </td>
                         <td>
-                          <a href="#" style="text-decoration:none;display:block;
+                          <a href="https://www.youtube.com/user/CIBILonline" style="text-decoration:none;display:block;
                                              width:36px;height:36px;background:#fff;
                                              border:1px solid #e6edf1;border-radius:50%;
                                              text-align:center;line-height:34px;">
