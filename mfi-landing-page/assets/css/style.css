@@ -78,6 +78,21 @@ a {
 }
 
 /* ══════════════════════════════════════
+   SCROLL ANIMATIONS
+   ══════════════════════════════════════ */
+
+[data-anim] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+[data-anim].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ══════════════════════════════════════
    SECTION 1 — HERO
    ══════════════════════════════════════ */
 
@@ -340,16 +355,21 @@ a {
 
 /* Steps — hidden by default, shown on expand */
 .gr-steps {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 16px;
   position: relative;
   padding-left: 0;
   cursor: default;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: max-height 0.45s ease, opacity 0.35s ease;
 }
 
 .gr-card--alt.is-open .gr-steps {
-  display: flex;
+  pointer-events: auto;
 }
 
 /* Vertical connector line through the number circles */
