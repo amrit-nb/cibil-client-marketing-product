@@ -52,10 +52,40 @@
           <p class="gr-alt-title">Prefer to apply by email or courier?</p>
           <p class="gr-alt-desc">Follow 4 simple steps to get started</p>
         </div>
-        <button class="gr-expand-btn" aria-label="Expand">
-          <img src="assets/images/icon-expand-more.png" alt="" width="24" height="24"/>
+        <button class="gr-expand-btn" aria-label="Expand" onclick="toggleAlt(this)">
+          <svg class="gr-expand-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <g clip-path="url(#clip0_1030_2789)">
+              <path d="M16.59 8.59009L12 13.1701L7.41 8.59009L6 10.0001L12 16.0001L18 10.0001L16.59 8.59009Z" fill="black"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_1030_2789">
+                <rect width="24" height="24" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
         </button>
       </div>
+
+      <!-- Expanded Steps -->
+      <div class="gr-steps">
+        <div class="gr-step">
+          <div class="gr-step-num">1</div>
+          <p class="gr-step-text"><a href="https://www.cibil.com/content/dam/cibil/web-resources/pdf/mfi-form.pdf" target="_blank">Download</a> and print the form.</p>
+        </div>
+        <div class="gr-step">
+          <div class="gr-step-num">2</div>
+          <p class="gr-step-text">Complete the form with all necessary details and sign it.</p>
+        </div>
+        <div class="gr-step">
+          <div class="gr-step-num">3</div>
+          <p class="gr-step-text">Courier the completed form along with a printed copy of your identity and address proof to CIBIL at the specified address.<br><br>Alternatively, you can email the scanned copy of the form and scanned copies of your identity and address proof to <a href="mailto:cibilinfo@transunion.com">cibilinfo@transunion.com</a>. You can submit Voter ID or PAN as an identity proof and one of these documents - Bank statement, electricity bill or credit card statement not older than 3 months, as your address proof.</p>
+        </div>
+        <div class="gr-step">
+          <div class="gr-step-num">4</div>
+          <p class="gr-step-text">CIBIL will verify and address your request for Microfinance Score &amp; Report within 3 days upon receipt of your request at the CIBIL office. While we aim for prompt delivery, please note that delivery times are beyond our control and may occasionally be delayed.</p>
+        </div>
+      </div>
+
     </div>
 
   </div>
@@ -149,5 +179,13 @@
   </div>
 </section>
 
+<script>
+  function toggleAlt(btn) {
+    const card = btn.closest('.gr-card--alt');
+    const steps = card.querySelector('.gr-steps');
+    const isOpen = card.classList.contains('is-open');
+    card.classList.toggle('is-open', !isOpen);
+  }
+</script>
 </body>
 </html>

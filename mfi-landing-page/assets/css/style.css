@@ -327,8 +327,77 @@ a {
   background: #fef9d3;
 }
 
-.gr-expand-btn img {
+.gr-expand-icon {
   display: block;
+  transition: transform 0.25s ease;
+}
+
+.gr-card--alt.is-open .gr-expand-icon {
+  transform: rotate(180deg);
+}
+
+/* Steps — hidden by default, shown on expand */
+.gr-steps {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  padding-left: 0;
+}
+
+.gr-card--alt.is-open .gr-steps {
+  display: flex;
+}
+
+/* Vertical connector line through the number circles */
+.gr-steps::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 32px;
+  bottom: 32px;
+  width: 1px;
+  background: var(--border-blue);
+}
+
+.gr-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  position: relative;
+}
+
+.gr-step-num {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background: var(--bg-light);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-intro-regular);
+  font-size: 14px;
+  color: #000;
+  line-height: 1.4;
+  text-transform: capitalize;
+  position: relative;
+  z-index: 1;
+}
+
+.gr-step-text {
+  flex: 1;
+  font-family: var(--font-intro-regular);
+  font-size: 14px;
+  color: var(--mid);
+  line-height: 1.5;
+  padding-top: 6px;
+}
+
+.gr-step-text a {
+  font-family: var(--font-intro-regular);
+  color: var(--mid);
+  text-decoration: underline;
 }
 
 /* ══════════════════════════════════════
