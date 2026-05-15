@@ -270,7 +270,8 @@ a {
 .gr-login-link {
   font-family: var(--font-intro-semibold);
   color: var(--blue);
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
 }
 
 /* Alternative card */
@@ -344,6 +345,7 @@ a {
   gap: 16px;
   position: relative;
   padding-left: 0;
+  cursor: default;
 }
 
 .gr-card--alt.is-open .gr-steps {
@@ -388,7 +390,7 @@ a {
 
 .gr-step-text {
   flex: 1;
-  font-family: var(--font-intro-regular);
+  font-family: var(--font-intro-light);
   font-size: 14px;
   color: var(--mid);
   line-height: 1.5;
@@ -459,7 +461,7 @@ a {
 }
 
 .terms-item-desc {
-  font-family: var(--font-intro-regular);
+  font-family: var(--font-intro-light);
   font-size: 16px;
   color: var(--mid);
   line-height: 1.5;
@@ -530,14 +532,15 @@ a {
 }
 
 .enquiry-item-desc {
-  font-family: var(--font-intro-regular);
+  font-family: var(--font-intro-light);
   font-size: 16px;
   color: var(--mid);
   line-height: 1.5;
+  padding-right: 20px;
 }
 
 .enquiry-item-desc a {
-  font-family: var(--font-intro-semibold);
+  font-family: var(--font-intro-regular);
   color: var(--blue);
   text-decoration: underline;
 }
@@ -545,7 +548,8 @@ a {
 .enquiry-divider {
   width: 1px;
   align-self: stretch;
-  background: var(--border-blue);
+  background: var(--dark);
+  opacity: 0.1;
   flex-shrink: 0;
 }
 
@@ -564,35 +568,52 @@ a {
 @media (max-width: 991px) {
   :root { --px: 16px; }
 
+  .mobile-display-none { display: none; }
+
   /* Hero */
   .hero-section {
     height: auto;
-    min-height: 280px;
+    min-height: 642px;
   }
 
   .hero-bg {
-    background-position: right center;
+    background-image: url('../images/hero-bg-mobile.jpg');
+    background-position: center center;
     background-size: cover;
   }
 
   .hero-content {
     max-width: 100%;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    gap: 24px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-text {
     gap: 24px;
   }
 
   .hero-title {
-    font-size: 24px;
+    font-size: 28px;
+    line-height: 40px;
+    text-align: center;
   }
 
   .hero-desc p {
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
   }
 
   .hero-cta {
     width: 100%;
+    font-family: var(--font-intro-semibold);
     font-size: 14px;
+    letter-spacing: 0.28px;
+    padding: 16px 40px;
+    border-radius: 25px;
   }
 
   /* Get Report */
@@ -600,27 +621,41 @@ a {
     padding: 40px 0;
   }
 
+  .gr-card {
+    padding: 24px 16px;
+  }
+
   .gr-card--featured {
     flex-direction: column;
     align-items: flex-start;
-    gap: 24px;
+    gap: 16px;
+  }
+
+  .gr-card-left {
+    gap: 16px;
+  }
+
+  .gr-label {
+    font-size: 10px;
+  }
+
+  .gr-title {
+    font-size: 18px;
+  }
+
+  .gr-subtitle {
+    font-size: 12px;
+    line-height: 1.4;
   }
 
   .gr-card-right {
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
+    gap: 16px;
   }
 
   .gr-btn {
     width: 100%;
-  }
-
-  .gr-title {
-    font-size: 22px;
-  }
-
-  .gr-subtitle {
-    font-size: 16px;
   }
 
   .gr-login-text {
@@ -628,11 +663,41 @@ a {
   }
 
   .gr-alt-title {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 1.4;
   }
 
   .gr-alt-desc {
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .gr-expand-btn {
+    padding: 4px;
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Steps (mobile) */
+  .gr-steps::before {
+    left: 11px; /* center of 24px circle */
+  }
+
+  .gr-step {
+    gap: 8px;
+  }
+
+  .gr-step-num {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .gr-step-text {
+    font-size: 12px;
+    line-height: 16px;
+    padding-top: 2px;
   }
 
   /* Key Terms */
@@ -641,7 +706,8 @@ a {
   }
 
   .terms-subtitle {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 20px;
     margin-bottom: 24px;
   }
 
@@ -650,18 +716,28 @@ a {
     gap: 24px;
   }
 
+  .terms-item {
+    gap: 12px;
+  }
+
+  .terms-icon,
+  .terms-icon img {
+    width: 28px;
+    height: 28px;
+  }
+
   .terms-divider {
-    width: 100%;
-    height: 1px;
-    align-self: auto;
+    display: none;
   }
 
   .terms-item-title {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 20px;
   }
 
   .terms-item-desc {
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 16px;
   }
 
   /* Don't Recognise */
@@ -670,13 +746,24 @@ a {
   }
 
   .enquiry-title {
-    font-size: 24px;
+    font-size: 18px;
+    line-height: 24px;
     margin-bottom: 24px;
   }
 
   .enquiry-grid {
     flex-direction: column;
     gap: 24px;
+  }
+
+  .enquiry-item {
+    gap: 12px;
+  }
+
+  .enquiry-icon,
+  .enquiry-icon img {
+    width: 24px;
+    height: 24px;
   }
 
   .enquiry-divider {
@@ -686,10 +773,13 @@ a {
   }
 
   .enquiry-item-title {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 20px;
   }
 
   .enquiry-item-desc {
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 16px;
+    padding-right: 0;
   }
 }
