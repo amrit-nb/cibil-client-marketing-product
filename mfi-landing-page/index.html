@@ -45,14 +45,14 @@
     </div>
 
     <!-- Alternative Card -->
-    <div class="gr-card gr-card--alt">
+    <div class="gr-card gr-card--alt" onclick="toggleAlt(event, this)">
       <p class="gr-label">Alternative</p>
       <div class="gr-alt-row">
         <div class="gr-alt-text">
           <p class="gr-alt-title">Prefer to apply by email or courier?</p>
           <p class="gr-alt-desc">Follow 4 simple steps to get started</p>
         </div>
-        <button class="gr-expand-btn" aria-label="Expand" onclick="toggleAlt(this)">
+        <button class="gr-expand-btn" aria-label="Expand">
           <svg class="gr-expand-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <g clip-path="url(#clip0_1030_2789)">
               <path d="M16.59 8.59009L12 13.1701L7.41 8.59009L6 10.0001L12 16.0001L18 10.0001L16.59 8.59009Z" fill="black"/>
@@ -180,11 +180,9 @@
 </section>
 
 <script>
-  function toggleAlt(btn) {
-    const card = btn.closest('.gr-card--alt');
-    const steps = card.querySelector('.gr-steps');
-    const isOpen = card.classList.contains('is-open');
-    card.classList.toggle('is-open', !isOpen);
+  function toggleAlt(event, card) {
+    if (event.target.closest('a')) return; // don't toggle when clicking links inside steps
+    card.classList.toggle('is-open');
   }
 </script>
 </body>

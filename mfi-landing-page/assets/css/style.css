@@ -279,6 +279,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  cursor: pointer;
 }
 
 .gr-alt-row {
