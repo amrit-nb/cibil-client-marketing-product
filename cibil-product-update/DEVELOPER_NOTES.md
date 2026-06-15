@@ -1,4 +1,4 @@
-# CIBIL Product Update — Developer Integration Notes (AEM)
+# CIBIL Product Update — Developer Integration Notes
 
 Static handoff: `index.html`, `assets/css/style.css`, `assets/js/main.js`, `assets/images/`.
 Everything lives on **one screen**. Both tabs (Individual + Combo) and both feature
