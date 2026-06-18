@@ -27,9 +27,9 @@ function switchTab(tab) {
 
   // combo always starts on Consumer feature cards
   if (tab === 'combo') {
-    switchFeatTab('consumer');
+    switchFeatTab('individual');
   } else {
-    setFeatPanel('consumer');
+    setFeatPanel('individual');
   }
 }
 

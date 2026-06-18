@@ -63,6 +63,8 @@ html {
   --blue-light: #99DBEA;
   --border-light: #E6EDF1;
   --blob-blue: #DFF4F9;
+  --note-blue: #F3F8FA;
+  --note-border: #D7E8EE;
   --divider: #EEE;
   --gold-1: #D0B518;
   --gold-2: #CFB420;
@@ -753,6 +755,31 @@ a {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+/* Combo variant — light blue pill, gift icon + single line */
+.plans-note--combo {
+  justify-content: flex-start;
+  gap: 8px;
+  background: var(--note-blue);
+  border-color: var(--note-border);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.plans-note-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.plans-note--combo p {
+  font-family: var(--font-intro-regular);
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.28px;
+  color: var(--dark);
 }
 
 .plans-note-text p {
