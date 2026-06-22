@@ -254,7 +254,7 @@ a { text-decoration: none; }
 }
 
 .field-input input::placeholder {
-  color: #595959;
+  color: #a19f9f;
   opacity: 1;
 }
 
@@ -497,7 +497,7 @@ a { text-decoration: none; }
 
 .gauge-needle {
   transform-box: view-box;
-  transform-origin: 50% 95%;
+  transform-origin: 50% 90%;
   transform: rotate(-90deg);
   transition: transform 1.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -546,6 +546,9 @@ a { text-decoration: none; }
   max-width: 100%;
   margin-top: 32px;
 }
+
+/* screen2 button spans full card inner width (Figma 486px) */
+#updateScoreBtn { width: 100%; }
 
 /* ══════════════════════════════════════
    RESPONSIVE
