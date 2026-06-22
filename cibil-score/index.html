@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CIBIL Score</title>
+<link rel="stylesheet" href="./assets/css/style.css"/>
+</head>
+<body>
+
+<header class="site-header">
+  <img src="assets/images/cibil-logo.png" alt="CIBIL — Part of TransUnion" class="site-logo"/>
+</header>
+
+<main class="login">
+
+  <section class="login-aside">
+    <h2 class="login-illu-title">Sabki Tarakki, <br>Sabka Score</h2>
+    <p class="login-illu-sub">Don&rsquo;t Worry. Checking your CIBIL Score won&rsquo;t lower it.</p>
+    <div class="login-illu"><img src="assets/images/login-illustration.svg" alt=""/></div>
+  </section>
+
+  <section class="login-card">
+    <h1 class="login-heading">Check your CIBIL score</h1>
+    <form class="login-form" id="scoreForm" novalidate>
+
+      <div class="field">
+        <label for="fullName">Full Name</label>
+        <div class="field-input">
+          <img src="assets/images/icon-field-name.svg" alt="" class="field-icon"/>
+          <input type="text" id="fullName" name="fullName" placeholder="Ashok Kumar" required/>
+        </div>
+        <span class="field-error" data-error-for="fullName"></span>
+      </div>
+
+      <div class="field">
+        <label for="phone">Phone Number</label>
+        <div class="field-input">
+          <img src="assets/images/icon-field-phone.svg" alt="" class="field-icon"/>
+          <input type="tel" id="phone" name="phone" placeholder="9876543210" inputmode="numeric" maxlength="10" required/>
+        </div>
+        <span class="field-error" data-error-for="phone"></span>
+      </div>
+
+      <div class="field">
+        <label for="org">Organization Name</label>
+        <div class="field-input">
+          <img src="assets/images/icon-field-org.svg" alt="" class="field-icon"/>
+          <input type="text" id="org" name="org" placeholder="Yellow Band Ltd"/>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="designation">Designation</label>
+        <div class="field-input">
+          <img src="assets/images/icon-field-designation.svg" alt="" class="field-icon"/>
+          <input type="text" id="designation" name="designation" placeholder="Senior Strategist"/>
+        </div>
+      </div>
+
+      <label class="consent">
+        <input type="checkbox" id="consent" name="consent" required/>
+        <span class="consent-box"></span>
+        <span class="consent-text">
+          <span>I hereby provide my explicit consent to TransUnion CIBIL Limited (TU CIBIL) to collect, use, and process my personal details (First Name, Last Name, and Mobile Number) for the purpose of displaying / sharing my CIBIL Score with me at the Annual Credit Conference.</span>
+          <span>I acknowledge and agree that the score so displayed is indicative in nature and provided solely for my informational purpose only. I understand that the CIBIL Score is derived from credit information submitted by credit institutions, and accordingly, its accuracy and completeness are subject to the correctness and quality of such credit information received by TU CIBIL from credit institutions.</span>
+        </span>
+      </label>
+
+      <span class="field-error consent-error" data-error-for="consent"></span>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </section>
+
+</main>
+
+<script>
+(function () {
+  sessionStorage.removeItem('cibil_name');
+  sessionStorage.removeItem('cibil_phone');
+  sessionStorage.removeItem('cibil_score');
+
+  var form = document.getElementById('scoreForm');
+  var fullName = document.getElementById('fullName');
+  var phone = document.getElementById('phone');
+  var consent = document.getElementById('consent');
+
+  function setError(input, msg) {
+    var slot = form.querySelector('[data-error-for="' + input.id + '"]');
+    if (slot) slot.textContent = msg || '';
+    var wrap = input.closest('.field-input');
+    if (wrap) wrap.classList.toggle('is-invalid', !!msg);
+  }
+
+  function validate() {
+    var ok = true;
+    if (!fullName.value.trim()) { setError(fullName, 'Please enter your full name.'); ok = false; }
+    else setError(fullName, '');
+    if (!/^\d{10}$/.test(phone.value.trim())) { setError(phone, 'Enter a valid 10-digit phone number.'); ok = false; }
+    else setError(phone, '');
+    var consentSlot = form.querySelector('[data-error-for="consent"]');
+    if (!consent.checked) { if (consentSlot) consentSlot.textContent = 'Please accept the consent to continue.'; ok = false; }
+    else if (consentSlot) consentSlot.textContent = '';
+    return ok;
+  }
+
+  [fullName, phone].forEach(function (input) {
+    input.addEventListener('input', function () { setError(input, ''); });
+  });
+  phone.addEventListener('input', function () {
+    phone.value = phone.value.replace(/\D/g, '').slice(0, 10);
+  });
+  consent.addEventListener('change', function () {
+    var slot = form.querySelector('[data-error-for="consent"]');
+    if (consent.checked && slot) slot.textContent = '';
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!validate()) return;
+    var score = Math.floor(300 + Math.random() * 341); // 300–640
+    sessionStorage.setItem('cibil_name', fullName.value.trim());
+    sessionStorage.setItem('cibil_phone', phone.value.trim());
+    sessionStorage.setItem('cibil_score', score);
+    window.location.href = 'screen2.html';
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Your CIBIL Score</title>
+<link rel="stylesheet" href="./assets/css/style.css"/>
+</head>
+<body>
+
+<header class="site-header">
+  <img src="assets/images/cibil-logo.png" alt="CIBIL — Part of TransUnion" class="site-logo"/>
+</header>
+
+<main class="result">
+  <div class="result-head">
+    <h1 class="result-title">Your existing CIBIL Score</h1>
+    <div class="result-meta">
+      <div class="result-meta-item">
+        <span class="result-meta-label"><img src="assets/images/icon-field-name.svg" alt=""/>Name</span>
+        <span class="result-meta-value" id="resName"></span>
+      </div>
+      <div class="result-meta-item">
+        <span class="result-meta-label"><img src="assets/images/icon-field-phone.svg" alt=""/>Phone</span>
+        <span class="result-meta-value" id="resPhone"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="result-card">
+    <p class="result-card-label">CIBIL Score (CreditVision Score - v3)</p>
+    <div class="score-gauge">
+      <svg viewBox="0 0 360 200" class="gauge-svg" role="img" aria-label="CIBIL Score gauge">
+        <defs>
+          <clipPath id="needleClip">
+            <rect x="0" y="0" width="360" height="184"/>
+          </clipPath>
+        </defs>
+        <g transform="translate(30, 30) scale(0.9007)">
+          <path d="M0 166.551C0 123.239 16.8725 81.6303 47.0387 50.5506C77.2049 19.4709 118.292 1.36491 161.585 0.073L162 13.979C122.323 15.163 84.668 31.757 57.022 60.24C29.376 88.724 13.912 126.857 13.912 166.551H0Z" fill="#E15825"/>
+          <path d="M220.898 9.116C202.97 2.928 184.117 -0.153 165.152 0.006L165.269 13.918C182.65 13.772 199.928 16.596 216.358 22.267L220.898 9.116Z" fill="#FF871F"/>
+          <path d="M274.492 39.712C259.403 26.872 242.144 16.826 223.527 10.048L218.768 23.121C235.83 29.333 251.647 38.539 265.475 50.307L274.492 39.712Z" fill="#FCD800"/>
+          <path d="M314.022 89.143C304.708 71.399 292.268 55.481 277.301 42.156L268.05 52.547C281.767 64.759 293.167 79.347 301.703 95.609L314.022 89.143Z" fill="#A9D161"/>
+          <path d="M333.103 166.553C333.103 141.268 327.346 116.315 316.269 93.585L303.762 99.68C313.915 120.511 319.191 143.38 319.191 166.553H333.103Z" fill="#008A00"/>
+        </g>
+        <path d="M120 180 A60 60 0 0 1 240 180 L240 185 L120 185 Z" fill="#CCDBE3"/>
+        <g class="gauge-needle" id="gaugeNeedle" clip-path="url(#needleClip)">
+          <path transform="translate(180,180) scale(0.914) rotate(-32) translate(-7.587,-105.411)"
+                d="M72.7394 0.970656L1.75303 80.2587C-0.89651 83.2181 -0.495364 87.7786 2.63654 90.303C5.76844 92.8273 10.3764 92.3041 12.7852 89.1507L77.3217 4.66403C78.2693 3.42354 78.0443 1.65717 76.8123 0.664152C75.5803 -0.328866 73.7817 -0.193509 72.7394 0.970656Z"
+                fill="#2C2C2C"/>
+        </g>
+      </svg>
+    </div>
+    <p class="score-value" id="resScore">0</p>
+    <p class="score-note">*Score is computed as of May 2026 basis credit data reported<br/>to the bureau by credit institutions</p>
+    <button type="button" class="submit-btn result-update-btn" id="updateScoreBtn">Experience the next generation score</button>
+  </div>
+</main>
+
+<script>
+(function () {
+  var name = sessionStorage.getItem('cibil_name') || '';
+  var phone = sessionStorage.getItem('cibil_phone') || '';
+  var score = parseInt(sessionStorage.getItem('cibil_score')) || 0;
+
+  document.getElementById('resName').textContent = name;
+  document.getElementById('resPhone').textContent = phone;
+
+  var needle = document.getElementById('gaugeNeedle');
+  var scoreEl = document.getElementById('resScore');
+
+  function showScore(s) {
+    needle.style.transition = 'none';
+    needle.style.transform = 'rotate(-90deg)';
+    void needle.getBBox();
+    requestAnimationFrame(function () {
+      needle.style.transition = '';
+      needle.style.transform = 'rotate(' + (-90 + (s / 900) * 180) + 'deg)';
+    });
+    var dur = 1600, start = performance.now();
+    function tick(now) {
+      var t = Math.min((now - start) / dur, 1);
+      var e = 1 - Math.pow(1 - t, 3);
+      scoreEl.textContent = Math.round(s * e);
+      if (t < 1) requestAnimationFrame(tick);
+      else scoreEl.textContent = s;
+    }
+    requestAnimationFrame(tick);
+  }
+
+  showScore(score);
+
+  document.getElementById('updateScoreBtn').addEventListener('click', function () {
+    var inc = Math.floor(Math.random() * 41) + 10;
+    var next = Math.min(900, score + inc);
+    sessionStorage.setItem('cibil_score', next);
+    window.location.href = 'screen3.html';
+  });
+})();
+</script>
+</body>
+</html>
