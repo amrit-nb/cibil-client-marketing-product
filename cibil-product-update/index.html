@@ -183,7 +183,10 @@
         <!-- Premium Duo (elite) -->
         <div class="plan-card plan-card--elite is-open" data-plan="premium-duo">
           <div class="plan-card-header">
-            <p class="plan-card-name">Premium Duo</p>
+            <div class="plan-card-name-group">
+              <p class="plan-card-name">Premium Duo</p>
+              <img src="assets/images/icon-info.svg" alt="info" class="plan-card-info-icon"/>
+            </div>
             <span class="plan-card-users-badge">2 users</span>
           </div>
           <div class="plan-card-body">
@@ -494,7 +497,10 @@
         <!-- Premium Duo (elite) -->
         <div class="plan-card plan-card--combo plan-card--elite is-open" data-plan="premium-duo">
           <div class="plan-card-header">
-            <p class="plan-card-name">Premium Duo</p>
+            <div class="plan-card-name-group">
+              <p class="plan-card-name">Premium Duo</p>
+              <img src="assets/images/icon-info.svg" alt="info" class="plan-card-info-icon"/>
+            </div>
             <span class="plan-card-users-badge">2 users</span>
           </div>
           <div class="plan-card-body">
@@ -596,8 +602,9 @@
     </div>
   </section>
 
-  <!-- SECTION 2: FEATURES HEADER -->
-  <section class="features-header-section">
+  <!-- SECTION 2+3: FEATURES HEADER + CARDS -->
+  <div class="features-scroll-wrapper">
+  <section class="features-section">
     <div class="features-header" data-anim>
       <h2 class="features-title" data-tab-show="individual">CIBIL Subscription Features</h2>
       <p class="features-subtitle" data-tab-show="individual">Everything you need to be credit-ready.<br/>Learn. Plan. Protect. All in one place.</p>
@@ -611,13 +618,10 @@
         <button class="feat-toggle-btn" type="button" data-feat="business" onclick="switchFeatTab('business')">Business</button>
       </div>
     </div>
-  </section>
-
-  <!-- SECTION 3: FEATURE CARDS -->
-  <section class="features-section">
+    <div class="features-pin">
 
     <!-- Consumer cards (shared by Individual tab and Combo > Consumer) -->
-    <div class="features-cards" data-feat-panel="individual" data-anim data-anim-delay="150">
+    <div class="features-cards" data-feat-panel="individual">
 
       <div class="feature-card">
         <div class="feature-card-text">
@@ -705,7 +709,9 @@
       </div>
 
     </div>
+    </div>
   </section>
+  </div><!-- /.features-scroll-wrapper -->
 
   <!-- SECTION 4: FAQ -->
   <section class="faq-section">
@@ -830,7 +836,72 @@
 
 </main>
 
+<!-- Premium Duo info tooltip (shared, positioned via JS) -->
+<div class="plan-tip" id="planTip" role="tooltip">
+  <p class="plan-tip-title"></p>
+  <p class="plan-tip-body"></p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="assets/js/animations.js"></script>
 <script src="assets/js/main.js"></script>
+<script>
+(function () {
+  var tip = document.getElementById('planTip');
+  if (!tip) return;
+  var titleEl = tip.querySelector('.plan-tip-title');
+  var bodyEl = tip.querySelector('.plan-tip-body');
+  var TEXT = {
+    individual: {
+      t: 'Premium Duo',
+      b: 'For those who empower (includes a 100% discount code for one more person)'
+    },
+    combo: {
+      t: 'Combo Premium Duo',
+      b: 'Includes three 100% discount codes-2 Premium plan for Businesses and 1 Premium plan for Individual.'
+    }
+  };
+  var openIcon = null;
+
+  function place(icon) {
+    var r = icon.getBoundingClientRect();
+    var tr = tip.getBoundingClientRect();
+    var left = r.right - tr.width;     // right edge aligned to icon's right
+    var top = r.top - tr.height - 8;   // sit above the card
+    if (left < 8) left = 8;
+    if (top < 8) top = r.bottom + 8;   // flip below if no room above
+    tip.style.left = left + 'px';
+    tip.style.top = top + 'px';
+  }
+
+  function open(icon) {
+    var d = icon.closest('.plan-card--combo') ? TEXT.combo : TEXT.individual;
+    titleEl.textContent = d.t;
+    bodyEl.textContent = d.b;
+    tip.classList.add('is-open');
+    place(icon);
+    openIcon = icon;
+  }
+
+  function close() {
+    tip.classList.remove('is-open');
+    openIcon = null;
+  }
+
+  document.querySelectorAll('.plan-card-info-icon').forEach(function (icon) {
+    icon.addEventListener('click', function (e) {
+      e.stopPropagation();
+      if (openIcon === icon) { close(); return; }
+      open(icon);
+    });
+  });
+  document.addEventListener('click', function (e) {
+    if (openIcon && !tip.contains(e.target)) close();
+  });
+  window.addEventListener('scroll', close, true);
+  window.addEventListener('resize', close);
+})();
+</script>
 </body>
 </html>

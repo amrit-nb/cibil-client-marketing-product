@@ -123,6 +123,16 @@ a {
   animation: panelFadeUp 0.4s ease both;
 }
 
+/* Feature panel swap — opacity only so GSAP's x-transform on .features-cards isn't overridden */
+@keyframes featPanelFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.feat-panel-fade {
+  animation: featPanelFade 0.3s ease both;
+}
+
 /* ══════════════════════════════════════
    SECTION 1 — PLANS
    ══════════════════════════════════════ */
@@ -511,6 +521,61 @@ a {
   font-size: 18px;
   line-height: 20px;
   color: var(--dark);
+}
+
+.plan-card-name-group {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.plan-card-info-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  display: block;
+  cursor: pointer;
+}
+
+/* Premium Duo info tooltip */
+.plan-tip {
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 348px;
+  max-width: 90vw;
+  padding: 16px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 2px 2px 16px 0 rgba(0, 71, 255, 0.2);
+  color: var(--accent-black);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+.plan-tip.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.plan-tip-title {
+  font-family: var(--font-intro-bold);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+}
+
+.plan-tip-body {
+  font-family: var(--font-intro-regular);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.28px;
 }
 
 .plan-card--elite .plan-card-name,
@@ -1026,17 +1091,13 @@ a {
    SECTION 2 — FEATURES HEADER
    ══════════════════════════════════════ */
 
-.features-header-section {
-  padding: 56px 48px 32px;
-  background: var(--white);
-}
-
 .features-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
   text-align: center;
+  padding-bottom: 32px;
 }
 
 .features-title {
@@ -1086,9 +1147,13 @@ a {
    SECTION 3 — FEATURE CARDS (carousel)
    ══════════════════════════════════════ */
 
+.features-scroll-wrapper {
+  /* height set by JS on desktop = section height + scroll distance */
+}
+
 .features-section {
   background: var(--white);
-  padding: 0 0 56px;
+  padding: 56px 48px 56px;
 }
 
 .features-cards {
@@ -1105,6 +1170,20 @@ a {
 
 .features-cards::-webkit-scrollbar {
   display: none;
+}
+
+@media (min-width: 992px) {
+  .features-section {
+    position: sticky;
+    top: 0;
+  }
+  .features-cards {
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+  .features-pin {
+    overflow: hidden;
+  }
 }
 
 .feature-card {
@@ -1513,7 +1592,7 @@ a {
   }
 
   /* ── Features ── */
-  .features-header-section {
+  .features-section {
     padding: 40px 20px 24px;
   }
 

@@ -47,11 +47,13 @@ function setFeatPanel(name) {
     const active = row.dataset.featPanel === name;
     row.classList.toggle('hidden', !active);
     if (active) {
-      row.classList.remove('panel-anim');
+      // Use opacity-only fade so GSAP's transform on .features-cards isn't clobbered
+      row.classList.remove('feat-panel-fade');
       void row.offsetWidth;
-      row.classList.add('panel-anim');
+      row.classList.add('feat-panel-fade');
     }
   });
+  window.refreshFeatureScroll?.();
 }
 
 // ─── Mobile: View / Hide Features on plan cards ─────────────────────────────
