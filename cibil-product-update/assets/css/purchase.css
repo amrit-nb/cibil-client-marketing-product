@@ -13,9 +13,8 @@
 }
 
 .pu-banner-inner {
-  max-width: 1180px;
   margin: 0 auto;
-  padding: 40px 0 32px;
+  padding: 40px 130px;
 }
 
 .pu-banner-inner h1 {
@@ -43,8 +42,8 @@
   display: flex;
   align-items: flex-start;
   gap: 32px;
-  max-width: 1180px;
   margin: 24px auto 0;
+  padding: 0 130px;
 }
 
 .pu-left {
@@ -75,7 +74,7 @@
 .pu-plans {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 10px;
 }
 
 .pu-plan-row {
@@ -89,6 +88,7 @@
   padding: 25px;
   cursor: pointer;
   box-shadow: 0 4px 10px 0 rgba(0, 101, 120, 0.02);
+  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* Rows with an "Add another member" addon (Premium) stack top row + addon vertically */
@@ -122,6 +122,7 @@
   border-radius: 50%;
   flex-shrink: 0;
   margin-top: 2px;
+  transition: border 0.2s ease;
 }
 
 .pu-plan-row.is-selected .pu-plan-radio {
@@ -334,12 +335,20 @@
   transform: rotate(0deg);
 }
 
-.pu-plans-collapsed .pu-plan-row:not(.is-selected) {
-  display: none;
+.pu-other-plans {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+  max-height: 2000px;
+  opacity: 1;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
 }
 
-.pu-plans-collapsed .pu-plan-toggle {
-  display: none;
+.pu-other-plans.pu-collapsed {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* ── Individual / Combo pill toggle ── */
@@ -363,6 +372,7 @@
   font-size: 14px;
   letter-spacing: 0.28px;
   color: var(--mid);
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .pu-plan-toggle-btn.is-active {
@@ -470,7 +480,7 @@
 .pu-summary-head {
   background: var(--blue);
   color: var(--white);
-  font-family: var(--font-intro-bold);
+  font-family: var(--font-intro-semibold);
   font-size: 18px;
   height: 56px;
   display: flex;
@@ -525,6 +535,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .pu-promo-top p {
@@ -536,11 +547,24 @@
 .pu-promo-chevron {
   color: var(--mid);
   font-size: 13px;
+  display: inline-block;
+  transition: transform 0.25s ease;
 }
 
 .pu-promo-row {
   display: flex;
   gap: 10px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  transition: max-height 0.3s ease, opacity 0.25s ease, margin-top 0.25s ease;
+}
+
+.pu-promo-row.pu-open {
+  max-height: 80px;
+  opacity: 1;
+  margin-top: 12px;
 }
 
 .pu-promo-input {
@@ -573,6 +597,24 @@
   cursor: pointer;
   white-space: nowrap;
 }
+
+/* Promo input success / error */
+.pu-promo-input.is-success { border-color: #008a1e; }
+.pu-promo-input.is-error   { border-color: #d32f2f; }
+
+.pu-promo-msg {
+  font-family: var(--font-intro-regular);
+  font-size: 13px;
+  line-height: 18px;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.25s ease, opacity 0.2s ease;
+}
+.pu-promo-msg.is-visible  { max-height: 40px; opacity: 1; }
+.pu-promo-msg.is-success  { color: #008a1e; }
+.pu-promo-msg.is-error    { color: #d32f2f; }
 
 .pu-total-row {
   display: flex;
@@ -622,7 +664,7 @@
 
 @media (max-width: 991px) {
   .pu-banner-inner {
-    padding: 24px 20px;
+    padding: 56px 20px;
     text-align: center;
   }
 
@@ -652,6 +694,10 @@
   .pu-card-title { font-size: 12px; }
 
   .pu-plan-row { padding: 13px; }
+
+  .pu-plan-toggle { width: 100%; }
+  .pu-plan-toggle-btn { width: 50%; font-family: var(--font-intro-regular); }
+  .pu-plan-toggle-btn.is-active { font-family: var(--font-intro-semibold); }
 
   .pu-plan-name { font-size: 16px; }
 
@@ -686,4 +732,10 @@
   }
 
   .pu-summary-body { padding: 24px 16px; }
+  .pu-include-item p { font-size: 12px; line-height: 16px; }
+  .pu-include-item svg {min-width: 24px;}
+  .pu-disclaimer{ font-size: 10px; line-height: 14px; }
+  .pu-badge-save{font-size: 10px; letter-spacing: normal;}
+  .pu-addon-text{font-size: 12px; line-height: 16px;}
+  .pu-addon-row{gap: 8px;}
 }
