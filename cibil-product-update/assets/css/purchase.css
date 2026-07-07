@@ -368,7 +368,7 @@
   cursor: pointer;
   padding: 5px 16px 3px;
   border-radius: 48px;
-  font-family: var(--font-intro-semibold);
+  font-family: var(--font-intro-regular);
   font-size: 14px;
   letter-spacing: 0.28px;
   color: var(--mid);
@@ -378,7 +378,7 @@
 .pu-plan-toggle-btn.is-active {
   background: var(--blue);
   color: var(--white);
-  font-family: var(--font-intro-bold);
+  font-family: var(--font-intro-semibold);
 }
 
 /* ── Includes grid ── */
@@ -696,8 +696,7 @@
   .pu-plan-row { padding: 13px; }
 
   .pu-plan-toggle { width: 100%; }
-  .pu-plan-toggle-btn { width: 50%; font-family: var(--font-intro-regular); }
-  .pu-plan-toggle-btn.is-active { font-family: var(--font-intro-semibold); }
+  .pu-plan-toggle-btn { width: 50%; }
 
   .pu-plan-name { font-size: 16px; }
 
@@ -738,4 +737,34 @@
   .pu-badge-save{font-size: 10px; letter-spacing: normal;}
   .pu-addon-text{font-size: 12px; line-height: 16px;}
   .pu-addon-row{gap: 8px;}
+}
+
+/* ══════════════════════════════════════
+   COMBO BAND
+   ══════════════════════════════════════ */
+
+.pu-combo-band {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: #f7f9fa;
+  border-radius: 8px;
+  padding: 8px 16px;
+  margin-top: 4px;
+}
+
+.pu-combo-band.hidden { display: none; }
+
+.pu-combo-band-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.pu-combo-band-text {
+  font-family: var(--font-intro-regular);
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.28px;
+  color: #262626;
+  margin: 0;
 }
