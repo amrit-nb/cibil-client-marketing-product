@@ -737,6 +737,7 @@
   .pu-badge-save{font-size: 10px; letter-spacing: normal;}
   .pu-addon-text{font-size: 12px; line-height: 16px;}
   .pu-addon-row{gap: 8px;}
+  .pu-combo-band-text{font-size: 12px; line-height: 16px;}
 }
 
 /* ══════════════════════════════════════
@@ -763,7 +764,7 @@
 .pu-combo-band-text {
   font-family: var(--font-intro-regular);
   font-size: 14px;
-  line-height: 24px;
+  line-height: 32px;
   letter-spacing: 0.28px;
   color: #262626;
   margin: 0;
