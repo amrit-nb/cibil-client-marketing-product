@@ -3,8 +3,8 @@ const puOtherEl = document.getElementById('puOtherPlans');
 let puActiveTab = 'individual';
 
 const PLAN_ORDER = {
-  individual: ['basic', 'standard', 'premium', 'starter'],
-  combo: ['basic', 'standard', 'premium']
+  individual: ['premium', 'standard', 'basic', 'starter'],
+  combo: ['premium', 'standard', 'basic']
 };
 
 function getAllRows() {
@@ -17,15 +17,14 @@ function getFirstPlanForTab(tab) {
 
 function insertRowInOrder(row) {
   const order = PLAN_ORDER[row.dataset.tab] || [];
-  for (const plan of order) {
-    if (plan === row.dataset.plan) continue;
-    const existing = puOtherEl.querySelector(`.pu-plan-row[data-tab="${row.dataset.tab}"][data-plan="${plan}"]`);
-    if (existing) {
-      puOtherEl.insertBefore(row, existing);
-      return;
-    }
+  const rowIndex = order.indexOf(row.dataset.plan);
+  const existing = [...puOtherEl.querySelectorAll(`.pu-plan-row[data-tab="${row.dataset.tab}"]`)];
+  const insertBefore = existing.find(r => order.indexOf(r.dataset.plan) > rowIndex);
+  if (insertBefore) {
+    puOtherEl.insertBefore(row, insertBefore);
+  } else {
+    puOtherEl.appendChild(row);
   }
-  puOtherEl.appendChild(row);
 }
 
 puPlansEl.addEventListener('click', (e) => {
