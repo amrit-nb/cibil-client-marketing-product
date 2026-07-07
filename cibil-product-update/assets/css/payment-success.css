@@ -265,6 +265,7 @@ body {
   padding: 11px 12px 9px;
   font-size: 14px;
   letter-spacing: 0.28px;
+  line-height: 20px;
   color: var(--accent-black);
   display: flex;
   align-items: center;
@@ -383,6 +384,7 @@ body {
   justify-content: center;
   gap: 24px;
   margin-bottom: 16px;
+  margin-top: 12px;
 }
 
 .ps-footer-links a {
@@ -486,7 +488,7 @@ body {
     font-family: var(--font-intro-regular);
     font-size: 12px;
     color: var(--mid);
-    margin-top: 8px;
+    margin-top: 12px;
   }
 
   .ps-code-item-label:first-child { margin-top: 0; }
@@ -494,6 +496,7 @@ body {
   .ps-code-item-value {
     font-family: var(--font-intro-semibold);
     font-size: 14px;
+    line-height: 16px;
     color: var(--accent-black);
   }
 
