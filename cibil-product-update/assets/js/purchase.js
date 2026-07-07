@@ -3,8 +3,8 @@ const puOtherEl = document.getElementById('puOtherPlans');
 let puActiveTab = 'individual';
 
 const PLAN_ORDER = {
-  individual: ['basic', 'standard', 'premium', 'premium-duo', 'starter'],
-  combo: ['basic', 'standard', 'premium', 'premium-duo']
+  individual: ['basic', 'standard', 'premium', 'starter'],
+  combo: ['basic', 'standard', 'premium']
 };
 
 function getAllRows() {
@@ -190,7 +190,9 @@ function applyPromo() {
 (function initFromQueryString() {
   const params = new URLSearchParams(window.location.search);
   const tab = params.get('tab') === 'combo' ? 'combo' : 'individual';
-  const plan = params.get('plan');
+  const rawPlan = params.get('plan');
+  const isDuo = rawPlan === 'premium-duo';
+  const plan = isDuo ? 'premium' : rawPlan;
   const btn = document.querySelector(`.pu-plan-toggle-btn[data-plan-tab="${tab}"]`);
   // Start collapsed — no transition on load
   puOtherEl.style.transition = 'none';
@@ -198,4 +200,9 @@ function applyPromo() {
   document.getElementById('puHideChevron').classList.add('is-collapsed');
   requestAnimationFrame(() => { puOtherEl.style.transition = ''; });
   switchPlanTab(btn, tab, plan);
+  if (isDuo) {
+    const selectedRow = document.querySelector('.pu-plan-row.is-selected');
+    const addon = selectedRow && selectedRow.querySelector('.pu-addon-checkbox');
+    if (addon) { addon.checked = true; addon.closest('.pu-addon-row').classList.add('is-checked'); updateSummary(); }
+  }
 })();
