@@ -100,6 +100,9 @@ function toggleOtherPlans() {
     if (selected) {
       const currentTop = puPlansEl.querySelector('.pu-plan-row');
       if (currentTop && currentTop !== selected) {
+        if (currentTop.dataset.tab !== selected.dataset.tab) {
+          currentTop.classList.add('hidden');
+        }
         insertRowInOrder(currentTop);
       }
       puPlansEl.insertBefore(selected, document.getElementById('puHideToggle'));
@@ -152,6 +155,7 @@ function switchPlanTab(btn, tab, preselectPlan, isInit) {
     updateSummary();
   } else {
     // Manual tab switch — keep committed plan in #puPlans, only show/hide other rows
+    puActiveTab = tab;
     const committedRow = puPlansEl.querySelector('.pu-plan-row');
     getAllRows().forEach(row => {
       if (row === committedRow) return;
