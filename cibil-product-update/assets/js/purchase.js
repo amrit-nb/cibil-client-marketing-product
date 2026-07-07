@@ -71,7 +71,8 @@ function toggleAddMember(checkbox) {
 }
 
 function updateSummary() {
-  const selected = puPlansEl.querySelector('.pu-plan-row.is-selected');
+  const selected = puPlansEl.querySelector('.pu-plan-row');
+  if (!selected) return;
   const price = parseInt(selected.dataset.price, 10);
   const addonCheckbox = selected.querySelector('.pu-addon-checkbox');
   const addMemberChecked = !!(addonCheckbox && addonCheckbox.checked);
@@ -96,49 +97,74 @@ function toggleOtherPlans() {
 
   if (isCollapsed) {
     const selected = puOtherEl.querySelector('.pu-plan-row.is-selected');
-    const currentTop = puPlansEl.querySelector('.pu-plan-row');
-    if (currentTop && currentTop !== selected) {
-      insertRowInOrder(currentTop);
-    }
     if (selected) {
+      const currentTop = puPlansEl.querySelector('.pu-plan-row');
+      if (currentTop && currentTop !== selected) {
+        insertRowInOrder(currentTop);
+      }
       puPlansEl.insertBefore(selected, document.getElementById('puHideToggle'));
+      if (selected.dataset.tab !== puActiveTab) {
+        puActiveTab = selected.dataset.tab;
+        const newBtn = puPlansEl.querySelector(`.pu-plan-toggle-btn[data-plan-tab="${puActiveTab}"]`);
+        puPlansEl.querySelectorAll('.pu-plan-toggle-btn').forEach(b => b.classList.toggle('is-active', b === newBtn));
+      }
+      updateSummary();
+    } else {
+      const currentTop = puPlansEl.querySelector('.pu-plan-row');
+      if (currentTop && !currentTop.classList.contains('is-selected')) {
+        currentTop.classList.add('is-selected');
+        const radio = currentTop.querySelector('input[type="radio"]');
+        if (radio) radio.checked = true;
+      }
     }
   }
 }
 
-function switchPlanTab(btn, tab, preselectPlan) {
-  puActiveTab = tab;
+function switchPlanTab(btn, tab, preselectPlan, isInit) {
   puPlansEl.querySelectorAll('.pu-plan-toggle-btn').forEach(b => b.classList.toggle('is-active', b === btn));
-
-  getAllRows().forEach(row => {
-    row.classList.toggle('hidden', row.dataset.tab !== tab);
-    if (row.dataset.tab !== tab) {
-      row.classList.remove('is-selected');
-      row.querySelector('input[type="radio"]').checked = false;
-      const addon = row.querySelector('.pu-addon-checkbox');
-      if (addon) { addon.checked = false; addon.closest('.pu-addon-row').classList.remove('is-checked'); }
-    }
-  });
-
-  const prev = puPlansEl.querySelector('.pu-plan-row');
-  if (prev) {
-    insertRowInOrder(prev);
-  }
-
-  const allRows = getAllRows().filter(r => r.dataset.tab === tab);
-  const targetPlan = preselectPlan || getFirstPlanForTab(tab);
-  const targetRow = allRows.find(r => r.dataset.plan === targetPlan) || allRows[0];
-
-  targetRow.classList.remove('hidden');
-  targetRow.classList.add('is-selected');
-  targetRow.querySelector('input[type="radio"]').checked = true;
-  puPlansEl.insertBefore(targetRow, document.getElementById('puHideToggle'));
 
   document.querySelectorAll('[data-includes-tab]').forEach(el => {
     el.classList.toggle('hidden', el.dataset.includesTab !== tab);
   });
 
-  updateSummary();
+  if (isInit) {
+    puActiveTab = tab;
+    getAllRows().forEach(row => {
+      row.classList.toggle('hidden', row.dataset.tab !== tab);
+      if (row.dataset.tab !== tab) {
+        row.classList.remove('is-selected');
+        row.querySelector('input[type="radio"]').checked = false;
+        const addon = row.querySelector('.pu-addon-checkbox');
+        if (addon) { addon.checked = false; addon.closest('.pu-addon-row').classList.remove('is-checked'); }
+      }
+    });
+
+    const prev = puPlansEl.querySelector('.pu-plan-row');
+    if (prev) insertRowInOrder(prev);
+
+    const allRows = getAllRows().filter(r => r.dataset.tab === tab);
+    const targetPlan = preselectPlan || getFirstPlanForTab(tab);
+    const targetRow = allRows.find(r => r.dataset.plan === targetPlan) || allRows[0];
+    targetRow.classList.remove('hidden');
+    targetRow.classList.add('is-selected');
+    targetRow.querySelector('input[type="radio"]').checked = true;
+    puPlansEl.insertBefore(targetRow, document.getElementById('puHideToggle'));
+    updateSummary();
+  } else {
+    // Manual tab switch — keep committed plan in #puPlans, only show/hide other rows
+    const committedRow = puPlansEl.querySelector('.pu-plan-row');
+    getAllRows().forEach(row => {
+      if (row === committedRow) return;
+      row.classList.toggle('hidden', row.dataset.tab !== tab);
+      if (row.dataset.tab !== tab) {
+        row.classList.remove('is-selected');
+        const radio = row.querySelector('input[type="radio"]');
+        if (radio) radio.checked = false;
+        const addon = row.querySelector('.pu-addon-checkbox');
+        if (addon) { addon.checked = false; addon.closest('.pu-addon-row').classList.remove('is-checked'); }
+      }
+    });
+  }
 }
 
 const PROMO_VALID_CODES = ['CIBIL100', 'SAVE10'];
@@ -198,7 +224,7 @@ function applyPromo() {
   puOtherEl.classList.add('pu-collapsed');
   document.getElementById('puHideChevron').classList.add('is-collapsed');
   requestAnimationFrame(() => { puOtherEl.style.transition = ''; });
-  switchPlanTab(btn, tab, plan);
+  switchPlanTab(btn, tab, plan, true);
   if (isDuo) {
     const selectedRow = document.querySelector('.pu-plan-row.is-selected');
     const addon = selectedRow && selectedRow.querySelector('.pu-addon-checkbox');
