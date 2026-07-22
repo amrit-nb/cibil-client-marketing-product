@@ -21,219 +21,300 @@
     <link type="text/css" rel="stylesheet" href="./Verification Successfully_files/dynamic.css">
     <link type="text/css" rel="stylesheet" href="./Verification Successfully_files/common.css">
     <style>
-      /* ── Left column: show logged-in state to match Figma ──── */
-      .col-left .thankLoggedOut { display: none !important; }
-      .col-left .thankLoggedIn { display: block !important; }
+        @font-face {
+            font-family: "intro-light";
+            src: url("Verification Successfully_files/fonts/IntroLightPlan.otf") format("opentype");
+        }
 
-      /* ── Left column: banner override ──────────────────────── */
-      .col-left .message.message-success.gstinFlow {
-        background: #fff !important;
-        border: 1px solid #bfbfbf !important;
-        border-radius: 0 !important;
-        display: flex !important;
-        align-items: center !important;
-        gap: 8px !important;
-        padding: 16px !important;
-      }
-      .col-left .message.message-success.gstinFlow::before,
-      .col-left .message.message-success.gstinFlow::after {
-        display: none !important;
-      }
-      .col-left .message.message-success.gstinFlow .message-text {
-        font-family: var(--font-intro-semibold) !important;
-        font-size: 18px !important;
-        line-height: 1.4 !important;
-        color: #777 !important;
-        text-transform: uppercase !important;
-        margin: 0 !important;
-        font-weight: 400 !important;
-      }
+        @font-face {
+            font-family: "IntroRegularPlan";
+            src: url("Verification Successfully_files/fonts/IntroRegularPlan.ttf") format("truetype");
+        }
 
-      /* ── Left column: Congratulations h1 ───────────────────── */
-      .col-left .section-title {
-        font-family: var(--font-intro-bold) !important;
-        font-size: 40px !important;
-        line-height: 1.4 !important;
-        color: #262626 !important;
-        text-transform: none !important;
-        letter-spacing: 0 !important;
-      }
+        @font-face {
+            font-family: "IntroSemiBoldPlan";
+            src: url("Verification Successfully_files/fonts/IntroSemiBoldPlan.ttf") format("truetype");
+        }
 
-      /* ── Left column: subtitle h5 ──────────────────────────── */
-      .col-left .gstinFlow.thankPurchaseFlow h5 {
-        font-family: var(--font-intro-regular) !important;
-        font-size: 16px !important;
-        line-height: 1.4 !important;
-        color: #777 !important;
-        font-weight: 400 !important;
-      }
+        @font-face {
+            font-family: "IntroPlan";
+            src:
+                url("Verification Successfully_files/fonts/intro-3/2CA963-0-0.woff2") format("woff2"),
+                url("Verification Successfully_files/fonts/intro-3/2CA963-0-0.woff") format("woff"),
+                url("Verification Successfully_files/fonts/intro-3/2CA963-0-0.ttf") format("truetype");
+        }
 
-      /* ── Left column: Go to Dashboard button ───────────────── */
-      .col-left .thankLoggedIn .btn-outline-orange {
-        font-family: var(--font-intro-bold) !important;
-        font-size: 16px !important;
-        line-height: 1.4 !important;
-        border: 2px solid #ff871f !important;
-        color: #ff871f !important;
-        text-transform: uppercase !important;
-        padding: 16px 24px !important;
-        border-radius: 0 !important;
-      }
+        /* ── Font variables (scoped to :root so var() works here) ─ */
+        :root {
+            --font-intro-bold: "IntroPlan", sans-serif;
+            --font-intro-semibold: "IntroSemiBoldPlan", sans-serif;
+            --font-intro-regular: "IntroRegularPlan", sans-serif;
+            --font-intro-light: intro-light, sans-serif;
+        }
 
-      /* ── Discount code section ─────────────────────────────── */
-      .discount-unlock-header {
-        display: flex;
-        gap: 16px;
-        align-items: flex-start;
-      }
-      .discount-unlock-icon {
-        background: #f7f9fa;
-        border-radius: 4px;
-        padding: 10px;
-        flex-shrink: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .discount-unlock-icon img { display: block; width: 24px; height: 24px; }
-      .discount-unlock-text { flex: 1; }
-      .discount-unlock-title {
-        font-family: var(--font-intro-bold);
-        font-size: 16px;
-        color: #262626;
-        text-transform: uppercase;
-        line-height: 1.4;
-        margin: 0 0 2px;
-      }
-      .discount-unlock-subtitle {
-        font-family: var(--font-intro-regular);
-        font-size: 14px;
-        color: #595959;
-        line-height: 1.4;
-        margin: 0;
-      }
-      .discount-cards-wrap {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-      }
-      .discount-card-inner {
-        background: #f9f9f9;
-        padding: 24px;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-      }
-      .discount-card-top {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-      }
-      .discount-card-row {
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-      }
-      .discount-card-plan {
-        font-family: var(--font-intro-semibold);
-        font-size: 14px;
-        color: #262626;
-        line-height: 1.4;
-        margin: 0;
-      }
-      .discount-card-badge {
-        background: #fff;
-        display: flex;
-        align-items: center;
-        gap: 4px;
-        padding: 4px 8px;
-      }
-      .discount-card-badge img { width: 14px; height: 14px; display: block; }
-      .discount-card-badge-text {
-        font-family: var(--font-intro-regular);
-        font-size: 14px;
-        color: #595959;
-        line-height: 1.4;
-        margin: 0;
-      }
-      .discount-code-box {
-        background: #fff;
-        border: 1px solid #d9d9d9;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        padding: 12px;
-      }
-      .discount-code-value {
-        flex: 1;
-        font-family: var(--font-intro-semibold);
-        font-size: 18px;
-        color: #262626;
-        line-height: 1.4;
-        margin: 0;
-        word-break: break-all;
-        min-width: 0;
-      }
-      .discount-copy-btn {
-        cursor: pointer;
-        flex-shrink: 0;
-        width: 20px;
-        height: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: none;
-        background: none;
-        padding: 0;
-        overflow: hidden;
-      }
-      .discount-copy-btn img { width: 20px; height: 20px; display: block; }
-      .discount-expiry {
-        font-family: var(--font-intro-regular);
-        font-size: 14px;
-        color: #595959;
-        line-height: 1.4;
-        margin: 0;
-        min-height: 20px;
-      }
-      .discount-card-divider {
-        height: 1px;
-        background: #d9d9d9;
-        border: none;
-        margin: 0;
-      }
-      .discount-info-row {
-        display: flex;
-        gap: 4px;
-        align-items: flex-start;
-      }
-      .discount-info-icon {
-        flex-shrink: 0;
-        padding-top: 2px;
-        display: flex;
-        align-items: center;
-      }
-      .discount-info-icon img { width: 16px; height: 16px; display: block; }
-      .discount-info-text {
-        flex: 1;
-        font-family: var(--font-intro-regular);
-        font-size: 14px;
-        color: #595959;
-        line-height: 1.4;
-        margin: 0;
-      }
-      .discount-info-text a {
-        font-family: var(--font-intro-bold);
-        color: #00a6ca;
-        text-decoration: underline;
-      }
-      .discount-footer-note {
-        font-family: var(--font-intro-regular);
-        font-size: 14px;
-        color: #777;
-        line-height: 1.4;
-        margin: 0;
-      }
+        /* ── Left column: show logged-in state to match Figma ──── */
+        .col-left .thankLoggedOut {
+            display: none !important;
+        }
+
+        .col-left .thankLoggedIn {
+            display: block !important;
+        }
+
+        /* ── Left column: banner override ──────────────────────── */
+        .col-left .message.message-success.gstinFlow {
+            background: #fff !important;
+            border: 1px solid #bfbfbf !important;
+            border-radius: 0 !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+            padding: 16px !important;
+        }
+
+        .col-left .message.message-success.gstinFlow::before,
+        .col-left .message.message-success.gstinFlow::after {
+            display: none !important;
+        }
+
+        .col-left .message.message-success.gstinFlow .message-text {
+            font-family: var(--font-intro-semibold) !important;
+            font-size: 18px !important;
+            line-height: 1.4 !important;
+            color: #777 !important;
+            text-transform: uppercase !important;
+            margin: 0 !important;
+            font-weight: 400 !important;
+        }
+
+        /* ── Left column: Congratulations h1 ───────────────────── */
+        .col-left .section-title {
+            font-family: var(--font-intro-bold) !important;
+            font-size: 40px !important;
+            line-height: 1.4 !important;
+            color: #262626 !important;
+            text-transform: none !important;
+            letter-spacing: 0 !important;
+        }
+
+        /* ── Left column: subtitle h5 ──────────────────────────── */
+        .col-left .gstinFlow.thankPurchaseFlow h5 {
+            font-family: var(--font-intro-regular) !important;
+            font-size: 16px !important;
+            line-height: 1.4 !important;
+            color: #777 !important;
+            font-weight: 400 !important;
+        }
+
+        /* ── Left column: Go to Dashboard button ───────────────── */
+        .col-left .thankLoggedIn .btn-outline-orange {
+            font-family: var(--font-intro-bold) !important;
+            font-size: 16px !important;
+            line-height: 1.4 !important;
+            border: 2px solid #ff871f !important;
+            color: #ff871f !important;
+            text-transform: uppercase !important;
+            padding: 16px 24px !important;
+            border-radius: 0 !important;
+        }
+
+        /* ── Discount code section ─────────────────────────────── */
+        .discount-unlock-header {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .discount-unlock-icon {
+            background: #f7f9fa;
+            border-radius: 4px;
+            padding: 10px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .discount-unlock-icon img {
+            display: block;
+            width: 24px;
+            height: 24px;
+        }
+
+        .discount-unlock-text {
+            flex: 1;
+        }
+
+        .discount-unlock-title {
+            font-family: var(--font-intro-bold);
+            font-size: 16px;
+            color: #262626;
+            text-transform: uppercase;
+            line-height: 1.4;
+            margin: 0 0 2px;
+        }
+
+        .discount-unlock-subtitle {
+            font-family: var(--font-intro-regular);
+            font-size: 14px;
+            color: #595959;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        .discount-cards-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .discount-card-inner {
+            background: #f9f9f9;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .discount-card-top {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .discount-card-row {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+
+        .discount-card-plan {
+            font-family: var(--font-intro-semibold);
+            font-size: 14px;
+            color: #262626;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        .discount-card-badge {
+            background: #fff;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 8px;
+        }
+
+        .discount-card-badge img {
+            width: 14px;
+            height: 14px;
+            display: block;
+        }
+
+        .discount-card-badge-text {
+            font-family: var(--font-intro-regular);
+            font-size: 14px;
+            color: #595959;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        .discount-code-box {
+            background: #fff;
+            border: 1px solid #d9d9d9;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px;
+        }
+
+        .discount-code-value {
+            flex: 1;
+            font-family: var(--font-intro-semibold);
+            font-size: 18px;
+            color: #262626;
+            line-height: 1.4;
+            margin: 0;
+            word-break: break-all;
+            min-width: 0;
+        }
+
+        .discount-copy-btn {
+            cursor: pointer;
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            background: none;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .discount-copy-btn img {
+            width: 20px;
+            height: 20px;
+            display: block;
+        }
+
+        .discount-expiry {
+            font-family: var(--font-intro-regular);
+            font-size: 14px;
+            color: #595959;
+            line-height: 1.4;
+            margin: 0;
+            min-height: 20px;
+        }
+
+        .discount-card-divider {
+            height: 1px;
+            background: #d9d9d9;
+            border: none;
+            margin: 0;
+        }
+
+        .discount-info-row {
+            display: flex;
+            gap: 4px;
+            align-items: flex-start;
+        }
+
+        .discount-info-icon {
+            flex-shrink: 0;
+            padding-top: 2px;
+            display: flex;
+            align-items: center;
+        }
+
+        .discount-info-icon img {
+            width: 16px;
+            height: 16px;
+            display: block;
+        }
+
+        .discount-info-text {
+            flex: 1;
+            font-family: var(--font-intro-regular);
+            font-size: 14px;
+            color: #595959;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        .discount-info-text a {
+            font-family: var(--font-intro-bold);
+            color: #00a6ca;
+            text-decoration: underline;
+        }
+
+        .discount-footer-note {
+            font-family: var(--font-intro-regular);
+            font-size: 14px;
+            color: #777;
+            line-height: 1.4;
+            margin: 0;
+        }
     </style>
 </head>
 
@@ -492,7 +573,8 @@
                         <div class="col-md-8 col-lg-7 offset-lg-1 col-left pr-lg-5">
                             <div
                                 class="mb-4 message message-success message-success-lg fadeInUp animated gstinFlow dci-none">
-                                <img src="./Verification Successfully_files/check-circle.svg" width="40" height="40" alt="" style="flex-shrink:0;">
+                                <img src="./Verification Successfully_files/check-circle.svg" width="40" height="40"
+                                    alt="" style="flex-shrink:0;">
                                 <h4 class="message-text">VERIFICATION SUCCESSFUL</h4>
                             </div>
                             <div
@@ -541,7 +623,8 @@
                                         </div>
                                         <div class="discount-unlock-text">
                                             <p class="discount-unlock-title">You've unlocked 2 Discount codes</p>
-                                            <p class="discount-unlock-subtitle">Redeem these codes for 100% off on your plans.</p>
+                                            <p class="discount-unlock-subtitle">Redeem these codes for 100% off on your
+                                                plans.</p>
                                         </div>
                                     </div>
 
@@ -554,24 +637,34 @@
                                                 <div class="discount-card-row">
                                                     <p class="discount-card-plan">Premium Plan</p>
                                                     <div class="discount-card-badge">
-                                                        <img src="./Verification Successfully_files/icon-business.svg" alt="">
+                                                        <img src="./Verification Successfully_files/icon-business.svg"
+                                                            alt="">
                                                         <p class="discount-card-badge-text">Business</p>
                                                     </div>
                                                 </div>
                                                 <div class="discount-code-box">
-                                                    <p class="discount-code-value"><span id="giftCode_0">ABCD123FDUBE6RDWS789</span></p>
-                                                    <button class="discount-copy-btn" data-nonce-trigger="copyCodeToClipboard('giftCode_0', 'giftCodeText_0');" id="giftCodeText_0" aria-label="Copy code">
-                                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM19 21H8V7H19V21Z" fill="#00A6CA"/></svg>
+                                                    <p class="discount-code-value"><span
+                                                            id="giftCode_0">ABCD123FDUBE6RDWS789</span></p>
+                                                    <button class="discount-copy-btn"
+                                                        data-nonce-trigger="copyCodeToClipboard('giftCode_0', 'giftCodeText_0');"
+                                                        id="giftCodeText_0" aria-label="Copy code">
+                                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM19 21H8V7H19V21Z"
+                                                                fill="#00A6CA" />
+                                                        </svg>
                                                     </button>
                                                 </div>
                                                 <p class="discount-expiry">Expires 26 Feb 2026</p>
                                             </div>
-                                            <hr class="discount-card-divider"/>
+                                            <hr class="discount-card-divider" />
                                             <div class="discount-info-row">
                                                 <span class="discount-info-icon">
                                                     <img src="./Verification Successfully_files/icon-info.svg" alt="">
                                                 </span>
-                                                <p class="discount-info-text">Use yourself or share with another business — applies in the discount code field.</p>
+                                                <p class="discount-info-text">Use yourself or share with another
+                                                    business — applies in the discount code field.</p>
                                             </div>
                                         </div>
 
@@ -581,31 +674,44 @@
                                                 <div class="discount-card-row">
                                                     <p class="discount-card-plan">Premium Duo Plan</p>
                                                     <div class="discount-card-badge">
-                                                        <img src="./Verification Successfully_files/icon-person.svg" alt="">
+                                                        <img src="./Verification Successfully_files/icon-person.svg"
+                                                            alt="">
                                                         <p class="discount-card-badge-text">Individual</p>
                                                     </div>
                                                 </div>
                                                 <div class="discount-code-box">
-                                                    <p class="discount-code-value"><span id="giftCode_1">ABCD123FDUBE6RDWS789</span></p>
-                                                    <button class="discount-copy-btn" data-nonce-trigger="copyCodeToClipboard('giftCode_1', 'giftCodeText_1');" id="giftCodeText_1" aria-label="Copy code">
-                                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM19 21H8V7H19V21Z" fill="#00A6CA"/></svg>
+                                                    <p class="discount-code-value"><span
+                                                            id="giftCode_1">ABCD123FDUBE6RDWS789</span></p>
+                                                    <button class="discount-copy-btn"
+                                                        data-nonce-trigger="copyCodeToClipboard('giftCode_1', 'giftCodeText_1');"
+                                                        id="giftCodeText_1" aria-label="Copy code">
+                                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM19 21H8V7H19V21Z"
+                                                                fill="#00A6CA" />
+                                                        </svg>
                                                     </button>
                                                 </div>
                                                 <p class="discount-expiry">Expires 26 Feb 2026</p>
                                             </div>
-                                            <hr class="discount-card-divider"/>
+                                            <hr class="discount-card-divider" />
                                             <div class="discount-info-row">
                                                 <span class="discount-info-icon">
                                                     <img src="./Verification Successfully_files/icon-info.svg" alt="">
                                                 </span>
-                                                <p class="discount-info-text"><a href="javascript:void(0);" data-nonce-trigger="_redirectToIndividualLogin();">Click here</a> to create a new account or log in to your existing CIBIL Individual account to redeem the code.</p>
+                                                <p class="discount-info-text"><a href="javascript:void(0);"
+                                                        data-nonce-trigger="_redirectToIndividualLogin();">Click
+                                                        here</a> to create a new account or log in to your existing
+                                                    CIBIL Individual account to redeem the code.</p>
                                             </div>
                                         </div>
 
                                     </div>
 
                                     <!-- Footer note -->
-                                    <p class="discount-footer-note mt-3">You can access these Discount Codes after logging in.</p>
+                                    <p class="discount-footer-note mt-3">You can access these Discount Codes after
+                                        logging in.</p>
                                 </div>
                             </div>
                             <div class="thankLoggedIn dci-none mt-3">
@@ -613,7 +719,8 @@
                                     <span class="text-grey">Click on below button to go back on home page.<p></p></span>
                                 </div>
                                 <button data-nonce-trigger="_getLatestCustomerAssetsForUser();"
-                                    class="btn btn-outline btn-outline-orange btn-lg border-width-2 btn-add-company">GO TO DASHBOARD</button>
+                                    class="btn btn-outline btn-outline-orange btn-lg border-width-2 btn-add-company">GO
+                                    TO DASHBOARD</button>
                             </div>
                         </div>
                         <div class="col-md-4 col-lg-3 col-right sticky-sidebar">
