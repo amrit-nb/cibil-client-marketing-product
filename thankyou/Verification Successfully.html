@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en" class=" ">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <title>Verification Successfully</title>
+
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="vpath" content="">
+
+    <meta name="page-locale-name" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="./Verification Successfully_files/dynamic.css">
+    <link type="text/css" rel="stylesheet" href="./Verification Successfully_files/common.css">
+    <style>
+      /* ── Left column: banner override ──────────────────────── */
+      .col-left .message.message-success.gstinFlow {
+        background: #fff !important;
+        border: 1px solid #bfbfbf !important;
+        border-radius: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        padding: 16px !important;
+      }
+      .col-left .message.message-success.gstinFlow::before,
+      .col-left .message.message-success.gstinFlow::after {
+        display: none !important;
+      }
+      .col-left .message.message-success.gstinFlow .message-text {
+        font-family: var(--font-intro-semibold) !important;
+        font-size: 18px !important;
+        line-height: 1.4 !important;
+        color: #777 !important;
+        text-transform: uppercase !important;
+        margin: 0 !important;
+        font-weight: 400 !important;
+      }
+
+      /* ── Left column: Congratulations h1 ───────────────────── */
+      .col-left .section-title {
+        font-family: var(--font-intro-bold) !important;
+        font-size: 40px !important;
+        line-height: 1.4 !important;
+        color: #262626 !important;
+        text-transform: none !important;
+        letter-spacing: 0 !important;
+      }
+
+      /* ── Left column: subtitle h5 ──────────────────────────── */
+      .col-left .gstinFlow.thankPurchaseFlow h5 {
+        font-family: var(--font-intro-regular) !important;
+        font-size: 16px !important;
+        line-height: 1.4 !important;
+        color: #777 !important;
+        font-weight: 400 !important;
+      }
+
+      /* ── Left column: Go to Dashboard button ───────────────── */
+      .col-left .thankLoggedIn .btn-outline-orange {
+        font-family: var(--font-intro-bold) !important;
+        font-size: 16px !important;
+        line-height: 1.4 !important;
+        border: 2px solid #ff871f !important;
+        color: #ff871f !important;
+        text-transform: uppercase !important;
+        padding: 16px 24px !important;
+        border-radius: 0 !important;
+      }
+
+      /* ── Discount code section ─────────────────────────────── */
+      .discount-unlock-header {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+      }
+      .discount-unlock-icon {
+        background: #f7f9fa;
+        border-radius: 4px;
+        padding: 10px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .discount-unlock-icon img { display: block; width: 24px; height: 24px; }
+      .discount-unlock-text { flex: 1; }
+      .discount-unlock-title {
+        font-family: var(--font-intro-bold);
+        font-size: 16px;
+        color: #262626;
+        text-transform: uppercase;
+        line-height: 1.4;
+        margin: 0 0 2px;
+      }
+      .discount-unlock-subtitle {
+        font-family: var(--font-intro-regular);
+        font-size: 14px;
+        color: #595959;
+        line-height: 1.4;
+        margin: 0;
+      }
+      .discount-cards-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      .discount-card-inner {
+        background: #f9f9f9;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .discount-card-top {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .discount-card-row {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+      }
+      .discount-card-plan {
+        font-family: var(--font-intro-semibold);
+        font-size: 14px;
+        color: #262626;
+        line-height: 1.4;
+        margin: 0;
+      }
+      .discount-card-badge {
+        background: #fff;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 4px 8px;
+      }
+      .discount-card-badge img { width: 14px; height: 14px; display: block; }
+      .discount-card-badge-text {
+        font-family: var(--font-intro-regular);
+        font-size: 14px;
+        color: #595959;
+        line-height: 1.4;
+        margin: 0;
+      }
+      .discount-code-box {
+        background: #fff;
+        border: 1px solid #d9d9d9;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px;
+      }
+      .discount-code-value {
+        flex: 1;
+        font-family: var(--font-intro-semibold);
+        font-size: 18px;
+        color: #262626;
+        line-height: 1.4;
+        margin: 0;
+        word-break: break-all;
+        min-width: 0;
+      }
+      .discount-copy-btn {
+        cursor: pointer;
+        flex-shrink: 0;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background: none;
+        padding: 0;
+        overflow: hidden;
+      }
+      .discount-copy-btn img { width: 20px; height: 20px; display: block; }
+      .discount-expiry {
+        font-family: var(--font-intro-regular);
+        font-size: 14px;
+        color: #595959;
+        line-height: 1.4;
+        margin: 0;
+        min-height: 20px;
+      }
+      .discount-card-divider {
+        height: 1px;
+        background: #d9d9d9;
+        border: none;
+        margin: 0;
+      }
+      .discount-info-row {
+        display: flex;
+        gap: 4px;
+        align-items: flex-start;
+      }
+      .discount-info-icon {
+        flex-shrink: 0;
+        padding-top: 2px;
+        display: flex;
+        align-items: center;
+      }
+      .discount-info-icon img { width: 16px; height: 16px; display: block; }
+      .discount-info-text {
+        flex: 1;
+        font-family: var(--font-intro-regular);
+        font-size: 14px;
+        color: #595959;
+        line-height: 1.4;
+        margin: 0;
+      }
+      .discount-info-text a {
+        font-family: var(--font-intro-bold);
+        color: #00a6ca;
+        text-decoration: underline;
+      }
+      .discount-footer-note {
+        font-family: var(--font-intro-regular);
+        font-size: 14px;
+        color: #777;
+        line-height: 1.4;
+        margin: 0;
+      }
+    </style>
+</head>
+
+
+<body class="lang-en wpg-thankYou">
+
+
+    <div id="c1702147134931" class="iw_component" style="width: 100%;">
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K68N3D" height="0" width="0"
+                style="display:none;visibility:hidden"></iframe></noscript>
+        <div class="header inner-normal">
+            <!-- Header -->
+            <div class="top-header img-height">
+                <div class="container">
+                    <nav class="navbar navbar-light flex-nowrap">
+                        <a class="navbar-brand d-flex" href="javascript: void(0);"
+                            data-nonce-trigger="_onClickRedirectDashBoard();">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <img src="./Verification Successfully_files/cibil-logo.png" width="80" alt="">
+                            </div>
+                            <div class="logo-sub-text d-md-none">
+                                <span class="text-black">CIBIL Rank &amp; <span class="d-block">Company Credit
+                                        Report</span></span>
+                            </div>
+                            <div class="partnership-width dc-none dp-partner-logo">
+                            </div>
+                        </a>
+                        <div class="header-center-col d-none d-md-block">
+                            <span class="text-black bg-yellow">CIBIL Rank &amp; Company Credit Report</span>
+                        </div>
+                        <div class="dropdown-sign-in">
+                            <a href="javascript: void(0);" data-nonce-trigger="_navigateUserByLogin();"><button
+                                    id="btn-confirm-login" class="btn btn-fill btn-fill-orange pl-05 dci-none">LOG IN <i
+                                        class="fas fa-sign-in-alt"></i></button></a>
+                        </div>
+                        <div class="profile-dropdown dci-none">
+                            <div class="user-profile">
+                                <div class="profile-photo">
+                                    <i class="fas fa-user-alt text-lightblue2 user-icon"></i>
+                                </div>
+
+                                <div class="dropdown-arrow">
+                                    <span class="arrow-icon"></span>
+                                </div>
+                            </div>
+                            <div class="dropdown-container dropdown-menu-anim">
+                                <div class="user-details">
+                                    <!--<div class="edit-profile">
+								<h6 class="text-blue d-flex justify-content-between align-items-center">ACCOUNT DETAILS
+									<a href="javascript: void(0);" data-nonce-trigger="_showAccountInformation(false);"
+										class="text-link text-link-blue font-10" data-toggle="modal"
+										data-target="#edit-contact-info">Edit</a>
+								</h6>
+							</div>-->
+
+                                    <div class="profile-info">
+                                        <label class="info-label font-light text-grey font-10 d-block mb-0">First
+                                            Name</label>
+                                        <label class="info-label font-regular text-black font-12 d-block text-break"
+                                            id="profileFirstName"></label>
+                                    </div>
+                                    <div class="profile-info mt-1">
+                                        <label class="info-label font-light text-grey font-10 d-block mb-0">Last
+                                            Name</label>
+                                        <label class="info-label font-regular text-black font-12 d-block text-break"
+                                            id="profileLastName"></label>
+                                    </div>
+                                    <div class="profile-info mt-1">
+                                        <label class="info-label font-light text-grey font-10 d-block mb-0">Mobile
+                                            Number</label>
+                                        <label class="info-label font-regular text-black font-12 d-block"
+                                            id="profileMobileNumber"></label>
+                                    </div>
+                                    <div class="profile-info mt-1 mb-15">
+                                        <label class="info-label font-light text-grey font-10 d-block mb-0">Email
+                                            id</label>
+                                        <label class="info-label font-regular text-black font-12 d-block text-break"
+                                            id="profileEmailId"></label>
+                                    </div>
+                                    <div class="profile-edit text-center dc-none">
+                                        <a href="javascript: void(0);"
+                                            data-nonce-trigger="_showAccountInformation(false);"
+                                            class="text-link text-link-blue font-10 font-light">Edit
+                                            contact details</a>
+                                    </div>
+                                    <div class="profile-action text-right"><a href="javascript:void(0);"
+                                            data-nonce-trigger="_sessionLogout();"
+                                            class="text-black font-12 text-decoration-none">Logout
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="18"
+                                                height="18" fill="#F16E00">
+                                                <path
+                                                    d="M312 372c-7.7 0-14 6.3-14 14 0 9.9-8.1 18-18 18H94c-9.9 0-18-8.1-18-18V126c0-9.9 8.1-18 18-18h186c9.9 0 18 8.1 18 18 0 7.7 6.3 14 14 14s14-6.3 14-14c0-25.4-20.6-46-46-46H94c-25.4 0-46 20.6-46 46v260c0 25.4 20.6 46 46 46h186c25.4 0 46-20.6 46-46 0-7.7-6.3-14-14-14z">
+                                                </path>
+                                                <path
+                                                    d="M372.9 158.1c-2.6-2.6-6.1-4.1-9.9-4.1-3.7 0-7.3 1.4-9.9 4.1-5.5 5.5-5.5 14.3 0 19.8l65.2 64.2H162c-7.7 0-14 6.3-14 14s6.3 14 14 14h256.6L355 334.2c-5.4 5.4-5.4 14.3 0 19.8l.1.1c2.7 2.5 6.2 3.9 9.8 3.9 3.8 0 7.3-1.4 9.9-4.1l82.6-82.4c4.3-4.3 6.5-9.3 6.5-14.7 0-5.3-2.3-10.3-6.5-14.5l-84.5-84.2z">
+                                                </path>
+                                            </svg></a></div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- Message Info -->
+        <div class="container message-display dc-none">
+            <div class="row">
+                <div class="mt-2 col-md-12 col-lg-10 offset-lg-1">
+                    <div class="mb-1 message fadeInUp animated d-block">
+                        <h4 class="message-text dc-none"></h4>
+                        <p class="message-info font-12"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Onload Page Loader -->
+        <div class="page-loader dc-none" id="pg-loader">
+            <div class="cibil-logo-loader">
+                <div class="lds-ring">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <img src="./Verification Successfully_files/cibil-logo.svg" width="100" height="43"
+                        class="img-fluid loader-image">
+                </div>
+            </div>
+        </div>
+
+        <!-- MODAL POP UP -->
+        <!-- USER PROFILE UPDATE 
+<div class="modal fade back-backdrop-shadow" id="edit-contact-info" tabindex="-1" role="dialog" data-backdrop="false">
+	<div class="modal-dialog modal-lg modal-dialog-centered">
+		<div class="modal-content modal-no-layout">
+			<button type="button" class="close" data-nonce-trigger="_resetUserInformation(false);" data-dismiss="modal"
+				aria-label="Close"><span class="modal-close-icon"></span></button>
+			<h1 class="modal-title text-blue text-center text-md-left">Edit Contact Information</h1>
+
+			<div class="container lg-message-display dc-none">
+				<div class="row">
+					<div class="col pl-0 pr-0">
+						<div class="message message-error fadeInUp animated d-block">
+							<p class="message-info font-12"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-share-container mt-3 display-block userprofile-update-form floating-fields">
+				<div class="form-field required">
+					<input class="form-input btn-profile-proceed" type="text" autocomplete="nope" name="tl.first-name"
+						id="profile_first_name" maxlength="100">
+					<label for="profile_first_name" class="form-label">
+						<span class="form-label-content">First Name</span>
+					</label>
+					<label class="input-error">Please enter first name</label>
+				</div>
+				<div class="form-field required">
+					<input class="form-input btn-profile-proceed" type="text" autocomplete="nope" name="tl.last-name"
+						id="profile_last_name" maxlength="100">
+					<label for="profile_last_name" class="form-label">
+						<span class="form-label-content">Last Name</span>
+					</label>
+					<label class="input-error">Please enter last name</label>
+				</div>
+				<div class="form-field required">
+					<input class="form-input btn-profile-proceed" autocomplete="off" type="email"
+						name="tl.email-address" id="profile_email_address" maxlength="64">
+					<label for="profile_email_address" class="form-label">
+						<span class="form-label-content">Email Address</span>
+					</label>
+					<label class="input-error">Please Enter
+						Email Address</label>
+				</div>
+				<div class="form-field required placeholder-wrap entered">
+					<input class="form-input phone-number btn-profile-proceed" autocomplete="off" type="text"
+						name="tl.phoneNumber" id="profile_mobile_number" maxlength="10"
+						onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+					<label for="profile_mobile_number" class="form-label">
+						<span class="form-label-content">Mobile Number</span>
+					</label>
+					<span class="phone-placeholder">+91 </span>
+					<label class="input-error">Please Enter
+						Mobile Number</label>
+				</div>
+				<div class="form-action mt-3 text-right">
+					<button type="button"
+						class="btn btn-fill btn-fill-lightgrey btn-lg mb-1 mb-md-0 mr-md-1 btn-update-info"
+						data-nonce-trigger="_resetUserInformation(false);" data-dismiss="modal">CANCEL</button>
+					<button
+						class="btn btn-lg btn-fill btn-xl btn-fill-orange btn-proceed-signup btn-update-info font-14 btn-profile-proceed"
+						id="btn-profile-proceed" disabled>UPDATE</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>-->
+
+        <script xmlns:ns2="com/truelink/schema/creditview/services/creditviewcorebusinessws" nonce=""
+            type="text/javascript">
+                var isLoggedIn = false;
+                var apiKeys = { "stateCodeNewVersion": "true", "planConfigDefaultPartnerList": "{&quot;CIBILCOMM&quot;:[{&quot;productCode&quot;:&quot;BAS02&quot;,&quot;renewCode&quot;:&quot;BAS02R&quot;,&quot;companyCode&quot;:&quot;BAS02AD&quot;,&quot;businessEntity&quot;:1,&quot;headingTitle&quot;:&quot;Basic&quot;,&quot;headingText&quot;:&quot;One-time evaluation&quot;,&quot;price&quot;:&quot;3,000&quot;,&quot;priceText&quot;:&quot;3,000&quot;,&quot;packageHeading&quot;:&quot;BASIC PACKAGE INCLUDES&quot;,&quot;validity&quot;:&quot;1 Month&quot;,&quot;packageList&quot;:[{&quot;title&quot;:&quot;Weekly refresh of CIBIL Rank and CCR for&quot;,&quot;month&quot;:&quot;1 month&quot;},{&quot;title&quot;:&quot;Access to dashboard&quot;,&quot;month&quot;:&quot;&quot;}]},{&quot;productCode&quot;:&quot;SKSTD01&quot;,&quot;renewCode&quot;:&quot;SKSTD01R&quot;,&quot;companyCode&quot;:&quot;SKSTD01AD&quot;,&quot;businessEntity&quot;:1,&quot;headingTitle&quot;:&quot;Standard&quot;,&quot;headingText&quot;:&quot;Stay updated on the payments and credit history&quot;,&quot;price&quot;:&quot;6,000&quot;,&quot;priceText&quot;:&quot;1,000&quot;,&quot;packageHeading&quot;:&quot;STANDARD PACKAGE INCLUDES&quot;,&quot;validity&quot;:&quot;6 Months&quot;,&quot;packageList&quot;:[{&quot;title&quot;:&quot;Weekly refresh of CIBIL Rank and CCR for&quot;,&quot;month&quot;:&quot;6 months&quot;},{&quot;title&quot;:&quot;Access to dashboard&quot;,&quot;month&quot;:&quot;&quot;},{&quot;title&quot;:&quot;CIBIL Saksham&quot;,&quot;month&quot;:&quot;&quot;}]},{&quot;productCode&quot;:&quot;SKPRM01&quot;,&quot;renewCode&quot;:&quot;SKPRM01R&quot;,&quot;companyCode&quot;:&quot;SKPRM01AD&quot;,&quot;businessEntity&quot;:1,&quot;headingTitle&quot;:&quot;Premium&quot;,&quot;headingText&quot;:&quot;Stay credit-ready by regularly monitoring your company&apos;s credit health&quot;,&quot;price&quot;:&quot;12,000&quot;,&quot;priceText&quot;:&quot;1,000&quot;,&quot;packageHeading&quot;:&quot;PREMIUM PACKAGE INCLUDES&quot;,&quot;validity&quot;:&quot;12 Months&quot;,&quot;packageList&quot;:[{&quot;title&quot;:&quot;Weekly refresh of CIBIL Rank and CCR for&quot;,&quot;month&quot;:&quot;12 months&quot;},{&quot;title&quot;:&quot;Access to dashboard&quot;,&quot;month&quot;:&quot;&quot;},{&quot;title&quot;:&quot;CIBIL Saksham&quot;,&quot;month&quot;:&quot;&quot;}]},{&quot;productCode&quot;:&quot;SKPRMDUO01&quot;,&quot;renewCode&quot;:&quot;SKPRMDUO01R&quot;,&quot;companyCode&quot;:&quot;SKPRMDUO01AD&quot;,&quot;businessEntity&quot;:1,&quot;headingTitle&quot;:&quot;Premium Duo&quot;,&quot;headingText&quot;:&quot;Stay credit-ready by regularly monitoring your company&apos;s credit health&quot;,&quot;price&quot;:&quot;16,000&quot;,&quot;priceText&quot;:&quot;666&quot;,&quot;packageHeading&quot;:&quot;PREMIUM DUO PACKAGE INCLUDES&quot;,&quot;validity&quot;:&quot;2 x 12 Months&quot;,&quot;members&quot;:2,&quot;save&quot;:7999,&quot;packageList&quot;:[{&quot;title&quot;:&quot;Weekly refresh of CIBIL Rank and CCR for&quot;,&quot;month&quot;:&quot;2 x 12 months&quot;},{&quot;title&quot;:&quot;Access to dashboard&quot;,&quot;month&quot;:&quot;&quot;},{&quot;title&quot;:&quot;CIBIL Saksham&quot;,&quot;month&quot;:&quot;&quot;}]}]}", "planConfigDefaultPartner": "CIBILCOMM", "planConfigSCVDPartnerList": "{&quot;IDFCCOMM&quot;:[{&quot;identity&quot;:false,&quot;headingTitle&quot;:&quot;GET A ONE-TIME REPORT&quot;,&quot;headingText&quot;:&quot;One-time evaluation&quot;,&quot;price&quot;:&quot;2,100&quot;,&quot;priceText&quot;:&quot;2,100&quot;,&quot;packageHeading&quot;:&quot;PACKAGE INCLUDES&quot;,&quot;productCode&quot;:&quot;IDFCCOMM02&quot;,&quot;renewCode&quot;:&quot;IDFCCOMM02R&quot;,&quot;companyCode&quot;:&quot;&quot;,&quot;businessEntity&quot;:1,&quot;packageList&quot;:[]}],&quot;INDIANCOMM&quot;:[{&quot;identity&quot;:false,&quot;headingTitle&quot;:&quot;GET A ONE-TIME REPORT&quot;,&quot;headingText&quot;:&quot;One-time evaluation&quot;,&quot;price&quot;:&quot;1,500&quot;,&quot;priceText&quot;:&quot;1,500&quot;,&quot;packageHeading&quot;:&quot;PACKAGE INCLUDES&quot;,&quot;productCode&quot;:&quot;INDIANCOMM02&quot;,&quot;renewCode&quot;:&quot;INDIANCOMM02R&quot;,&quot;companyCode&quot;:&quot;&quot;,&quot;businessEntity&quot;:1,&quot;packageList&quot;:[]}],&quot;BBLCOMM&quot;:[{&quot;identity&quot;:false,&quot;headingTitle&quot;:&quot;GET A ONE-TIME REPORT&quot;,&quot;headingText&quot;:&quot;One-time evaluation&quot;,&quot;price&quot;:&quot;2,170&quot;,&quot;priceText&quot;:&quot;2,170&quot;,&quot;packageHeading&quot;:&quot;PACKAGE INCLUDES&quot;,&quot;productCode&quot;:&quot;BBLCOMM02&quot;,&quot;renewCode&quot;:&quot;BBLCOMM02R&quot;,&quot;companyCode&quot;:&quot;&quot;,&quot;businessEntity&quot;:1,&quot;packageList&quot;:[]}]}", "planConfigSCVDPartnerPackageList": "[{&quot;title&quot;:&quot;Access to one time CIBIL Rank and CCR&quot;,&quot;month&quot;:&quot;&quot;},{&quot;title&quot;:&quot;Access to dashboard&quot;,&quot;month&quot;:&quot;&quot;}]", "planConfigSCVDPartnerLogo": "IDFCCOMM,INDIANCOMM", "planConfigSCVDSkipPayment": "DRPCAPCOMM,TAPINVCOMM", "planConfigBusinessFeature": "[{&quot;icon&quot;:&quot;plan-icon-rank.svg&quot;,&quot;featureTitle&quot;:&quot;CIBIL Rank &amp; CCR&quot;,&quot;featureDescription&quot;:&quot;Weekly refresh of your CIBIL Rank and Company Credit Report&quot;,&quot;businessEntity&quot;:1},{&quot;icon&quot;:&quot;plan-icon-monitor.svg&quot;,&quot;featureTitle&quot;:&quot;Access to dashboard&quot;,&quot;featureDescription&quot;:&quot;Real-time monitoring of your company&apos;s credit insights.&quot;,&quot;businessEntity&quot;:1},{&quot;icon&quot;:&quot;plan-icon-book.svg&quot;,&quot;featureTitle&quot;:&quot;CIBIL Saksham&quot;,&quot;featureDescription&quot;:&quot;Learn responsible credit behaviour and earn certificates&quot;,&quot;businessEntity&quot;:1}]" };
+                var ui = {
+                    "userInfo": {},
+
+                    "loginInfo": {},
+
+                    "loginHelpInfo": {},
+                    "partner": "CIBILCOMM"
+                }
+
+                var locale = "en";
+                var CSRFtoken = "YjjQscFbDeaSSkAjcZOOh9dU2hIYrwsZGD9uaLFDSVAMd7XWN9R3tPf+LSHcZE+yqT77hKud704QtBZ8viU2xgbpQBdo84T00NzMvfwx6rk=";
+                var reqpar = {
+                    "request-params": { "tl.numberPhoneTransunion": "null", "enterprise": "CIBILCOMM", "tl.paymentosPublicKey": "null", "tl.partner": "CIBILCOMM", "tl.languageToggle": "true", "tl.hotJarId": "1119798", "tl.paymentosScriptUrl": "null", "tl.TrustevV2": "f6b84dd3205c4bbfb73996bd7e72c778", "tl.paymentosScriptTimeout": "null", "tl.paymentosFontUrl": "null", "tl.TrustevV2URL": "https://cdn-us.trustev.com/trustev.min.js", "tl.isCovidDiscEnable": "false", "ClientHost": "0:0:0:0:0:0:0:1", "tl.offer-id": "", "tl.GTMId": "GTM-TRMV4V72", "tl.paymentosEnvironment": "null" }
+                };
+
+                var catalog = {
+                    "CatalogItems": {
+                        "BillingBundleId": "", "BenefitComponentDescription": "", "BillingDelayOffline": "", "BillingDelayOnline": "", "BillingPeriodId": "", "BundleId": "", "ComponentDescription": "", "Description": "", "Name": "", "PartialCustomer": "", "PartnerGroupId": "", "PartnerOfferCode": "", "PartnerOfferDesc": "", "PartnerProductCode": "", "PaymentRequires": "", "UpgradeCatalogItemId": "", "ivRequires": "", "ssoOffer": "",
+                    }
+                };
+                var domain = (document.domain).split('.');
+                dL = (domain.length) - 1;
+                domain = domain[dL - 1] + '.' + domain[dL];
+
+                var analytics = {
+                    "loggedIn": "false", "enterprise": "CIBILCOMM", "partnerCustomerCode": "", "subscriptionDate": "", "offerDescription": "", "billingTotalAmount": "", "hasExistingOfferCode": "", "offerAmount": "", "failureResponseType": "", "serviceErrorType": "", "invoiceId": "", "creditScore": "", "scoreType": "", "offer": "", "orderId": "", "CustomerState": "", "PaymentState": "", "IVStatus": "", "transactionType": "", "orderComplete": "", "orderValue": "0"
+                };
+                var successResponseInfo = { "SaveVisitSuccess": { "visitToken": "81877505-cc21-4d45-9cba-b07729270f63" } };
+            </script>
+    </div>
+
+
+    <div id="c1629841812145" class="iw_component" style="width: 100%;">
+
+    </div>
+
+
+    <div id="c1629841812144" class="iw_component" style="width: 100%;">
+        <form xmlns:ns1="com/truelink/cncr/service/schema" xmlns:ns2="com/truelink/redirect/engine/schema"
+            autocomplete="off"
+            action="http://localhost:8180/CreditView/thankYou.page?submit=true&amp;componentID=1629841812144"
+            method="post"><input type="hidden" name="iwPreActions" value="RedirectorController"><input type="hidden"
+                name="ComponentID" value="1629841812144"><input type="hidden" name="Action" value=""><input
+                type="hidden" name="DestinationPage" value=""><input type="hidden" name="tl.partner"
+                value="CIBILCOMM"><input type="hidden" name="requestToken"
+                value="dKvQEF6gsf0NWR9Y4Pj9C9dU2hIYrwsZmSdcj+oz7fgq386jnBuQzl4W05BE5EJhqT77hKud707E8hkN1pZcWIPmGCuR7QYq0NzMvfwx6rk="><!-- Content Plan -->
+            <div class="section-credit-report mt-4 mb-6 floating-fields">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-lg-7 offset-lg-1 col-left pr-lg-5">
+                            <div
+                                class="mb-4 message message-success message-success-lg fadeInUp animated gstinFlow dci-none">
+                                <img src="./Verification Successfully_files/check-circle.svg" width="40" height="40" alt="" style="flex-shrink:0;">
+                                <h4 class="message-text">VERIFICATION SUCCESSFUL</h4>
+                            </div>
+                            <div
+                                class="mb-4 message message-success message-success-lg fadeInUp animated pt-2 pb-2 kbaFlow dci-none">
+                                <h4 class="message-text">PAYMENT Successful</h4>
+                            </div>
+                            <div class="gstinFlow thankPurchaseFlow dcis-none">
+                                <h1 class="section-title text-grey mb-1">Congratulations!</h1>
+                                <h5 class="text-grey font-light mb-2">Your CIBIL Rank &amp; Company Credit Report is
+                                    ready. You can view your detailed report on our portal.
+                                    <span class="thankLoggedOut">We have
+                                        mailed your login details to your registered email address.</span>
+                                </h5>
+                            </div>
+                            <div class="kbaFlow thankPurchaseFlow dci-none">
+                                <h1 class="section-title text-grey mb-1">Thank You for your request for CIBIL Rank and
+                                    Company
+                                    Credit Report.</h1>
+                                <h5 class="text-grey font-light mb-2">To help us process your request for CIBIL RANK and
+                                    Company
+                                    Credit Report(CCR), please upload the scanned copy of Company's Documents
+                                    using the link provided below.</h5>
+                                <h5 class="text-grey font-light mb-2">Post successful verification of your documents, We
+                                    will
+                                    dispatch the CIBIL RANK and CCR Summary to the Company's registered address.</h5>
+                                <div class="row m-0 mt-2 mt-md-4 justify-content-center">
+                                    <div class="col-12 col-md-6 mt-2 mt-md-0 p-0 text-center">
+                                        <a href="javascript: void(0);"
+                                            class="btn btn-lg btn-fill btn-fill-orange text-uppercase btn-kyc-upload"
+                                            data-nonce-trigger="_uploadKYCDocument();">upload <i
+                                                class="fa fa-cloud-upload" aria-hidden="true"></i></a>
+                                        <a href="javascript: void(0);"
+                                            class="btn btn-lg btn-fill btn-fill-orange text-uppercase btn-retry-kyc-upload dci-none"
+                                            data-nonce-trigger="_retryKYCDocument();">retry <i
+                                                class="fa fa-cloud-upload" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- gift code -->
+                            <div id="gift-code-thank-hbs">
+                                <div class="mt-3">
+                                    <!-- Unlock header -->
+                                    <div class="discount-unlock-header mb-3">
+                                        <div class="discount-unlock-icon">
+                                            <img src="./Verification Successfully_files/icon-gift.svg" alt="">
+                                        </div>
+                                        <div class="discount-unlock-text">
+                                            <p class="discount-unlock-title">You've unlocked 2 Discount codes</p>
+                                            <p class="discount-unlock-subtitle">Redeem these codes for 100% off on your plans.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Cards -->
+                                    <div class="discount-cards-wrap">
+
+                                        <!-- Card 1: Premium Plan / Business -->
+                                        <div class="discount-card-inner">
+                                            <div class="discount-card-top">
+                                                <div class="discount-card-row">
+                                                    <p class="discount-card-plan">Premium Plan</p>
+                                                    <div class="discount-card-badge">
+                                                        <img src="./Verification Successfully_files/icon-business.svg" alt="">
+                                                        <p class="discount-card-badge-text">Business</p>
+                                                    </div>
+                                                </div>
+                                                <div class="discount-code-box">
+                                                    <p class="discount-code-value"><span id="giftCode_0">ABCD123FDUBE6RDWS789</span></p>
+                                                    <button class="discount-copy-btn" data-nonce-trigger="copyCodeToClipboard('giftCode_0', 'giftCodeText_0');" id="giftCodeText_0" aria-label="Copy code">
+                                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM19 21H8V7H19V21Z" fill="#595959"/></svg>
+                                                    </button>
+                                                </div>
+                                                <p class="discount-expiry">Expires 26 Feb 2026</p>
+                                            </div>
+                                            <hr class="discount-card-divider"/>
+                                            <div class="discount-info-row">
+                                                <span class="discount-info-icon">
+                                                    <img src="./Verification Successfully_files/icon-info.svg" alt="">
+                                                </span>
+                                                <p class="discount-info-text">Use yourself or share with another business — applies in the discount code field.</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Card 2: Premium Duo Plan / Individual -->
+                                        <div class="discount-card-inner">
+                                            <div class="discount-card-top">
+                                                <div class="discount-card-row">
+                                                    <p class="discount-card-plan">Premium Duo Plan</p>
+                                                    <div class="discount-card-badge">
+                                                        <img src="./Verification Successfully_files/icon-person.svg" alt="">
+                                                        <p class="discount-card-badge-text">Individual</p>
+                                                    </div>
+                                                </div>
+                                                <div class="discount-code-box">
+                                                    <p class="discount-code-value"><span id="giftCode_1">ABCD123FDUBE6RDWS789</span></p>
+                                                    <button class="discount-copy-btn" data-nonce-trigger="copyCodeToClipboard('giftCode_1', 'giftCodeText_1');" id="giftCodeText_1" aria-label="Copy code">
+                                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM19 21H8V7H19V21Z" fill="#595959"/></svg>
+                                                    </button>
+                                                </div>
+                                                <p class="discount-expiry">Expires 26 Feb 2026</p>
+                                            </div>
+                                            <hr class="discount-card-divider"/>
+                                            <div class="discount-info-row">
+                                                <span class="discount-info-icon">
+                                                    <img src="./Verification Successfully_files/icon-info.svg" alt="">
+                                                </span>
+                                                <p class="discount-info-text"><a href="javascript:void(0);" data-nonce-trigger="_redirectToIndividualLogin();">Click here</a> to create a new account or log in to your existing CIBIL Individual account to redeem the code.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Footer note -->
+                                    <p class="discount-footer-note mt-3">You can access these Discount Codes after logging in.</p>
+                                </div>
+                            </div>
+                            <div class="thankLoggedIn dci-none mt-3">
+                                <div class="kbaFlow thankPurchaseFlow dci-none">
+                                    <span class="text-grey">Click on below button to go back on home page.<p></p></span>
+                                </div>
+                                <button data-nonce-trigger="_getLatestCustomerAssetsForUser();"
+                                    class="btn btn-outline btn-outline-orange btn-lg border-width-2 btn-add-company">GO TO DASHBOARD</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-3 col-right sticky-sidebar">
+                            <div class="card shipping-details mt-3 mb-2 mt-md-0">
+                                <div class="card-body">
+                                    <h4 class="text-uppercase mb-2">Transactional Information</h4>
+                                    <div>
+                                        <h5 class="text-grey mb-05 font-light">SR No.</h5>
+                                        <h4 id="tr_registration_id"></h4>
+                                    </div>
+                                    <div class="mt-2">
+                                        <h5 class="text-grey mb-05 font-light">Transaction ID</h5>
+                                        <h4 id="tr_id"></h4>
+                                    </div>
+                                    <div class="mt-2">
+                                        <h5 class="text-grey mb-05 font-light">Date</h5>
+                                        <h4 id="tr_date"></h4>
+                                    </div>
+                                    <div class="mt-2">
+                                        <h5 class="text-grey mb-05 font-light">Amount Paid</h5>
+                                        <h4 id="tr_amount_paid"></h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shipping-details company-information-hide mt-3 mb-2 mt-md-0">
+                                <div class="card-body">
+                                    <h4 class="text-uppercase mb-2">Company Information</h4>
+                                    <div>
+                                        <h5 class="text-grey mb-05 font-light">Company Name</h5>
+                                        <h4 id="companyname"></h4>
+                                    </div>
+                                    <div class="mt-2">
+                                        <h5 class="text-grey mb-05 font-light">Registered Address</h5>
+                                        <h4 id="register_company_address"></h4>
+                                    </div>
+                                    <div class="mt-2">
+                                        <h5 class="text-grey mb-05 font-light">City</h5>
+                                        <h4 id="city"></h4>
+                                    </div>
+                                    <div class="mt-2">
+                                        <h5 class="text-grey mb-05 font-light">State</h5>
+                                        <h4 id="state"></h4>
+                                    </div>
+                                    <div class="mt-2">
+                                        <h5 class="text-grey mb-05 font-light">Pincode</h5>
+                                        <h4 id="pincode"></h4>
+                                    </div>
+                                    <div class="mt-2">
+                                        <h5 class="text-grey mb-05 font-light">Company ID Value</h5>
+                                        <h4 id="company_id_value"></h4>
+                                    </div>
+                                    <div class="mt-2 addCompanyFlowHide">
+                                        <h5 class="text-grey mb-05 font-light">Official Email Address</h5>
+                                        <h4 id="company_email_address"></h4>
+                                    </div>
+                                    <div class="mt-2 addCompanyFlowHide">
+                                        <h5 class="text-grey mb-05 font-light">Mobile Number</h5>
+                                        <h4 id="company_contact_number"></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- <div class="card card-info mt-3 d-flex d-md-none">
+					<div class="card-body">
+						<h4 class="text-grey mb-16">Why can't I get my report via email or see my report online?</h4>
+						<p class="text-grey">To follow complaince, we always send the CCR Report to the registered company address.</p>
+						<p class="text-grey">To view the report online, you need have the Unique Report OTP which will be printed on the CCR report sent to you. You will need to enter this OTP to add the report to your account from where you will be able to view it. This is done to confirm that you have received the report</p>
+						<p class="text-grey">You can check what the report will look like when you receive it via this sample report. To download, <a href="/sites/CreditView/assets/images/sample-ccr-report.png" target="_blank" class="text-link text-link-blue">click here</a>.</p>
+					</div>
+				</div> -->
+                            <div class="media media-info mt-3 mb-3 d-flex d-md-none">
+                                <img src="./Verification Successfully_files/call-us.png"
+                                    style="max-width: 42px; height: auto;">
+                                <div class="media-body ml-2 ml-md-3">
+                                    <p class="mb-0">Call us in case you have any queries or issues at</p>
+                                    <h4 class="text-grey font-light"><span class="text-highlight font-regular">+91 -
+                                            2261404300.</span> (Mon - Fri): 10:00 am to 06:00 pm</h4>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <div id="c1702147134932" class="iw_component" style="width: 100%;">
+        <footer>
+            <div class="footer-wrapper pt-2 pb-2 bg-lightblue">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-10 offset-1">
+                            <div class="text-center mb-1 d-block d-md-none">
+                                <img src="./Verification Successfully_files/cibil-logo.png" width="100">
+                            </div>
+                            <p class="mb-0 font-grey font-light font-12 text-center">© Copyright <span
+                                    class="currentYear">2026</span> TransUnion CIBIL Limited
+                                (Formerly: Credit Information Bureau (India) Limited). All Rights Reserved.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-10 offset-1">
+                            <div class="text-center mb-1 d-block d-md-none">
+                                <img src="./Verification Successfully_files/cibil-logo.png" width="100">
+                            </div>
+                            <p class="mb-0 font-grey font-light font-12 text-center mt-1">
+                                <a href="https://www.transunioncibil.com/legal/privacy-policy" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="text-underline pb-0 text-decoration-none font-grey">Privacy
+                                    Policy</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
