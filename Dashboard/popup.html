@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discount Codes – CIBIL</title>
+  <link rel="stylesheet" href="./assets/css/popup.css">
+</head>
+<body>
+
+<!-- Trigger button -->
+<div class="popup-trigger-wrap">
+  <button class="popup-trigger-btn" id="openPopupBtn" type="button">
+    View Discount Codes
+  </button>
+</div>
+
+<!-- Toast -->
+<div class="popup-toast" id="popupToast">Copied</div>
+
+<!-- Popup overlay -->
+<div class="popup-overlay" id="popupOverlay" role="dialog" aria-modal="true" aria-label="Discount Codes">
+  <div class="popup">
+
+    <!-- Header -->
+    <div class="popup-header">
+      <img class="popup-header-icon" src="./assets/images/popup/icon-gift.svg" alt="">
+      <p class="popup-header-title">Discount Codes</p>
+      <button class="popup-close" id="closePopupBtn" type="button" aria-label="Close">
+        <img src="./assets/images/popup/icon-close.svg" alt="Close">
+      </button>
+    </div>
+
+    <!-- Scrollable body -->
+    <div class="popup-body">
+
+      <div class="code-cards">
+
+        <!-- Card 1: Active – Premium Plan / Business -->
+        <div class="code-card">
+          <div class="code-card-top">
+            <div class="code-card-row1">
+              <p class="code-value">ABCD123FDUBE6RDWS789</p>
+              <div class="code-status code-status--active">
+                <img class="code-status-dot" src="./assets/images/popup/dot-active.svg" alt="">
+                <span class="code-status-label">Active</span>
+              </div>
+            </div>
+            <div class="code-meta">
+              <div class="code-meta-row">
+                <span class="code-meta-label">Expiry</span>
+                <span class="code-meta-value">10 Mar 2027</span>
+              </div>
+              <div class="code-meta-row">
+                <span class="code-meta-label">Valid For</span>
+                <span class="code-meta-value">Premium Plan</span>
+                <div class="code-badge">
+                  <img src="./assets/images/popup/icon-business.svg" alt="">
+                  <span class="code-badge-text">Business</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="copy-code-btn" type="button" data-copy="ABCD123FDUBE6RDWS789">Copy Code</button>
+        </div>
+
+        <!-- Card 2: Active – Premium Duo Plan / Individual -->
+        <div class="code-card">
+          <div class="code-card-top">
+            <div class="code-card-row1">
+              <p class="code-value">SLQ0YOAI10GL33O7MZRI</p>
+              <div class="code-status code-status--active">
+                <img class="code-status-dot" src="./assets/images/popup/dot-active.svg" alt="">
+                <span class="code-status-label">Active</span>
+              </div>
+            </div>
+            <div class="code-meta">
+              <div class="code-meta-row">
+                <span class="code-meta-label">Expiry</span>
+                <span class="code-meta-value">10 Mar 2027</span>
+              </div>
+              <div class="code-meta-row">
+                <span class="code-meta-label">Valid For</span>
+                <span class="code-meta-value">Premium Duo Plan</span>
+                <div class="code-badge">
+                  <img src="./assets/images/popup/icon-person.svg" alt="">
+                  <span class="code-badge-text">Individual</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="copy-code-btn" type="button" data-copy="SLQ0YOAI10GL33O7MZRI">Copy Code</button>
+        </div>
+
+        <!-- Card 3: Redeemed -->
+        <div class="code-card code-card--inactive">
+          <div class="code-card-top">
+            <div class="code-card-row1">
+              <p class="code-value">XYZ987GHXYZ987GHXYZ9</p>
+              <div class="code-status code-status--inactive">
+                <img class="code-status-dot" src="./assets/images/popup/dot-inactive.svg" alt="">
+                <span class="code-status-label">Redeemed</span>
+              </div>
+            </div>
+            <div class="code-meta">
+              <div class="code-meta-row">
+                <span class="code-meta-label">Expiry</span>
+                <span class="code-meta-value">15 Jan 2025</span>
+              </div>
+              <div class="code-meta-row">
+                <span class="code-meta-label">Valid For</span>
+                <span class="code-meta-value">Premium Plan</span>
+                <div class="code-badge">
+                  <img src="./assets/images/popup/icon-person.svg" alt="">
+                  <span class="code-badge-text">Individual</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Expired -->
+        <div class="code-card code-card--inactive">
+          <div class="code-card-top">
+            <div class="code-card-row1">
+              <p class="code-value">JKL321OPJKL321OPJKL32</p>
+              <div class="code-status code-status--inactive">
+                <img class="code-status-dot" src="./assets/images/popup/dot-inactive.svg" alt="">
+                <span class="code-status-label">Expired</span>
+              </div>
+            </div>
+            <div class="code-meta">
+              <div class="code-meta-row">
+                <span class="code-meta-label">Expiry</span>
+                <span class="code-meta-value">30 Dec 2023</span>
+              </div>
+              <div class="code-meta-row">
+                <span class="code-meta-label">Valid For</span>
+                <span class="code-meta-value">Premium Plan</span>
+                <div class="code-badge">
+                  <img src="./assets/images/popup/icon-business.svg" alt="">
+                  <span class="code-badge-text">Business</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.code-cards -->
+
+      <!-- How to redeem -->
+      <div class="redeem-section">
+        <p class="redeem-title">How to redeem the discount code?</p>
+
+        <div class="redeem-group">
+          <p class="redeem-group-title">Businesses</p>
+          <div class="redeem-items">
+            <div class="redeem-item">
+              <img src="./assets/images/popup/icon-share.svg" alt="">
+              <p class="redeem-item-text">This code can be used for another business or shared with another user.</p>
+            </div>
+            <div class="redeem-item">
+              <img src="./assets/images/popup/icon-gift-sm.svg" alt="">
+              <p class="redeem-item-text">During enrolment, enter the code in the Discount Code section to activate the Premium Business Subscription.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="redeem-group">
+          <p class="redeem-group-title">Individuals</p>
+          <div class="redeem-items">
+            <div class="redeem-item">
+              <img src="./assets/images/popup/icon-gift-sm.svg" alt="">
+              <p class="redeem-item-text">Use the discount code to get 100% off on CIBIL subscription plan for Individuals.</p>
+            </div>
+            <div class="redeem-item">
+              <img src="./assets/images/popup/icon-person-link.svg" alt="">
+              <p class="redeem-item-text"><a href="https://myscore.cibil.com/CreditView/mobilelogin.page?enterprise=CIBIL" target="_blank" rel="noopener noreferrer">Click here</a> to create a new account or log in to your existing CIBIL Individual account to redeem the code.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.popup-body -->
+  </div><!-- /.popup -->
+</div><!-- /.popup-overlay -->
+
+<script>
+  (function () {
+    var overlay = document.getElementById('popupOverlay');
+    var openBtn = document.getElementById('openPopupBtn');
+    var closeBtn = document.getElementById('closePopupBtn');
+    var toast = document.getElementById('popupToast');
+    var toastTimer = null;
+
+    function openPopup() { overlay.classList.add('is-open'); }
+    function closePopup() { overlay.classList.remove('is-open'); }
+
+    openBtn.addEventListener('click', openPopup);
+    closeBtn.addEventListener('click', closePopup);
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) closePopup();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closePopup();
+    });
+
+    document.querySelectorAll('.copy-code-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        navigator.clipboard.writeText(btn.dataset.copy);
+        var orig = btn.textContent.trim();
+        btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="#ff871f"/></svg>';
+        setTimeout(function () { btn.textContent = orig; }, 1200);
+        clearTimeout(toastTimer);
+        toast.classList.add('is-visible');
+        toastTimer = setTimeout(function () { toast.classList.remove('is-visible'); }, 1800);
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
