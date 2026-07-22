@@ -1,0 +1,323 @@
+@font-face {
+    font-family: "intro-light";
+    src: url("fonts/IntroLightPlan.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "IntroRegularPlan";
+    src: url("fonts/IntroRegularPlan.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "IntroSemiBoldPlan";
+    src: url("fonts/IntroSemiBoldPlan.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "IntroPlan";
+    src:
+        url("fonts/intro-3/2CA963-0-0.woff2") format("woff2"),
+        url("fonts/intro-3/2CA963-0-0.woff") format("woff"),
+        url("fonts/intro-3/2CA963-0-0.ttf") format("truetype");
+}
+
+:root {
+    --font-intro-bold: "IntroPlan", sans-serif;
+    --font-intro-semibold: "IntroSemiBoldPlan", sans-serif;
+    --font-intro-regular: "IntroRegularPlan", sans-serif;
+    --font-intro-light: intro-light, sans-serif;
+}
+
+.col-left .thankLoggedOut {
+    display: none;
+}
+
+.col-left .thankLoggedIn {
+    display: block !important;
+}
+
+.col-left .message.message-success.gstinFlow {
+    display: flex !important;
+    background: #fff;
+    border: 1px solid #bfbfbf;
+    border-radius: 0;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+}
+
+.col-left .message.message-success.gstinFlow::before,
+.col-left .message.message-success.gstinFlow::after {
+    display: none;
+}
+
+.col-left .message.message-success.gstinFlow .message-text {
+    font-family: var(--font-intro-semibold);
+    font-size: 18px;
+    line-height: 1.4;
+    color: #777;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 400;
+}
+
+.col-left .section-title {
+    font-family: var(--font-intro-semibold);
+    font-size: 40px;
+    line-height: 1.4;
+    color: #262626;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.col-left .gstinFlow.thankPurchaseFlow h5 {
+    font-family: var(--font-intro-regular);
+    font-size: 16px;
+    line-height: 1.4;
+    color: #777;
+    font-weight: 400;
+}
+
+.col-left .thankLoggedIn .btn-outline-orange {
+    font-family: var(--font-intro-semibold);
+    font-size: 16px;
+    line-height: 1.4;
+    border: 2px solid #ff871f;
+    color: #ff871f;
+    text-transform: uppercase;
+    padding: 16px 24px;
+    border-radius: 0;
+}
+
+.col-left .thankLoggedIn .btn-outline-orange:hover{
+    background: inherit;
+}
+
+.discount-unlock-header {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.discount-unlock-icon {
+    background: #f7f9fa;
+    border-radius: 4px;
+    padding: 10px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.discount-unlock-icon img {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+.discount-unlock-text {
+    flex: 1;
+}
+
+.discount-unlock-title {
+    font-family: var(--font-intro-bold);
+    font-size: 16px;
+    color: #262626;
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin: 0 0 2px;
+}
+
+.discount-unlock-subtitle {
+    font-family: var(--font-intro-regular);
+    font-size: 14px;
+    color: #595959;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.discount-cards-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.discount-card-inner {
+    background: #f9f9f9;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.discount-card-top {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.discount-card-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.discount-card-plan {
+    font-family: var(--font-intro-semibold);
+    font-size: 14px;
+    color: #262626;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.discount-card-badge {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+}
+
+.discount-card-badge img {
+    width: 14px;
+    height: 14px;
+    display: block;
+}
+
+.discount-card-badge-text {
+    font-family: var(--font-intro-regular);
+    font-size: 14px;
+    color: #595959;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.discount-code-box {
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+}
+
+.discount-code-value {
+    flex: 1;
+    font-family: var(--font-intro-semibold);
+    font-size: 18px;
+    color: #262626;
+    line-height: 1.4;
+    margin: 0;
+    word-break: break-all;
+    min-width: 0;
+}
+
+.discount-copy-btn {
+    cursor: pointer;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    padding: 0;
+    overflow: hidden;
+}
+
+.discount-copy-btn:focus{
+    outline: none;
+}
+
+.discount-copy-btn img {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.discount-expiry {
+    font-family: var(--font-intro-regular);
+    font-size: 14px;
+    color: #595959;
+    line-height: 1.4;
+    margin: 0;
+    min-height: 20px;
+}
+
+.discount-card-divider {
+    height: 1px;
+    background: #d9d9d9;
+    border: none;
+    margin: 0;
+}
+
+.discount-info-row {
+    display: flex;
+    gap: 4px;
+    align-items: flex-start;
+}
+
+.discount-info-icon {
+    flex-shrink: 0;
+    padding-top: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.discount-info-icon img {
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
+.discount-info-text {
+    flex: 1;
+    font-family: var(--font-intro-regular);
+    font-size: 14px;
+    color: #595959;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.discount-info-text a {
+    font-family: var(--font-intro-semibold);
+    color: #00a6ca;
+    text-decoration: underline;
+}
+
+.discount-footer-note {
+    font-family: var(--font-intro-regular);
+    font-size: 14px;
+    color: #777;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.text-dark-grey {
+    color: #595959;
+}
+
+.discount-toast {
+    position: fixed;
+    left: 50%;
+    bottom: 24px;
+    transform: translate(-50%, 12px);
+    background: #262626;
+    color: #fff;
+    font-family: var(--font-intro-semibold);
+    font-size: 14px;
+    letter-spacing: 0.28px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 2000;
+}
+
+.discount-toast.is-visible {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}

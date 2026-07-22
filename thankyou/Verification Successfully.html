@@ -20,302 +20,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link type="text/css" rel="stylesheet" href="./Verification Successfully_files/dynamic.css">
     <link type="text/css" rel="stylesheet" href="./Verification Successfully_files/common.css">
-    <style>
-        @font-face {
-            font-family: "intro-light";
-            src: url("Verification Successfully_files/fonts/IntroLightPlan.otf") format("opentype");
-        }
-
-        @font-face {
-            font-family: "IntroRegularPlan";
-            src: url("Verification Successfully_files/fonts/IntroRegularPlan.ttf") format("truetype");
-        }
-
-        @font-face {
-            font-family: "IntroSemiBoldPlan";
-            src: url("Verification Successfully_files/fonts/IntroSemiBoldPlan.ttf") format("truetype");
-        }
-
-        @font-face {
-            font-family: "IntroPlan";
-            src:
-                url("Verification Successfully_files/fonts/intro-3/2CA963-0-0.woff2") format("woff2"),
-                url("Verification Successfully_files/fonts/intro-3/2CA963-0-0.woff") format("woff"),
-                url("Verification Successfully_files/fonts/intro-3/2CA963-0-0.ttf") format("truetype");
-        }
-
-        /* ── Font variables (scoped to :root so var() works here) ─ */
-        :root {
-            --font-intro-bold: "IntroPlan", sans-serif;
-            --font-intro-semibold: "IntroSemiBoldPlan", sans-serif;
-            --font-intro-regular: "IntroRegularPlan", sans-serif;
-            --font-intro-light: intro-light, sans-serif;
-        }
-
-        /* ── Left column: show logged-in state to match Figma ──── */
-        .col-left .thankLoggedOut {
-            display: none !important;
-        }
-
-        .col-left .thankLoggedIn {
-            display: block !important;
-        }
-
-        /* ── Left column: banner override ──────────────────────── */
-        .col-left .message.message-success.gstinFlow {
-            background: #fff !important;
-            border: 1px solid #bfbfbf !important;
-            border-radius: 0 !important;
-            display: flex !important;
-            align-items: center !important;
-            gap: 8px !important;
-            padding: 16px !important;
-        }
-
-        .col-left .message.message-success.gstinFlow::before,
-        .col-left .message.message-success.gstinFlow::after {
-            display: none !important;
-        }
-
-        .col-left .message.message-success.gstinFlow .message-text {
-            font-family: var(--font-intro-semibold) !important;
-            font-size: 18px !important;
-            line-height: 1.4 !important;
-            color: #777 !important;
-            text-transform: uppercase !important;
-            margin: 0 !important;
-            font-weight: 400 !important;
-        }
-
-        /* ── Left column: Congratulations h1 ───────────────────── */
-        .col-left .section-title {
-            font-family: var(--font-intro-bold) !important;
-            font-size: 40px !important;
-            line-height: 1.4 !important;
-            color: #262626 !important;
-            text-transform: none !important;
-            letter-spacing: 0 !important;
-        }
-
-        /* ── Left column: subtitle h5 ──────────────────────────── */
-        .col-left .gstinFlow.thankPurchaseFlow h5 {
-            font-family: var(--font-intro-regular) !important;
-            font-size: 16px !important;
-            line-height: 1.4 !important;
-            color: #777 !important;
-            font-weight: 400 !important;
-        }
-
-        /* ── Left column: Go to Dashboard button ───────────────── */
-        .col-left .thankLoggedIn .btn-outline-orange {
-            font-family: var(--font-intro-bold) !important;
-            font-size: 16px !important;
-            line-height: 1.4 !important;
-            border: 2px solid #ff871f !important;
-            color: #ff871f !important;
-            text-transform: uppercase !important;
-            padding: 16px 24px !important;
-            border-radius: 0 !important;
-        }
-
-        /* ── Discount code section ─────────────────────────────── */
-        .discount-unlock-header {
-            display: flex;
-            gap: 16px;
-            align-items: flex-start;
-        }
-
-        .discount-unlock-icon {
-            background: #f7f9fa;
-            border-radius: 4px;
-            padding: 10px;
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .discount-unlock-icon img {
-            display: block;
-            width: 24px;
-            height: 24px;
-        }
-
-        .discount-unlock-text {
-            flex: 1;
-        }
-
-        .discount-unlock-title {
-            font-family: var(--font-intro-bold);
-            font-size: 16px;
-            color: #262626;
-            text-transform: uppercase;
-            line-height: 1.4;
-            margin: 0 0 2px;
-        }
-
-        .discount-unlock-subtitle {
-            font-family: var(--font-intro-regular);
-            font-size: 14px;
-            color: #595959;
-            line-height: 1.4;
-            margin: 0;
-        }
-
-        .discount-cards-wrap {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
-
-        .discount-card-inner {
-            background: #f9f9f9;
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .discount-card-top {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .discount-card-row {
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-        }
-
-        .discount-card-plan {
-            font-family: var(--font-intro-semibold);
-            font-size: 14px;
-            color: #262626;
-            line-height: 1.4;
-            margin: 0;
-        }
-
-        .discount-card-badge {
-            background: #fff;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            padding: 4px 8px;
-        }
-
-        .discount-card-badge img {
-            width: 14px;
-            height: 14px;
-            display: block;
-        }
-
-        .discount-card-badge-text {
-            font-family: var(--font-intro-regular);
-            font-size: 14px;
-            color: #595959;
-            line-height: 1.4;
-            margin: 0;
-        }
-
-        .discount-code-box {
-            background: #fff;
-            border: 1px solid #d9d9d9;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px;
-        }
-
-        .discount-code-value {
-            flex: 1;
-            font-family: var(--font-intro-semibold);
-            font-size: 18px;
-            color: #262626;
-            line-height: 1.4;
-            margin: 0;
-            word-break: break-all;
-            min-width: 0;
-        }
-
-        .discount-copy-btn {
-            cursor: pointer;
-            flex-shrink: 0;
-            width: 20px;
-            height: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: none;
-            background: none;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        .discount-copy-btn img {
-            width: 20px;
-            height: 20px;
-            display: block;
-        }
-
-        .discount-expiry {
-            font-family: var(--font-intro-regular);
-            font-size: 14px;
-            color: #595959;
-            line-height: 1.4;
-            margin: 0;
-            min-height: 20px;
-        }
-
-        .discount-card-divider {
-            height: 1px;
-            background: #d9d9d9;
-            border: none;
-            margin: 0;
-        }
-
-        .discount-info-row {
-            display: flex;
-            gap: 4px;
-            align-items: flex-start;
-        }
-
-        .discount-info-icon {
-            flex-shrink: 0;
-            padding-top: 2px;
-            display: flex;
-            align-items: center;
-        }
-
-        .discount-info-icon img {
-            width: 16px;
-            height: 16px;
-            display: block;
-        }
-
-        .discount-info-text {
-            flex: 1;
-            font-family: var(--font-intro-regular);
-            font-size: 14px;
-            color: #595959;
-            line-height: 1.4;
-            margin: 0;
-        }
-
-        .discount-info-text a {
-            font-family: var(--font-intro-bold);
-            color: #00a6ca;
-            text-decoration: underline;
-        }
-
-        .discount-footer-note {
-            font-family: var(--font-intro-regular);
-            font-size: 14px;
-            color: #777;
-            line-height: 1.4;
-            margin: 0;
-        }
-    </style>
 </head>
 
 
@@ -371,25 +75,25 @@
 							</div>-->
 
                                     <div class="profile-info">
-                                        <label class="info-label font-light text-grey font-10 d-block mb-0">First
+                                        <label class="info-label font-light text-dark-grey font-10 d-block mb-0">First
                                             Name</label>
                                         <label class="info-label font-regular text-black font-12 d-block text-break"
                                             id="profileFirstName"></label>
                                     </div>
                                     <div class="profile-info mt-1">
-                                        <label class="info-label font-light text-grey font-10 d-block mb-0">Last
+                                        <label class="info-label font-light text-dark-grey font-10 d-block mb-0">Last
                                             Name</label>
                                         <label class="info-label font-regular text-black font-12 d-block text-break"
                                             id="profileLastName"></label>
                                     </div>
                                     <div class="profile-info mt-1">
-                                        <label class="info-label font-light text-grey font-10 d-block mb-0">Mobile
+                                        <label class="info-label font-light text-dark-grey font-10 d-block mb-0">Mobile
                                             Number</label>
                                         <label class="info-label font-regular text-black font-12 d-block"
                                             id="profileMobileNumber"></label>
                                     </div>
                                     <div class="profile-info mt-1 mb-15">
-                                        <label class="info-label font-light text-grey font-10 d-block mb-0">Email
+                                        <label class="info-label font-light text-dark-grey font-10 d-block mb-0">Email
                                             id</label>
                                         <label class="info-label font-regular text-black font-12 d-block text-break"
                                             id="profileEmailId"></label>
@@ -582,22 +286,22 @@
                                 <h4 class="message-text">PAYMENT Successful</h4>
                             </div>
                             <div class="gstinFlow thankPurchaseFlow dcis-none">
-                                <h1 class="section-title text-grey mb-1">Congratulations!</h1>
-                                <h5 class="text-grey font-light mb-2">Your CIBIL Rank &amp; Company Credit Report is
+                                <h1 class="section-title text-dark-grey mb-1">Congratulations!</h1>
+                                <h5 class="text-dark-grey font-light mb-2">Your CIBIL Rank &amp; Company Credit Report is
                                     ready. You can view your detailed report on our portal.
                                     <span class="thankLoggedOut">We have
                                         mailed your login details to your registered email address.</span>
                                 </h5>
                             </div>
                             <div class="kbaFlow thankPurchaseFlow dci-none">
-                                <h1 class="section-title text-grey mb-1">Thank You for your request for CIBIL Rank and
+                                <h1 class="section-title text-dark-grey mb-1">Thank You for your request for CIBIL Rank and
                                     Company
                                     Credit Report.</h1>
-                                <h5 class="text-grey font-light mb-2">To help us process your request for CIBIL RANK and
+                                <h5 class="text-dark-grey font-light mb-2">To help us process your request for CIBIL RANK and
                                     Company
                                     Credit Report(CCR), please upload the scanned copy of Company's Documents
                                     using the link provided below.</h5>
-                                <h5 class="text-grey font-light mb-2">Post successful verification of your documents, We
+                                <h5 class="text-dark-grey font-light mb-2">Post successful verification of your documents, We
                                     will
                                     dispatch the CIBIL RANK and CCR Summary to the Company's registered address.</h5>
                                 <div class="row m-0 mt-2 mt-md-4 justify-content-center">
@@ -645,8 +349,9 @@
                                                 <div class="discount-code-box">
                                                     <p class="discount-code-value"><span
                                                             id="giftCode_0">ABCD123FDUBE6RDWS789</span></p>
-                                                    <button class="discount-copy-btn"
+                                                    <button class="discount-copy-btn" type="button"
                                                         data-nonce-trigger="copyCodeToClipboard('giftCode_0', 'giftCodeText_0');"
+                                                        data-copy="ABCD123FDUBE6RDWS789"
                                                         id="giftCodeText_0" aria-label="Copy code">
                                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                                                             xmlns="http://www.w3.org/2000/svg">
@@ -682,8 +387,9 @@
                                                 <div class="discount-code-box">
                                                     <p class="discount-code-value"><span
                                                             id="giftCode_1">ABCD123FDUBE6RDWS789</span></p>
-                                                    <button class="discount-copy-btn"
+                                                    <button class="discount-copy-btn" type="button"
                                                         data-nonce-trigger="copyCodeToClipboard('giftCode_1', 'giftCodeText_1');"
+                                                        data-copy="ABCD123FDUBE6RDWS789"
                                                         id="giftCodeText_1" aria-label="Copy code">
                                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                                                             xmlns="http://www.w3.org/2000/svg">
@@ -716,7 +422,7 @@
                             </div>
                             <div class="thankLoggedIn dci-none mt-3">
                                 <div class="kbaFlow thankPurchaseFlow dci-none">
-                                    <span class="text-grey">Click on below button to go back on home page.<p></p></span>
+                                    <span class="text-dark-grey">Click on below button to go back on home page.<p></p></span>
                                 </div>
                                 <button data-nonce-trigger="_getLatestCustomerAssetsForUser();"
                                     class="btn btn-outline btn-outline-orange btn-lg border-width-2 btn-add-company">GO
@@ -728,19 +434,19 @@
                                 <div class="card-body">
                                     <h4 class="text-uppercase mb-2">Transactional Information</h4>
                                     <div>
-                                        <h5 class="text-grey mb-05 font-light">SR No.</h5>
+                                        <h5 class="text-dark-grey mb-05 font-light">SR No.</h5>
                                         <h4 id="tr_registration_id"></h4>
                                     </div>
                                     <div class="mt-2">
-                                        <h5 class="text-grey mb-05 font-light">Transaction ID</h5>
+                                        <h5 class="text-dark-grey mb-05 font-light">Transaction ID</h5>
                                         <h4 id="tr_id"></h4>
                                     </div>
                                     <div class="mt-2">
-                                        <h5 class="text-grey mb-05 font-light">Date</h5>
+                                        <h5 class="text-dark-grey mb-05 font-light">Date</h5>
                                         <h4 id="tr_date"></h4>
                                     </div>
                                     <div class="mt-2">
-                                        <h5 class="text-grey mb-05 font-light">Amount Paid</h5>
+                                        <h5 class="text-dark-grey mb-05 font-light">Amount Paid</h5>
                                         <h4 id="tr_amount_paid"></h4>
                                     </div>
                                 </div>
@@ -749,35 +455,35 @@
                                 <div class="card-body">
                                     <h4 class="text-uppercase mb-2">Company Information</h4>
                                     <div>
-                                        <h5 class="text-grey mb-05 font-light">Company Name</h5>
+                                        <h5 class="text-dark-grey mb-05 font-light">Company Name</h5>
                                         <h4 id="companyname"></h4>
                                     </div>
                                     <div class="mt-2">
-                                        <h5 class="text-grey mb-05 font-light">Registered Address</h5>
+                                        <h5 class="text-dark-grey mb-05 font-light">Registered Address</h5>
                                         <h4 id="register_company_address"></h4>
                                     </div>
                                     <div class="mt-2">
-                                        <h5 class="text-grey mb-05 font-light">City</h5>
+                                        <h5 class="text-dark-grey mb-05 font-light">City</h5>
                                         <h4 id="city"></h4>
                                     </div>
                                     <div class="mt-2">
-                                        <h5 class="text-grey mb-05 font-light">State</h5>
+                                        <h5 class="text-dark-grey mb-05 font-light">State</h5>
                                         <h4 id="state"></h4>
                                     </div>
                                     <div class="mt-2">
-                                        <h5 class="text-grey mb-05 font-light">Pincode</h5>
+                                        <h5 class="text-dark-grey mb-05 font-light">Pincode</h5>
                                         <h4 id="pincode"></h4>
                                     </div>
                                     <div class="mt-2">
-                                        <h5 class="text-grey mb-05 font-light">Company ID Value</h5>
+                                        <h5 class="text-dark-grey mb-05 font-light">Company ID Value</h5>
                                         <h4 id="company_id_value"></h4>
                                     </div>
                                     <div class="mt-2 addCompanyFlowHide">
-                                        <h5 class="text-grey mb-05 font-light">Official Email Address</h5>
+                                        <h5 class="text-dark-grey mb-05 font-light">Official Email Address</h5>
                                         <h4 id="company_email_address"></h4>
                                     </div>
                                     <div class="mt-2 addCompanyFlowHide">
-                                        <h5 class="text-grey mb-05 font-light">Mobile Number</h5>
+                                        <h5 class="text-dark-grey mb-05 font-light">Mobile Number</h5>
                                         <h4 id="company_contact_number"></h4>
                                     </div>
                                 </div>
@@ -786,10 +492,10 @@
 
                             <!-- <div class="card card-info mt-3 d-flex d-md-none">
 					<div class="card-body">
-						<h4 class="text-grey mb-16">Why can't I get my report via email or see my report online?</h4>
-						<p class="text-grey">To follow complaince, we always send the CCR Report to the registered company address.</p>
-						<p class="text-grey">To view the report online, you need have the Unique Report OTP which will be printed on the CCR report sent to you. You will need to enter this OTP to add the report to your account from where you will be able to view it. This is done to confirm that you have received the report</p>
-						<p class="text-grey">You can check what the report will look like when you receive it via this sample report. To download, <a href="/sites/CreditView/assets/images/sample-ccr-report.png" target="_blank" class="text-link text-link-blue">click here</a>.</p>
+						<h4 class="text-dark-grey mb-16">Why can't I get my report via email or see my report online?</h4>
+						<p class="text-dark-grey">To follow complaince, we always send the CCR Report to the registered company address.</p>
+						<p class="text-dark-grey">To view the report online, you need have the Unique Report OTP which will be printed on the CCR report sent to you. You will need to enter this OTP to add the report to your account from where you will be able to view it. This is done to confirm that you have received the report</p>
+						<p class="text-dark-grey">You can check what the report will look like when you receive it via this sample report. To download, <a href="/sites/CreditView/assets/images/sample-ccr-report.png" target="_blank" class="text-link text-link-blue">click here</a>.</p>
 					</div>
 				</div> -->
                             <div class="media media-info mt-3 mb-3 d-flex d-md-none">
@@ -797,7 +503,7 @@
                                     style="max-width: 42px; height: auto;">
                                 <div class="media-body ml-2 ml-md-3">
                                     <p class="mb-0">Call us in case you have any queries or issues at</p>
-                                    <h4 class="text-grey font-light"><span class="text-highlight font-regular">+91 -
+                                    <h4 class="text-dark-grey font-light"><span class="text-highlight font-regular">+91 -
                                             2261404300.</span> (Mon - Fri): 10:00 am to 06:00 pm</h4>
                                 </div>
                             </div>
@@ -841,6 +547,24 @@
             </div>
         </footer>
     </div>
+<div class="discount-toast" id="discountToast">Copied</div>
+<script>
+  (function () {
+    var toast = document.getElementById('discountToast');
+    var toastTimer = null;
+    document.querySelectorAll('.discount-copy-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        navigator.clipboard.writeText(btn.dataset.copy);
+        var original = btn.innerHTML;
+        btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="#00A6CA"/></svg>';
+        setTimeout(function () { btn.innerHTML = original; }, 1200);
+        clearTimeout(toastTimer);
+        toast.classList.add('is-visible');
+        toastTimer = setTimeout(function () { toast.classList.remove('is-visible'); }, 1800);
+      });
+    });
+  })();
+</script>
 </body>
 
 </html>
