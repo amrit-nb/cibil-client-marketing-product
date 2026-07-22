@@ -495,6 +495,88 @@ p {
 .faq-answer a { color: var(--dark-blue); text-decoration: underline; }
 
 /* ══════════════════════════════════════
+   HOW IT WORKS SECTION
+   ══════════════════════════════════════ */
+
+.hiw-section {
+  background: #fff;
+  padding: 32px 0 48px;
+}
+
+.hiw-eyebrow {
+  font-family: var(--font-intro-bold);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+  color: var(--blue);
+  text-align: center;
+  margin: 0 0 24px;
+}
+
+.hiw-steps {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.hiw-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.hiw-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #e6f6fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hiw-badge-num {
+  font-family: var(--font-intro-semibold);
+  font-size: 14px;
+  color: var(--blue);
+}
+
+.hiw-step-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+}
+
+.hiw-step-title {
+  font-family: var(--font-intro-semibold);
+  font-size: 20px;
+  line-height: 28px;
+  color: #2c2c2c;
+  margin: 0;
+}
+
+.hiw-step-desc {
+  font-family: var(--font-intro-regular);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.28px;
+  color: #565656;
+  margin: 0;
+}
+
+.hiw-divider {
+  width: 1px;
+  height: 114px;
+  background: #e6e6e6;
+  flex-shrink: 0;
+}
+
+/* ══════════════════════════════════════
    RESPONSIVE — 1366px
    ══════════════════════════════════════ */
 
@@ -637,8 +719,93 @@ p {
     letter-spacing: 0.02em;
   }
 
+  /* How it works — mobile */
+  .hiw-section {
+    padding: 32px 0 48px;
+  }
+
+  .hiw-steps {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .hiw-badge {
+    width: 36px;
+    height: 36px;
+  }
+
+  .hiw-divider {
+    width: 114px;
+    height: 1px;
+  }
+
+  .hiw-step-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .hiw-step-desc {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.24px;
+  }
+
   /* FAQ */
   .faq-title { font-size: 24px; text-align: center; margin-bottom: 20px; }
   .faq-q-text { font-size: 14px; }
   .faq-answer { font-size: 12px; margin-top: 10px; }
+}
+
+/* ── Premium Duo info tooltip ───────────────────────────────── */
+
+.pc-info-btn {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  display: block;
+  cursor: pointer;
+  margin-left: 6px;
+}
+
+.pc-tip {
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 348px;
+  max-width: 100vw;
+  padding: 16px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 2px 2px 16px 0 rgba(0, 71, 255, 0.2);
+  color: var(--dark);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+.pc-tip.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.pc-tip-title {
+  font-family: var(--font-intro-bold);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  margin: 0;
+}
+
+.pc-tip-body {
+  font-family: var(--font-intro-regular);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.28px;
+  margin: 0;
 }
