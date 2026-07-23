@@ -1389,6 +1389,94 @@ a {
 }
 
 /* ══════════════════════════════════════
+   HOW IT WORKS
+   ══════════════════════════════════════ */
+
+.hiw-section {
+  background: #F7F9FA;
+  padding: 32px 0 48px;
+}
+
+.hiw-inner {
+  max-width: var(--inner-max);
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.hiw-eyebrow {
+  font-family: var(--font-intro-semibold);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+  color: var(--blue);
+  text-align: center;
+  margin: 0 0 24px;
+}
+
+.hiw-steps {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.hiw-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.hiw-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #e6f6fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hiw-badge-num {
+  font-family: var(--font-intro-semibold);
+  font-size: 14px;
+  color: var(--blue);
+}
+
+.hiw-step-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+}
+
+.hiw-step-title {
+  font-family: var(--font-intro-semibold);
+  font-size: 20px;
+  line-height: 28px;
+  color: #2c2c2c;
+  margin: 0;
+}
+
+.hiw-step-desc {
+  font-family: var(--font-intro-regular);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.28px;
+  color: #565656;
+  margin: 0;
+}
+
+.hiw-divider {
+  width: 1px;
+  height: 114px;
+  background: #e6e6e6;
+  flex-shrink: 0;
+}
+
+/* ══════════════════════════════════════
    RESPONSIVE — 991px (Tablet / Mobile)
    ══════════════════════════════════════ */
 
@@ -1681,5 +1769,36 @@ a {
   .faq-answer-inner p {
     font-size: 14px;
     line-height: 20px;
+  }
+
+  .hiw-inner {
+    padding: 0 16px;
+  }
+
+  .hiw-steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .hiw-divider {
+    width: 114px;
+    height: 1px;
+  }
+
+  .hiw-badge {
+    width: 36px;
+    height: 36px;
+  }
+
+  .hiw-step-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .hiw-step-desc {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.24px;
   }
 }
