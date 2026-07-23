@@ -3,8 +3,8 @@ const puOtherEl = document.getElementById('puOtherPlans');
 let puActiveTab = 'individual';
 
 const PLAN_ORDER = {
-  individual: ['premium', 'standard', 'basic', 'starter'],
-  combo: ['premium', 'standard', 'basic']
+  individual: ['premium-duo', 'premium', 'standard', 'basic', 'starter'],
+  combo: ['premium-duo', 'premium', 'standard', 'basic']
 };
 
 function getAllRows() {
@@ -29,13 +29,13 @@ function insertRowInOrder(row) {
 
 puPlansEl.addEventListener('click', (e) => {
   const row = e.target.closest('.pu-plan-row');
-  if (!row || e.target.closest('.pu-addon-row')) return;
+  if (!row) return;
   selectPlan(row);
 });
 
 puOtherEl.addEventListener('click', (e) => {
   const row = e.target.closest('.pu-plan-row');
-  if (!row || e.target.closest('.pu-addon-row')) return;
+  if (!row) return;
   selectPlan(row);
 });
 
@@ -46,8 +46,6 @@ function selectPlan(row) {
   if (prev) {
     prev.classList.remove('is-selected');
     prev.querySelector('input[type="radio"]').checked = false;
-    const addonPrev = prev.querySelector('.pu-addon-checkbox');
-    if (addonPrev) { addonPrev.checked = false; addonPrev.closest('.pu-addon-row').classList.remove('is-checked'); }
   }
 
   row.classList.remove('hidden');
@@ -65,29 +63,14 @@ function selectPlan(row) {
   updateSummary();
 }
 
-function toggleAddMember(checkbox) {
-  checkbox.closest('.pu-addon-row').classList.toggle('is-checked', checkbox.checked);
-  updateSummary();
-}
-
 function updateSummary() {
   const selected = puPlansEl.querySelector('.pu-plan-row');
   if (!selected) return;
   const price = parseInt(selected.dataset.price, 10);
-  const addonCheckbox = selected.querySelector('.pu-addon-checkbox');
-  const addMemberChecked = !!(addonCheckbox && addonCheckbox.checked);
-  const addonPrice = addMemberChecked ? parseInt(selected.dataset.addonPrice, 10) : 0;
-
   document.getElementById('puSummaryName').textContent = selected.dataset.name;
   document.getElementById('puSummaryPrice').textContent = '₹' + price.toLocaleString('en-IN');
   document.getElementById('puSummaryDuration').textContent = selected.dataset.summaryDuration;
-  document.getElementById('puTotalAmount').textContent = '₹' + (price + addonPrice).toLocaleString('en-IN');
-
-  const addMemberLine = document.getElementById('puAddMemberLine');
-  addMemberLine.classList.toggle('hidden', !addMemberChecked);
-  if (addMemberChecked) {
-    document.getElementById('puAddMemberAmount').textContent = '+ ' + selected.dataset.addonPriceLabel;
-  }
+  document.getElementById('puTotalAmount').textContent = '₹' + price.toLocaleString('en-IN');
 }
 
 function toggleOtherPlans() {
@@ -137,8 +120,6 @@ function switchPlanTab(btn, tab, preselectPlan, isInit) {
       if (row.dataset.tab !== tab) {
         row.classList.remove('is-selected');
         row.querySelector('input[type="radio"]').checked = false;
-        const addon = row.querySelector('.pu-addon-checkbox');
-        if (addon) { addon.checked = false; addon.closest('.pu-addon-row').classList.remove('is-checked'); }
       }
     });
 
@@ -164,8 +145,6 @@ function switchPlanTab(btn, tab, preselectPlan, isInit) {
         row.classList.remove('is-selected');
         const radio = row.querySelector('input[type="radio"]');
         if (radio) radio.checked = false;
-        const addon = row.querySelector('.pu-addon-checkbox');
-        if (addon) { addon.checked = false; addon.closest('.pu-addon-row').classList.remove('is-checked'); }
       }
     });
   }
@@ -219,9 +198,7 @@ function applyPromo() {
 (function initFromQueryString() {
   const params = new URLSearchParams(window.location.search);
   const tab = params.get('tab') === 'combo' ? 'combo' : 'individual';
-  const rawPlan = params.get('plan');
-  const isDuo = rawPlan === 'premium-duo';
-  const plan = isDuo ? 'premium' : rawPlan;
+  const plan = params.get('plan');
   const btn = document.querySelector(`.pu-plan-toggle-btn[data-plan-tab="${tab}"]`);
   // Start collapsed — no transition on load
   puOtherEl.style.transition = 'none';
@@ -229,9 +206,4 @@ function applyPromo() {
   document.getElementById('puHideChevron').classList.add('is-collapsed');
   requestAnimationFrame(() => { puOtherEl.style.transition = ''; });
   switchPlanTab(btn, tab, plan, true);
-  if (isDuo) {
-    const selectedRow = document.querySelector('.pu-plan-row.is-selected');
-    const addon = selectedRow && selectedRow.querySelector('.pu-addon-checkbox');
-    if (addon) { addon.checked = true; addon.closest('.pu-addon-row').classList.add('is-checked'); updateSummary(); }
-  }
 })();

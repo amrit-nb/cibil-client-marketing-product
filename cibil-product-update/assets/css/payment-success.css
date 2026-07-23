@@ -388,10 +388,23 @@ body {
    DASHBOARD BUTTON + FOOTER
    ══════════════════════════════════════ */
 
+.ps-btn-row {
+  display: flex;
+  align-items: center;
+  padding: 0 130px;
+  margin-top: 32px;
+}
+
+.ps-btn-spacer {
+  width: 34.06%;
+  flex-shrink: 0;
+  margin-right: 32px;
+}
+
 .ps-dashboard-btn {
   display: block;
   width: fit-content;
-  margin: 32px auto 0;
+  margin: 0;
   background: var(--orange);
   color: var(--accent-black);
   font-family: var(--font-intro-bold);
@@ -545,6 +558,14 @@ body {
   .ps-code-item-valid-row .ps-plan-pill {
     font-size: 12px;
   }
+
+  .ps-btn-row {
+    padding: 0;
+    margin-top: 0;
+    display: block;
+  }
+
+  .ps-btn-spacer { display: none; }
 
   .ps-dashboard-btn {
     width: 90%;
