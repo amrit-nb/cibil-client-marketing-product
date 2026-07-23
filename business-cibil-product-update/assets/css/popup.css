@@ -1,0 +1,357 @@
+/* ── Popup page ────────────────────────────────────────────── */
+
+body {
+  background: #f0f2f5;
+}
+
+.pp-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pp-open-btn {
+  background: var(--blue);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-family: var(--font-intro-semibold);
+  font-size: 16px;
+  padding: 16px 28px;
+  cursor: pointer;
+}
+
+/* ── Overlay ───────────────────────────────────────────────── */
+
+.pp-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: grid;
+  place-items: center;
+  z-index: 1000;
+  padding: 24px;
+}
+
+.pp-overlay.hidden {
+  display: none;
+}
+
+/* ── Panel ─────────────────────────────────────────────────── */
+
+.pp-panel {
+  position: relative;
+  width: 368px;
+  max-width: 100%;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.18);
+}
+
+/* ── Close button ──────────────────────────────────────────── */
+
+.pp-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: none;
+  background: #ebebeb;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  padding: 0;
+}
+
+/* ── White top section ─────────────────────────────────────── */
+
+.pp-top {
+  background: #fff;
+  padding: 46px 20px 0;
+}
+
+.pp-plan-name {
+  font-family: var(--font-intro-bold);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  color: #2c2c2c;
+  margin: 0 0 6px;
+}
+
+.pp-plan-meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.pp-plan-duration,
+.pp-plan-price {
+  font-family: var(--font-intro-regular);
+  font-size: 24px;
+  line-height: 30px;
+  color: #2c2c2c;
+}
+
+/* ── Addon box ─────────────────────────────────────────────── */
+
+.pp-addon {
+  /* gradient: light yellow on left, bright yellow on right */
+  background: linear-gradient(270deg, #fcd800 0%, #fef3b3 100%);
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.pp-addon-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.pp-addon-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.pp-addon-check {
+  flex-shrink: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid #acacac;
+  background: #f9f9f9;
+  margin-top: 1px;
+  position: relative;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.pp-addon-input:checked + .pp-addon-check {
+  background: #00a6ca;
+  border-color: #00a6ca;
+}
+
+.pp-addon-input:checked + .pp-addon-check::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 6px;
+  height: 10px;
+  border: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+
+.pp-addon-text {
+  font-family: var(--font-intro-regular);
+  font-size: 14px;
+  line-height: 18px;
+  color: #333;
+}
+
+/* ── Discount code ─────────────────────────────────────────── */
+
+.pp-code {
+  padding-bottom: 44px;
+}
+
+.pp-code-label {
+  font-family: var(--font-intro-regular);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  color: #000;
+  margin: 0 0 6px;
+}
+
+.pp-code-wrap {
+  display: flex;
+  align-items: center;
+  border: 1px solid #acacac;
+  height: 50px;
+  background: #fff;
+}
+
+.pp-code-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0 12px;
+  font-family: var(--font-intro-regular);
+  font-size: 14px;
+  height: 100%;
+  background: transparent;
+}
+
+.pp-code-vline {
+  display: block;
+  width: 1px;
+  height: 30px;
+  background: #acacac;
+  flex-shrink: 0;
+}
+
+.pp-code-apply {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-intro-bold);
+  font-size: 16px;
+  color: #f16e00;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  padding: 0 16px;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+/* Success / Error states */
+.pp-code-wrap.is-success { border-color: #008a1e; }
+.pp-code-wrap.is-error   { border-color: #d32f2f; }
+
+.pp-code-msg {
+  font-family: var(--font-intro-regular);
+  font-size: 13px;
+  line-height: 18px;
+  margin: 6px 0 0;
+  display: none;
+}
+.pp-code-msg.is-visible  { display: block; }
+.pp-code-msg.is-success  { color: #008a1e; }
+.pp-code-msg.is-error    { color: #d32f2f; }
+
+/* ── Bottom section ────────────────────────────────────────── */
+
+.pp-bottom {
+  background: #f5f5f5;
+  padding: 12px 20px 0;
+}
+
+/* ── Totals ────────────────────────────────────────────────── */
+
+.pp-totals {
+  margin-bottom: 12px;
+}
+
+.pp-totals-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pp-totals-sub {
+  padding: 4px 0 14px;
+}
+
+.pp-totals-sub span {
+  font-family: var(--font-intro-regular);
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.28px;
+  color: #2c2c2c;
+}
+
+.pp-totals-grand {
+  padding: 0 0 4px;
+}
+
+.pp-totals-grand span {
+  font-family: var(--font-intro-regular);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  color: #2c2c2c;
+}
+
+/* ── Divider ───────────────────────────────────────────────── */
+
+.pp-hline {
+  height: 1px;
+  background: #ddd;
+  margin: 0 0 28px;
+}
+
+/* ── Reward points card ────────────────────────────────────── */
+
+.pp-reward {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 12px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.pp-reward-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pp-reward-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.pp-reward-link {
+  font-family: var(--font-intro-regular);
+  font-size: 14px;
+  line-height: 24px;
+  color: #2c2c2c;
+  text-decoration: underline;
+  margin: 0 0 2px;
+  cursor: pointer;
+}
+
+.pp-reward-note {
+  font-family: var(--font-intro-regular);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.28px;
+  color: #707070;
+  margin: 0;
+}
+
+.pp-reward-arrow {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ── Proceed to Pay button ─────────────────────────────────── */
+
+.pp-pay-btn {
+  display: block;
+  width: 100%;
+  background: #dddddd;
+  color: #707070;
+  font-family: var(--font-intro-bold);
+  font-size: 16px;
+  line-height: normal;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  border-radius: 25px;
+  padding: 19px 40px 15px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Purchase — CIBIL</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/popup.css" />
+</head>
+<body>
+
+  <main class="pp-page">
+    <button class="pp-open-btn" id="openPopupButton" type="button">Open popup</button>
+  </main>
+
+  <div class="pp-overlay hidden" id="popupOverlay" aria-hidden="true">
+    <div class="pp-panel" role="dialog" aria-modal="true">
+
+      <!-- Close button — absolute top-right -->
+      <button type="button" class="pp-close" id="popupClose" aria-label="Close popup">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <path d="M9 1L1 9M1 1l8 8" stroke="#595959" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <!-- White top section -->
+      <div class="pp-top">
+        <p class="pp-plan-name">Premium</p>
+        <div class="pp-plan-meta">
+          <span class="pp-plan-duration">12 Months</span>
+          <span class="pp-plan-price">₹1,499</span>
+        </div>
+
+        <div class="pp-addon">
+          <label class="pp-addon-inner">
+            <input type="checkbox" class="pp-addon-input" id="ppAddonCheck">
+            <span class="pp-addon-check"></span>
+            <span class="pp-addon-text">Get an additional business plan for 12 months at just ₹14,500 extra.</span>
+          </label>
+        </div>
+
+        <div class="pp-code">
+          <p class="pp-code-label">Enter discount code</p>
+          <div class="pp-code-wrap" id="ppCodeWrap">
+            <input type="text" class="pp-code-input" id="discountCode" />
+            <span class="pp-code-vline"></span>
+            <button type="button" class="pp-code-apply" onclick="applyPopupCode()">Apply</button>
+          </div>
+          <p class="pp-code-msg" id="ppCodeMsg"></p>
+        </div>
+      </div>
+
+      <!-- Light-gray bottom section -->
+      <div class="pp-bottom">
+
+        <div class="pp-totals">
+          <div class="pp-totals-row pp-totals-sub">
+            <span>Subtotal</span>
+            <span>₹1,499</span>
+          </div>
+          <div class="pp-totals-row pp-totals-grand">
+            <span>Grand total</span>
+            <span>₹1,499</span>
+          </div>
+        </div>
+
+        <div class="pp-hline"></div>
+
+        <div class="pp-reward">
+          <div class="pp-reward-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 16 24" fill="none">
+            <path d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM1.6 8C1.6 11.5346 4.46538 14.4 8 14.4C11.5346 14.4 14.4 11.5346 14.4 8C14.4 4.46538 11.5346 1.6 8 1.6C4.46538 1.6 1.6 4.46538 1.6 8Z" fill="#2C2C2C"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.14693 4.41361C5.10038 4.45456 5.08984 4.54784 5.08984 4.91964C5.08984 5.31364 5.09846 5.3822 5.15343 5.425C5.20539 5.46546 5.36637 5.47744 6.0346 5.49063C6.90508 5.50781 7.11045 5.53681 7.45761 5.69141C7.63526 5.77055 7.85462 5.94198 7.92403 6.05593C7.96269 6.11945 7.95262 6.11993 6.60719 6.11993C5.43886 6.11993 5.2402 6.12679 5.17062 6.16965C5.09493 6.21625 5.08984 6.24301 5.08984 6.59584C5.08984 6.91999 5.09907 6.97965 5.1563 7.02516C5.21575 7.07246 5.37251 7.07801 6.64421 7.07801H8.06567L8.02682 7.17593C7.95531 7.35624 7.75568 7.57146 7.53915 7.70163C7.14595 7.93802 6.61504 8.0361 5.72875 8.0361C5.05852 8.0361 5.08966 8.00949 5.09035 8.58153L5.09086 9.01015L5.60332 9.50516C6.16915 10.0517 7.13334 11.0254 7.91203 11.8365L8.41791 12.3634H9.93864L9.98275 12.2856C10.0169 12.2255 10.0171 12.1917 9.98384 12.1362C9.89561 11.9893 8.02301 10.0335 7.35274 9.38827C7.16735 9.20981 7.01568 9.05697 7.01568 9.0486C7.01568 9.04023 7.09264 9.02321 7.18668 9.01082C7.4938 8.97036 7.96945 8.83364 8.24935 8.70535C8.94152 8.38813 9.3857 7.90966 9.55252 7.30166L9.61375 7.07846L10.1986 7.07824C10.937 7.07795 10.9037 7.10101 10.9037 6.59028C10.9037 6.1023 10.9311 6.11993 10.1734 6.11993H9.6047L9.52247 5.89519C9.47727 5.7716 9.38527 5.59024 9.31808 5.49213C9.25086 5.39405 9.19584 5.31194 9.19584 5.30968C9.19581 5.30741 9.50241 5.30993 9.87715 5.31527C10.6118 5.32574 10.7619 5.31383 10.848 5.23814C10.9285 5.1674 10.9278 4.53564 10.8471 4.43444L10.7906 4.36344H7.99732C5.50644 4.36344 5.19787 4.36887 5.14693 4.41361Z" fill="#2C2C2C"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 15.2728C12.0166 15.2728 15.2728 12.0166 15.2728 8C15.2728 3.98337 12.0166 0.727242 8 0.727242C3.98337 0.727242 0.727242 3.98337 0.727242 8C0.727242 12.0166 3.98337 15.2728 8 15.2728ZM8 15.1272C4.06373 15.1272 0.872758 11.9363 0.872758 8C0.872758 4.06373 4.06373 0.872758 8 0.872758C11.9363 0.872758 15.1272 4.06373 15.1272 8C15.1272 11.9363 11.9363 15.1272 8 15.1272ZM8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8 14.4C4.46538 14.4 1.6 11.5346 1.6 8C1.6 4.46538 4.46538 1.6 8 1.6C11.5346 1.6 14.4 4.46538 14.4 8C14.4 11.5346 11.5346 14.4 8 14.4Z" fill="#2C2C2C"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 23.1258L4 14H5.53846L4.53846 21.8232L7.28111 19.4992C7.6902 19.1525 8.3098 19.1525 8.71889 19.4992L11.4615 21.8232L10.4615 14H12L13 23.1258C13 23.8804 12.0552 24.2791 11.4607 23.7754L8 20.8429L4.53927 23.7754C3.94485 24.2791 3 23.8804 3 23.1258Z" fill="#2C2C2C"/>
+            </svg>
+          </div>
+          <div class="pp-reward-body">
+            <p class="pp-reward-link">Use reward points</p>
+            <p class="pp-reward-note">You will not be able to use discount code when using reward points</p>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="8" viewBox="0 0 25 8" fill="none">
+            <path d="M24.3536 4.03556C24.5488 3.8403 24.5488 3.52372 24.3536 3.32845L21.1716 0.146473C20.9763 -0.0487893 20.6597 -0.0487893 20.4645 0.146473C20.2692 0.341735 20.2692 0.658318 20.4645 0.85358L23.2929 3.68201L20.4645 6.51043C20.2692 6.7057 20.2692 7.02228 20.4645 7.21754C20.6597 7.4128 20.9763 7.4128 21.1716 7.21754L24.3536 4.03556ZM0 3.68201V4.18201H24V3.68201V3.18201H0V3.68201Z" fill="black"/>
+          </svg>
+        </div>
+
+        <button type="button" class="pp-pay-btn">Proceed to Pay</button>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/js/popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Complete Your Purchase — CIBIL</title>
+<link rel="stylesheet" href="./assets/css/style.css"/>
+<link rel="stylesheet" href="./assets/css/payment-success.css"/>
+<link rel="stylesheet" href="./assets/css/purchase.css"/>
+</head>
+<body>
+
+<header class="site-header">
+  <img src="assets/images/cibil-logo.png" alt="CIBIL — Part of TransUnion" class="site-logo"/>
+
+  <div class="site-header-lang desktop-only">
+    <div class="site-header-lang-icon">
+      <span>A</span>
+      <span>अ</span>
+    </div>
+    <span class="site-header-lang-label">English</span>
+    <span class="site-header-lang-chevron">▾</span>
+  </div>
+
+  <button class="site-header-menu mobile-only" type="button" aria-label="Menu">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 6H21M3 12H21M3 18H21" stroke="#2C2C2C" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+</header>
+
+<main class="pu-main">
+
+  <section class="pu-banner">
+    <div class="pu-banner-inner">
+      <h1>Complete your purchase</h1>
+      <p>You will be able to access your dashboard after payment. Start planning your long-term gains with the expert tools on the dashboard.</p>
+    </div>
+  </section>
+
+  <section class="pu-body">
+
+    <div class="pu-left">
+
+      <div class="pu-card pu-plan-card" data-anim>
+        <p class="pu-card-title">Selected Subscription Plan</p>
+
+        <div class="pu-plans" id="puPlans">
+
+          <!-- Individual: Premium (default selected — sits outside the container) -->
+          <div class="pu-plan-row is-selected" data-tab="individual" data-plan="premium" data-name="CIBIL Premium" data-price="1200" data-per-day="₹4.1/day" data-duration="12 Months" data-summary-duration="12 Months" data-addon-save="999" data-addon-price="500" data-addon-price-label="₹500">
+            <div class="pu-plan-top">
+              <input type="radio" name="pu-plan" value="premium" checked/>
+              <div class="pu-plan-radio"></div>
+              <div class="pu-plan-main">
+                <div class="pu-plan-left">
+                  <div class="pu-plan-name-row">
+                    <p class="pu-plan-name">Premium</p>
+                    <span class="pu-badge-save">
+                      <img src="assets/images/save.svg" width="12" height="12" alt="save"/>
+                      Save 80%
+                    </span>
+                  </div>
+                  <p class="pu-plan-sub">12 Months</p>
+                </div>
+                <div class="pu-plan-right">
+                  <p class="pu-plan-price">₹1,200</p>
+                  <p class="pu-plan-per-day">₹4.1/day</p>
+                </div>
+              </div>
+            </div>
+            <div class="pu-plan-addon">
+              <label class="pu-addon-row">
+                <input type="checkbox" class="pu-addon-checkbox" onchange="toggleAddMember(this)"/>
+                <span class="pu-addon-check"></span>
+                <span class="pu-addon-text">Add another member to your Premium plan and save ₹999 <span class="pu-addon-new">New</span></span>
+              </label>
+              <span class="pu-addon-price">+ ₹500</span>
+            </div>
+          </div>
+
+          <div class="pu-hide-toggle" id="puHideToggle" onclick="toggleOtherPlans()">
+            <span id="puHideToggleLabel">Show other plans</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="pu-hide-chevron is-collapsed" id="puHideChevron"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" fill="#595959"/></svg>
+          </div>
+
+          <!-- Container for all non-selected plans (hidden by default) -->
+          <div class="pu-other-plans" id="puOtherPlans">
+
+            <div class="pu-plan-toggle">
+              <button type="button" class="pu-plan-toggle-btn is-active" data-plan-tab="individual" onclick="switchPlanTab(this,'individual')">Individual Plans</button>
+              <button type="button" class="pu-plan-toggle-btn" data-plan-tab="combo" onclick="switchPlanTab(this,'combo')">Combo Plans</button>
+            </div>
+
+            <!-- Individual: Standard -->
+            <div class="pu-plan-row" data-tab="individual" data-plan="standard" data-name="CIBIL Standard" data-price="800" data-per-day="₹17.7/day" data-duration="6 Months" data-summary-duration="6 Months">
+              <input type="radio" name="pu-plan" value="standard"/>
+              <div class="pu-plan-radio"></div>
+              <div class="pu-plan-main">
+                <div class="pu-plan-left">
+                  <div class="pu-plan-name-row">
+                    <p class="pu-plan-name">Standard</p>
+                    <span class="pu-badge-save">
+                      <img src="assets/images/save.svg" width="12" height="12" alt="save"/>
+                      Save 75%
+                    </span>
+                  </div>
+                  <p class="pu-plan-sub">6 Months</p>
+                </div>
+                <div class="pu-plan-right">
+                  <p class="pu-plan-price">₹800</p>
+                  <p class="pu-plan-per-day">₹17.7/day</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Individual: Basic -->
+            <div class="pu-plan-row" data-tab="individual" data-plan="basic" data-name="CIBIL Basic" data-price="550" data-per-day="₹17.7/day" data-duration="1 Month" data-summary-duration="1 Month">
+              <input type="radio" name="pu-plan" value="basic"/>
+              <div class="pu-plan-radio"></div>
+              <div class="pu-plan-main">
+                <div class="pu-plan-left">
+                  <p class="pu-plan-name">Basic</p>
+                  <p class="pu-plan-sub">1 Month</p>
+                </div>
+                <div class="pu-plan-right">
+                  <p class="pu-plan-price">₹550</p>
+                  <p class="pu-plan-per-day">₹17.7/day</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Individual: Starter Plan -->
+            <div class="pu-plan-row" data-tab="individual" data-plan="starter" data-name="CIBIL Starter" data-price="118" data-per-day="" data-duration="" data-summary-duration="One-time">
+              <input type="radio" name="pu-plan" value="starter"/>
+              <div class="pu-plan-radio"></div>
+              <div class="pu-plan-main">
+                <div class="pu-plan-left">
+                  <p class="pu-plan-name">Starter Plan</p>
+                  <p class="pu-plan-desc">Additionally, you can also opt to access your latest CIBIL report.</p>
+                </div>
+                <div class="pu-plan-right">
+                  <p class="pu-plan-price">₹118</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Combo: Premium -->
+            <div class="pu-plan-row hidden" data-tab="combo" data-plan="premium" data-name="CIBIL Combo Premium" data-price="12999" data-per-day="₹35.6/day" data-duration="12 Months" data-summary-duration="12 Months" data-addon-save="10,999" data-addon-price="5000" data-addon-price-label="₹5,000">
+              <div class="pu-plan-top">
+                <input type="radio" name="pu-plan" value="combo-premium"/>
+                <div class="pu-plan-radio"></div>
+                <div class="pu-plan-main">
+                  <div class="pu-plan-left">
+                    <div class="pu-plan-name-row">
+                      <p class="pu-plan-name">Combo Premium</p>
+                      <span class="pu-badge-save">
+                        <img src="assets/images/save.svg" width="12" height="12" alt="save"/>
+                        Save 80%
+                      </span>
+                    </div>
+                    <p class="pu-plan-sub">12 Months</p>
+                  </div>
+                  <div class="pu-plan-right">
+                    <p class="pu-plan-price">₹12,999</p>
+                    <p class="pu-plan-per-day">₹35.6/day</p>
+                  </div>
+                </div>
+              </div>
+              <div class="pu-plan-addon">
+                <label class="pu-addon-row">
+                  <input type="checkbox" class="pu-addon-checkbox" onchange="toggleAddMember(this)"/>
+                  <span class="pu-addon-check"></span>
+                  <span class="pu-addon-text">Add another member to your Premium plan and save ₹10,999 <span class="pu-addon-new">New</span></span>
+                </label>
+                <span class="pu-addon-price">+ ₹5,000</span>
+              </div>
+            </div>
+
+            <!-- Combo: Standard -->
+            <div class="pu-plan-row hidden" data-tab="combo" data-plan="standard" data-name="CIBIL Combo Standard" data-price="7499" data-per-day="₹40.3/day" data-duration="6 Months" data-summary-duration="6 Months">
+              <input type="radio" name="pu-plan" value="combo-standard"/>
+              <div class="pu-plan-radio"></div>
+              <div class="pu-plan-main">
+                <div class="pu-plan-left">
+                  <div class="pu-plan-name-row">
+                    <p class="pu-plan-name">Combo Standard</p>
+                    <span class="pu-badge-save">
+                      <img src="assets/images/save.svg" width="12" height="12" alt="save"/>
+                      Save 75%
+                    </span>
+                  </div>
+                  <p class="pu-plan-sub">6 Months</p>
+                </div>
+                <div class="pu-plan-right">
+                  <p class="pu-plan-price">₹7,499</p>
+                  <p class="pu-plan-per-day">₹40.3/day</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Combo: Basic -->
+            <div class="pu-plan-row hidden" data-tab="combo" data-plan="basic" data-name="CIBIL Combo Basic" data-price="4299" data-per-day="₹138.7/day" data-duration="1 Month" data-summary-duration="1 Month">
+              <input type="radio" name="pu-plan" value="combo-basic"/>
+              <div class="pu-plan-radio"></div>
+              <div class="pu-plan-main">
+                <div class="pu-plan-left">
+                  <p class="pu-plan-name">Combo Basic</p>
+                  <p class="pu-plan-sub">1 Month</p>
+                </div>
+                <div class="pu-plan-right">
+                  <p class="pu-plan-price">₹4,299</p>
+                  <p class="pu-plan-per-day">₹138.7/day</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Combo-only info band -->
+            <div class="pu-combo-band hidden" data-includes-tab="combo">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="pu-combo-band-icon" aria-hidden="true">
+                <g clip-path="url(#clip0_30668_7739)">
+                  <path d="M20 6H17.82C17.93 5.69 18 5.35 18 5C18 3.34 16.66 2 15 2C13.95 2 13.04 2.54 12.5 3.35L12 4.02L11.5 3.34C10.96 2.54 10.05 2 9 2C7.34 2 6 3.34 6 5C6 5.35 6.07 5.69 6.18 6H4C2.89 6 2.01 6.89 2.01 8L2 19C2 20.11 2.89 21 4 21H20C21.11 21 22 20.11 22 19V8C22 6.89 21.11 6 20 6ZM15 4C15.55 4 16 4.45 16 5C16 5.55 15.55 6 15 6C14.45 6 14 5.55 14 5C14 4.45 14.45 4 15 4ZM9 4C9.55 4 10 4.45 10 5C10 5.55 9.55 6 9 6C8.45 6 8 5.55 8 5C8 4.45 8.45 4 9 4ZM20 19H4V17H20V19ZM20 14H4V8H9.08L7 10.83L8.62 12L12 7.4L15.38 12L17 10.83L14.92 8H20V14Z" fill="#00A6CA"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_30668_7739">
+                    <rect width="24" height="24" fill="white"/>
+                  </clipPath>
+                </defs>
+              </svg>
+              <p class="pu-combo-band-text">Includes a 100% discount code to activate your Business Subscription Plan at no extra cost.</p>
+            </div>
+
+          </div><!-- /#puOtherPlans -->
+
+        </div>
+      </div>
+
+      <div class="pu-card" data-anim data-anim-delay="100">
+        <p class="pu-card-title">Your selected subscription includes</p>
+
+        <!-- Individual tab: flat 4-item grid -->
+        <div class="pu-includes" data-includes-tab="individual">
+          <div class="pu-include-item">
+            <img src="assets/images/include-ic-alerts.svg" width="32" height="32" alt=""/>
+            <p>24x7 credit monitoring with CIBIL Alerts (only with 6 months &amp; 12 months subscription).</p>
+          </div>
+          <div class="pu-include-item">
+            <img src="assets/images/include-ic-score-report.svg" width="32" height="32" alt=""/>
+            <p>Stay up-to-date with your CIBIL Score &amp; Report with unlimited access.</p>
+          </div>
+          <div class="pu-include-item">
+            <img src="assets/images/include-ic-score-simulator.svg" width="32" height="32" alt=""/>
+            <p>Find out how your credit decisions affect your Credit Score with the Score Simulator.</p>
+          </div>
+          <div class="pu-include-item">
+            <img src="assets/images/include-ic-saksham.svg" width="32" height="32" alt=""/>
+            <p>Learn responsible credit behavior and earn certificates with CIBIL Saksham.</p>
+          </div>
+        </div>
+
+        <!-- Combo tab: Individual Features + Combo Features grouped sections -->
+        <div class="pu-includes-groups hidden" data-includes-tab="combo">
+
+          <div class="pu-includes-group">
+            <div class="pu-includes-group-head">
+              <img src="assets/images/user-icon.svg" width="20" height="20" alt=""/>
+              <p>Individual Features</p>
+            </div>
+            <div class="pu-includes-divider"></div>
+            <div class="pu-includes">
+              <div class="pu-include-item">
+                <img src="assets/images/include-ic-alerts.svg" width="32" height="32" alt=""/>
+                <p>24x7 credit monitoring with CIBIL Alerts (only with 6 months &amp; 12 months subscription).</p>
+              </div>
+              <div class="pu-include-item">
+                <img src="assets/images/include-ic-score-report.svg" width="32" height="32" alt=""/>
+                <p>Stay up-to-date with your CIBIL Score &amp; Report with unlimited access.</p>
+              </div>
+              <div class="pu-include-item">
+                <img src="assets/images/include-ic-score-simulator.svg" width="32" height="32" alt=""/>
+                <p>Find out how your credit decisions affect your Credit Score with the Score Simulator.</p>
+              </div>
+              <div class="pu-include-item">
+                <img src="assets/images/include-ic-saksham.svg" width="32" height="32" alt=""/>
+                <p>Learn responsible credit behavior and earn certificates with CIBIL Saksham.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pu-includes-group">
+            <div class="pu-includes-group-head">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z" fill="#595959"/></svg>
+              <p>Combo Features</p>
+            </div>
+            <div class="pu-includes-divider"></div>
+            <div class="pu-includes">
+              <div class="pu-include-item">
+                <img src="assets/images/include-ic-rank.svg" width="32" height="32" alt=""/>
+                <p>Weekly refresh of your CIBIL Rank and Company Credit Report</p>
+              </div>
+              <div class="pu-include-item">
+                <img src="assets/images/include-ic-monitor.svg" width="32" height="32" alt=""/>
+                <p>Real-time monitoring of your company's credit insights.</p>
+              </div>
+              <div class="pu-include-item">
+                <img src="assets/images/include-ic-saksham.svg" width="32" height="32" alt=""/>
+                <p>Learn responsible credit behavior and earn certificates with CIBIL Saksham.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="pu-card" data-anim data-anim-delay="200">
+        <p class="pu-card-title">Account Details</p>
+        <div class="pu-account-details">
+          <div class="pu-account-field">
+            <span>Full name</span>
+            <strong>Arnab Tarcar</strong>
+          </div>
+          <div class="pu-account-field">
+            <span>Email ID</span>
+            <strong>Arnab@gmail.com</strong>
+          </div>
+          <div class="pu-account-field">
+            <span>Mobile</span>
+            <strong>+91 9812345678</strong>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="pu-right" data-anim data-anim-delay="150">
+      <div class="pu-summary">
+        <div class="pu-summary-head">Price Summary</div>
+        <div class="pu-summary-body">
+
+          <div class="pu-summary-line">
+            <div class="pu-summary-row">
+              <p id="puSummaryName">CIBIL Basic</p>
+              <p id="puSummaryPrice">₹699</p>
+            </div>
+            <p class="pu-summary-duration" id="puSummaryDuration">1 month</p>
+          </div>
+
+          <div class="pu-summary-line hidden" id="puAddMemberLine">
+            <div class="pu-summary-row">
+              <p>Includes 1 additional member</p>
+              <p id="puAddMemberAmount">+ ₹500</p>
+            </div>
+          </div>
+
+          <div class="pu-divider"></div>
+
+          <div class="pu-promo">
+            <div class="pu-promo-top" onclick="togglePromo()">
+              <p>Have a promo code?</p>
+              <span class="pu-promo-chevron">▾</span>
+            </div>
+            <div class="pu-promo-row">
+              <input type="text" class="pu-promo-input" placeholder="Enter code" id="puPromoInput"/>
+              <button type="button" class="pu-promo-apply" onclick="applyPromo()">Apply</button>
+            </div>
+            <p class="pu-promo-msg" id="puPromoMsg"></p>
+          </div>
+
+          <div class="pu-divider"></div>
+
+          <div class="pu-total-row">
+            <p>Total amount</p>
+            <p id="puTotalAmount">₹699</p>
+          </div>
+
+          <p class="pu-disclaimer">By clicking the "Proceed to Payment" button, you will be redirected to a third-party payment vendor that will handle your payment.</p>
+
+          <a href="payment-success.html" class="pu-proceed-btn">Proceed to Payment</a>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="ps-footer">
+  <div class="ps-footer-links">
+    <a href="#">FAQs</a>
+    <a href="#">Terms and Conditions</a>
+    <a href="#">Privacy Policy</a>
+  </div>
+  <p class="ps-footer-copy">&#169; Copyright 2026 TransUnion CIBIL Limited (Formerly: Credit Information Bureau (India) Limited). All Rights Reserved.</p>
+</footer>
+
+<script src="assets/js/purchase.js?v=3"></script>
+<script src="assets/js/animations.js"></script>
+</body>
+</html>
