@@ -296,6 +296,7 @@ body {
   height: 14px;
   display: block;
   flex-shrink: 0;
+  filter: brightness(0);
 }
 
 .ps-plan-pill--individual { background: #DFF4F9; }
@@ -330,6 +331,17 @@ body {
 
 .ps-code-stack {
   display: none;
+}
+
+/* ── My Account note ── */
+
+.ps-code-note {
+  font-family: var(--font-intro-regular);
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.24px;
+  color: #595959;
+  margin-top: -12px;
 }
 
 /* ── How it works ── */
@@ -499,7 +511,7 @@ body {
   }
 
   .ps-invoice { width: 100%; }
-  .ps-benefits { width: 100%; }
+  .ps-benefits { width: 100%; gap: 16px;}
 
   .ps-code-table { display: none; }
 
@@ -558,6 +570,10 @@ body {
   .ps-code-item-valid-row .ps-plan-pill {
     font-size: 12px;
   }
+
+  .ps-benefits-desc { font-size: 12px; }
+
+  .ps-code-note { margin-top: -4px; }
 
   .ps-btn-row {
     padding: 0;
