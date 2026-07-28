@@ -108,6 +108,14 @@ p {
   align-items: stretch;
 }
 
+.pricing-disclaimer {
+  margin-top: 16px;
+  font-family: var(--font-intro-regular);
+  font-size: 14px;
+  line-height: 20px;
+  color: #595959;
+}
+
 /* Individual card wrapper */
 .pc-wrap {
   flex: 1;
@@ -594,6 +602,12 @@ p {
   /* Pricing section — mobile */
   .pricing-section {
     padding: 40px 0;
+  }
+
+  .pricing-disclaimer {
+    margin-top: 32px;
+    font-size: 12px;
+    line-height: 16px;
   }
 
   .pricing-header {

@@ -481,6 +481,15 @@ a {
   display: block;
 }
 
+.pricing-disclaimer {
+  margin-top: 16px;
+  margin-bottom: 28px;
+  font-family: var(--font-intro-regular);
+  font-size: 14px;
+  line-height: 20px;
+  color: #595959;
+}
+
 /* Cards row — resizable: 4 → 3 → 2 (capped width, centered) */
 .plans-cards {
   position: relative;
@@ -488,7 +497,6 @@ a {
   align-items: stretch;
   justify-content: center;
   gap: 20px;
-  margin-bottom: 28px;
   z-index: 1;
 }
 
@@ -1945,11 +1953,16 @@ a {
   }
 
   /* Cards stack — Premium Duo first */
+  .pricing-disclaimer {
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
   .plans-cards {
     flex-direction: column-reverse;
     align-items: stretch;
     gap: 32px;
-    margin-bottom: 40px;
   }
 
   .plan-card {

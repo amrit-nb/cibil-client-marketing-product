@@ -466,7 +466,6 @@ a {
   align-items: stretch;
   justify-content: center;
   gap: 20px;
-  margin-bottom: 28px;
   z-index: 1;
 }
 
@@ -800,6 +799,15 @@ a {
     opacity: 1 !important;
     overflow: visible !important;
   }
+}
+
+.pricing-disclaimer {
+  margin-top: 16px;
+  margin-bottom: 28px;
+  font-family: var(--font-intro-regular);
+  font-size: 14px;
+  line-height: 20px;
+  color: #595959;
 }
 
 /* Note strip */
@@ -1484,6 +1492,12 @@ a {
   .mobile-display-none { display: none; }
   .mobile-only { display: block; }
 
+  .pricing-disclaimer {
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
   /* More Plans hidden on mobile — all cards already shown */
   .more-plans { display: none; }
 
@@ -1545,7 +1559,6 @@ a {
     flex-direction: column-reverse;
     align-items: stretch;
     gap: 20px;
-    margin-bottom: 24px;
   }
 
   .plan-card {
