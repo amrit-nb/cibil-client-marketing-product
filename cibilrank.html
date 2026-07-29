@@ -1,0 +1,1106 @@
+<style>
+    html {
+        scroll-behavior: smooth
+    }
+
+    .highlight {
+        position: relative;
+        display: inline-flex;
+        z-index: 0
+    }
+
+    .highlight:after {
+        content: "";
+        height: 6px;
+        width: calc(100% - 3px);
+        background: #fcd800;
+        position: absolute;
+        left: 0px;
+        bottom: 6px;
+        z-index: -1
+    }
+
+    .cibil-link {
+        color: inherit !important;
+        outline: none !important
+    }
+
+    .rank-page .container {
+        padding-left: 20px;
+        padding-right: 20px
+    }
+
+    .rank-page .container:before,
+    .rank-page .container:after {
+        content: none
+    }
+
+    ul.features {
+        list-style: none;
+    }
+
+    @media (min-width: 1400px) {
+        .rank-page .container {
+            max-width: 1220px;
+            width: 1220px
+        }
+
+        .rank-page .container.container-medium {
+            max-width: 1020px
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        .rank-page .hide-mob {
+            display: none !important
+        }
+    }
+
+    .rank-page .hide-desk {
+        display: none
+    }
+
+    @media (max-width: 767.98px) {
+        .rank-page .hide-desk {
+            display: block
+        }
+    }
+
+    .rank-page .cibil-btn {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: #ffffff !important;
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 18px 30px 16px;
+        height: 50px;
+        background: #f16e00;
+        text-decoration: none !important;
+        outline: none !important
+    }
+
+    .rank-page .section-heading {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 44px;
+        letter-spacing: -0.01em;
+        text-align: center;
+        color: #2c2c2c;
+        margin-bottom: 30px
+    }
+
+    @media (max-width: 767.98px) {
+        .rank-page .section-heading {
+            font-size: 24px;
+            line-height: 30px;
+            letter-spacing: 0.02em
+        }
+    }
+
+    .rank-page .login-btn-header {
+        background: #ffffff;
+        position: relative
+    }
+
+    .rank-page .login-btn-header:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        background: #fcd833;
+        left: 0px;
+        bottom: 0px
+    }
+
+    .rank-page .login-btn-header__wraper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 12px;
+        padding-bottom: 16px
+    }
+
+    .rank-page .login-btn-header__wraper .site-logo {
+        width: 91px
+    }
+
+    .rank-page .login-btn-header__wraper .right-panel {
+        display: flex;
+        align-items: center
+    }
+
+    .rank-page .login-btn-header__wraper .right-panel .login-text {
+        margin-bottom: 0px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        color: #2c2c2c;
+        margin-right: 20px;
+        text-align: right
+    }
+
+    .rank-page .login-btn-header__wraper .header-btn {
+        background: #fafdff;
+        border: 2px solid #3ea3ce;
+        border-radius: 4px;
+        height: 36px;
+        padding: 7px 16px 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-family: "Intro", Bold;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 16px;
+        text-align: center;
+        color: #3ea3ce
+    }
+
+    .rank-page .login-btn-header__wraper .header-btn .icon {
+        margin-right: 12px
+    }
+
+    @media (max-width: 767.98px) {
+        .rank-page .login-btn-header__wraper {
+            padding-top: 9px;
+            padding-bottom: 9px
+        }
+
+        .rank-page .login-btn-header__wraper .site-logo {
+            width: 70.15px
+        }
+
+        .rank-page .login-btn-header__wraper .right-panel .login-text {
+            font-size: 14px;
+            line-height: 18px
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .rank-page .login-btn-header:after {
+            height: 2px
+        }
+
+        .rank-page .login-btn-header .right-panel .login-text {
+            margin-right: 14px;
+            max-width: 105px
+        }
+    }
+
+    .rank-page .banner-slider {
+        position: relative
+    }
+
+    .rank-page .banner-slider .slick-track {
+        display: flex !important
+    }
+
+    .rank-page .banner-slider .slide-section {
+        height: inherit !important
+    }
+
+    .rank-page .slide-section {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-top: 81px;
+        padding-bottom: 71px
+    }
+
+    .rank-page .slide-section .slide-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        top: 0px
+    }
+
+    .rank-page .slide-section .slide-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: right
+    }
+
+    .rank-page .slide-section .slide-image img.mob-img {
+        display: none
+    }
+
+    .rank-page .slide-section__wraper .slide-heading {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 44px;
+        letter-spacing: -0.01em;
+        color: #2c2c2c;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        max-width: 459px
+    }
+
+    .rank-page .slide-section__wraper .slide-subheading {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 30px;
+        letter-spacing: -0.01em;
+        color: #00a6ca;
+        max-width: 575px
+    }
+
+    .rank-page .slide-section__wraper .cibil-btn {
+        min-width: 320px
+    }
+
+    @media (min-width: 1800px) {
+        .rank-page .slide-section {
+            min-height: 630px
+        }
+    }
+
+    @media (max-width: 1199.98px) and (min-width: 992px) {
+
+        .rank-page .slide-section .slide-heading,
+        .rank-page .slide-section .slide-subheading {
+            max-width: 50% !important
+        }
+    }
+
+    @media (max-width: 991.98px) {
+        .rank-page .slide-section {
+            padding-top: 30px;
+            padding-bottom: 287px
+        }
+
+        .rank-page .slide-section .slide-image img {
+            object-position: bottom
+        }
+
+        .rank-page .slide-section .slide-image img.desk-img {
+            display: none
+        }
+
+        .rank-page .slide-section .slide-image img.mob-img {
+            display: block
+        }
+
+        .rank-page .slide-section__wraper {
+            display: flex;
+            flex-direction: column;
+            align-items: center
+        }
+
+        .rank-page .slide-section__wraper .slide-heading,
+        .rank-page .slide-section__wraper .slide-subheading,
+        .rank-page .slide-section__wraper .cibil-btn {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .rank-page .slide-section__wraper .slide-heading {
+            margin-bottom: 10px
+        }
+
+        .rank-page .slide-section__wraper .slide-heading .highlight:after {
+            display: none
+        }
+
+        .rank-page .slide-section__wraper .slide-subheading {
+            font-size: 24px;
+            line-height: 30px;
+            margin-bottom: 10px;
+            font-weight: 600
+        }
+    }
+
+    @media (max-width: 991.98px) and (min-width: 452px) {
+        .rank-page .slide-section {
+            align-items: flex-start;
+            min-height: 860px
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        .rank-page .slide-section {
+            min-height: 720px;
+            align-items: flex-start
+        }
+
+        .rank-page .slide-section__wraper {
+            width: 100%
+        }
+
+        .rank-page .slide-section__wraper .cibil-btn {
+            max-width: 100% !important
+        }
+    }
+
+    @media (max-width: 425.98px) {
+        .rank-page .slide-section {
+            min-height: 653px
+        }
+
+        .rank-page .slide-section__wraper {
+            min-height: 336px;
+            justify-content: space-between
+        }
+    }
+
+    .rank-page .features-section {
+        padding-top: 37px;
+        padding-bottom: 40px
+    }
+
+    .rank-page .features-section .bottom-text {
+        text-align: center;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 0px
+    }
+
+    .rank-page .features-section__wraper .features-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between
+    }
+
+    .rank-page .features-section__wraper .features-list .feature-head {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        grid-gap: 16px;
+        margin-bottom: 16px
+    }
+
+    .rank-page .features-section__wraper .features-list .feature-body {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        max-width: 362px
+    }
+
+    .rank-page .features-section__wraper .features-list .feature-title {
+        margin-bottom: 0px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0.02em
+    }
+
+    .rank-page .features-section__wraper .features-list .icon {
+        width: 64px
+    }
+
+    .rank-page .features-section__wraper .features-list .feature {
+        background: #ffffff;
+        box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 30px 30px 20px;
+        color: #000000;
+        margin-bottom: 20px
+    }
+
+    .rank-page .features-section__wraper .features-list .feature-text {
+        margin-bottom: 0px
+    }
+
+    @media (min-width: 768px) {
+        .rank-page .features-section__wraper .features-list .feature {
+            width: calc(50% - 10px)
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        .rank-page .features-section {
+            padding-top: 50px;
+            padding-bottom: 40px
+        }
+
+        .rank-page .features-section__wraper .section-heading {
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-bottom: 50px
+        }
+
+        .rank-page .features-section__wraper .features-list .feature {
+            padding: 20px 20px 18px;
+            width: 100%
+        }
+
+        .rank-page .features-section__wraper .features-list .feature:last-child {
+            margin-bottom: 0px
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .rank-page .features-section__wraper .features-list .feature {
+            align-items: flex-start
+        }
+    }
+
+    .rank-page .subscription-plans-section {
+        background-color: #f6f7fc;
+        padding-top: 10px;
+        margin-top: 10px;
+        padding-bottom: 10px
+    }
+
+    .rank-page .subscription-plans-section .section-heading {
+        margin-bottom: 10px
+    }
+
+    .rank-page .subscription-plans-section .bottom-text {
+        margin-top: 28px
+    }
+
+    .rank-page .subscription-plans-section__wraper .subscription-plans .subscription-plan {
+        width: calc(100% / 4);
+        background: #ffffff;
+        box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.06)
+    }
+
+    .rank-page .subscription-plans-section__wraper .subscription-plans .subscription-plan__header {
+        position: relative
+    }
+
+    .rank-page .subscription-plans-section__wraper .subscription-plans .subscription-plan__header .plan-tag {
+        text-transform: uppercase;
+        position: absolute;
+        width: 100%;
+        top: -30px;
+        background: #fcd800;
+        padding: 3px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        color: #2c2c2c;
+        margin-bottom: 0px
+    }
+
+    .rank-page .subscription-plans-section__wraper .subscription-plans .subscription-plan__header .discount-tag {
+        background: #feef99;
+        width: 76px;
+        height: 76px;
+        position: absolute;
+        right: 10px;
+        top: 22px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        color: #2c2c2c;
+        text-transform: uppercase;
+        text-align: center
+    }
+
+    .rank-page .subscription-plans-section__wraper .subscription-plans .subscription-plan__header .plan-name {
+        background: #00a6ca;
+        box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.06);
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #ffffff;
+        padding: 17px 30px 13px;
+        margin-bottom: 0px
+    }
+
+    .rank-page .subscription-plans-section__wraper .subscription-plans .subscription-plan__body {
+        padding-top: 24px;
+        padding-bottom: 30px
+    }
+
+    .rank-page .subscription-plans-section__wraper .subscription-plans .subscription-plan__body .plan-price {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 44px;
+        text-align: center;
+        letter-spacing: -0.01em;
+        color: #000000;
+        margin-top: 0px;
+        margin-bottom: 16px
+    }
+
+    .rank-page .subscription-plans-section__wraper .subscription-plans .subscription-plan__body .cibil-btn {
+        width: calc(100% - 60px);
+        margin: 0 auto 18px;
+        display: flex
+    }
+
+    .rank-page .subscription-plans-section__wraper .subscription-plans .subscription-plan__body .price-details {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        color: #707070;
+        margin-bottom: 22px
+    }
+
+    .rank-page .subscription-plans-section__wraper .subscription-plans .subscription-plan__body .highlighted-feature {
+        background: #fcf8e0;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #000000;
+        min-height: 88px;
+        padding: 20px 24px !important;
+        margin-bottom: 30px
+    }
+
+    .rank-page .subscription-plans-section__wraper .subscription-plans .subscription-plan__body ul.features,
+    .rank-page .subscription-plans-section__wraper .subscription-plans .subscription-plan__body .highlighted-feature,
+    .rank-page .subscription-plans-section__wraper .subscription-plans .subscription-plan__body .price-details,
+    .rank-page .subscription-plans-section__wraper .subscription-plans .subscription-plan__body .plan-price {
+        padding-left: 30px;
+        padding-right: 30px
+    }
+
+    .rank-page .subscription-plans-section__wraper .subscription-plans .subscription-plan__body ul.features li.feature {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        color: #000000;
+        padding-left: 34px;
+        margin-bottom: 0px;
+        position: relative
+    }
+
+    .rank-page .subscription-plans-section__wraper .subscription-plans .subscription-plan__body ul.features li.feature:before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 16px;
+        background: url(/content/dam/cibil/icons/check-green.svg) no-repeat;
+        background-size: 100%;
+        background-position: center;
+        left: 0;
+        top: 5px
+    }
+
+    .rank-page .subscription-plans-section__wraper .subscription-plans .subscription-plan__body ul.features li.feature:not(:last-child) {
+        margin-bottom: 24px
+    }
+
+    .rank-page .subscription-plans-section__wraper .subscription-plans .subscription-plan__body ul.features li.feature b {
+        font-weight: 600
+    }
+
+    .rank-page .subscription-plans-section__wraper .subscription-plans .subscription-plan__body ul.features li.feature b.highlight {
+        position: relative;
+        display: inline-block;
+        z-index: 1
+    }
+
+    .rank-page .subscription-plans-section__wraper .subscription-plans .subscription-plan__body ul.features li.feature b.highlight:before {
+        content: "";
+        background-color: #fcd800;
+        height: 4px;
+        width: 100%;
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        z-index: -1
+    }
+
+    .rank-page .subscription-plans-section__wraper .subscription-plans-cards {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        grid-gap: 20px
+    }
+
+    .rank-page .subscription-plans-section__wraper .bottom-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        color: #2c2c2c;
+        margin-bottom: 0px
+    }
+
+    @media (max-width: 767.98px) {
+        .rank-page .subscription-plans-section {
+            padding-top: 40px;
+            padding-bottom: 30px
+        }
+
+        .rank-page .subscription-plans-section__wraper .section-heading {
+            font-weight: 700;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-bottom: 30px
+        }
+
+        .rank-page .subscription-plans-section__wraper .bottom-text {
+            text-align: center
+        }
+
+        .rank-page .subscription-plans-section__wraper .subscription-plans-tabs .nav-tabs {
+            border-bottom: none;
+            display: flex;
+            justify-content: space-between
+        }
+
+        .rank-page .subscription-plans-section__wraper .subscription-plans-tabs .nav-tabs .nav-item {
+            background: #ffffff;
+            border-width: 0px 2px 2px 0px;
+            border-style: solid;
+            border-color: #ededed;
+            padding: 16px 8px 12px 8px;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 30px;
+            text-align: center;
+            letter-spacing: 0.02em;
+            color: #2c2c2c;
+            width: 100%;
+        }
+
+        .rank-page .subscription-plans-section__wraper .subscription-plans-tabs .nav-tabs .nav-item:last-child {
+            border-right-width: 0px
+        }
+
+        .rank-page .subscription-plans-section__wraper .subscription-plans-tabs .nav-tabs .nav-item.active {
+            background: #00a6ca;
+            color: #ffffff;
+            border-color: #00a6ca;
+            position: relative
+        }
+
+        .rank-page .subscription-plans-section__wraper .subscription-plans-tabs .nav-tabs .nav-item.active:after {
+            content: url(/content/dam/cibil/icons/active-tab-icon.svg);
+            position: absolute;
+            left: calc(50% - 6px);
+            bottom: -13.5px
+        }
+
+        .rank-page .subscription-plans-section__wraper .subscription-plans-tabs .subscription-plan__body {
+            background: #ffffff;
+            padding-top: 20px
+        }
+
+        .rank-page .subscription-plans-section__wraper .subscription-plans-tabs .subscription-plan__body .plan-price {
+            margin-bottom: 10px
+        }
+
+        .rank-page .subscription-plans-section__wraper .subscription-plans-tabs .subscription-plan__body .cibil-btn {
+            width: calc(100% - 40px);
+            margin-bottom: 10px
+        }
+
+        .rank-page .subscription-plans-section__wraper .subscription-plans-tabs .subscription-plan__body .price-details,
+        .rank-page .subscription-plans-section__wraper .subscription-plans-tabs .subscription-plan__body .highlighted-feature {
+            margin-bottom: 20px
+        }
+
+        .rank-page .subscription-plans-section__wraper .subscription-plans-tabs .subscription-plan__body .highlighted-feature {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80px;
+            padding: 28px 20px !important
+        }
+
+        .rank-page .subscription-plans-section__wraper .subscription-plans-tabs .subscription-plan__body ul.features li.feature {
+            padding-left: 40px
+        }
+
+        .rank-page .subscription-plans-section__wraper .subscription-plans-tabs .subscription-plan__body ul.features li.feature b.highlight:before {
+            bottom: 3px;
+            height: 2px
+        }
+
+        .rank-page .subscription-plans-section__wraper .subscription-plans-tabs .subscription-plan__body ul.features li.feature b.highlight::after {
+            display: none
+        }
+
+        .rank-page .subscription-plans-section__wraper .subscription-plans-tabs .subscription-plan__body ul.features li.feature:not(:last-child) {
+            margin-bottom: 16px
+        }
+    }
+
+    @media (max-width: 991.98px) {
+        .rank-page .subscription-plans-section {
+            margin-top: 9px
+        }
+    }
+
+    .faq-section {
+        padding-top: 40px;
+        padding-bottom: 20px;
+        background: #F6F7FC
+    }
+
+    .faq-section__wraper .heading {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 44px;
+        text-align: center;
+        letter-spacing: -0.01em;
+        color: #2c2c2c;
+        margin-bottom: 30px
+    }
+
+    .faq-section__wraper .panel-group {
+        margin: 0 auto
+    }
+
+    .faq-section__wraper .panel-group .panel {
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+        background: #F6F7FC;
+        margin-top: 0px
+    }
+
+    .faq-section__wraper .panel-group .panel:not(:last-child) {
+        margin-bottom: 1 0px;
+        border-bottom: 1px solid #dddddd
+    }
+
+    .faq-section__wraper .panel-group .panel .panel-heading {
+        box-shadow: none;
+        padding: 10px 21px 10px 0px;
+        background: #F6F7FC;
+        border: none;
+        cursor: pointer
+    }
+
+    .faq-section__wraper .panel-group .panel .panel-heading .panel-title {
+        position: relative;
+        padding-left: 35px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        color: #2c2c2c
+    }
+
+    .faq-section__wraper .panel-group .panel .panel-heading .panel-title:before {
+        content: "";
+        height: 22px;
+        width: 22px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        background-repeat: no-repeat;
+        background-size: contain
+    }
+
+    /* .faq-section__wraper .panel-group .panel .panel-heading:not(.show) .panel-title:before {
+        background-image: url(/resources/cibil/img/lp/rank/faq-open.svg)
+    }
+
+    .faq-section__wraper .panel-group .panel .panel-heading.show .panel-title:before {
+        background-image: url(/resources/cibil/img/lp/rank/faq-close.svg)
+    } */
+
+    .faq-section__wraper .panel-group .panel .faq-content {
+        padding: 0px 35px 20px;
+        background: #F6F7FC;
+        border: none;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        color: #707070
+    }
+
+    .faq-section__wraper .panel-group .panel .faq-content ul {
+        margin-bottom: 0px
+    }
+
+    .faq-section__wraper .panel-group .panel .faq-content ul li {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        position: relative;
+        padding-left: 26px;
+        margin-bottom: 0px
+    }
+
+    .faq-section__wraper .panel-group .panel .faq-content ul li:before {
+        content: "";
+        position: absolute;
+        left: 5px;
+        top: 8px;
+        height: 4px;
+        width: 4px;
+        background: #707070;
+        border-radius: 100%
+    }
+
+    @media (max-width: 992px) {
+        .faq-section {
+            padding-bottom: 20px
+        }
+
+        .faq-section__wraper .panel-group {
+            max-width: 100%
+        }
+
+        .faq-section__wraper .panel-group .panel .panel-heading {
+            padding: 20px 0px
+        }
+
+        .faq-section__wraper .panel-group .panel .panel-heading .panel-title {
+            padding-left: 29px
+        }
+
+        .faq-section__wraper .panel-group .panel .panel-heading .panel-title:before {
+            height: 19px;
+            width: 19px;
+            top: 1px
+        }
+
+        .faq-section__wraper .panel-group .panel .panel-heading.show {
+            padding-bottom: 10px
+        }
+
+        .faq-section__wraper .panel-group .panel .faq-content {
+            font-size: 14px;
+            line-height: 24px;
+            padding: 0px 28px 20px
+        }
+
+        .faq-section__wraper .panel-group .panel .faq-content ul li {
+            font-size: 14px;
+            line-height: 24px
+        }
+
+        .faq-section__wraper .heading {
+            margin-bottom: 10px
+        }
+    }
+
+    .cibil-slick-dots {
+        margin-top: -41px;
+        position: relative;
+        z-index: 1
+    }
+
+    @media (max-width: 991.98px) {
+        .cibil-slick-dots {
+            margin-top: -22px
+        }
+
+        .cibil-slick-dots .slick-dots {
+            justify-content: center
+        }
+    }
+
+    .slick-dots {
+        display: flex !important
+    }
+
+    .slick-dots li {
+        margin-bottom: 0px;
+        display: flex
+    }
+
+    .slick-dots li:not(:last-child) {
+        margin-right: 8px
+    }
+
+    .slick-dots li button {
+        font-size: 0px;
+        font-size: 0px;
+        padding: 0;
+        margin: 0;
+        height: 12px;
+        width: 12px;
+        background: #ffffff;
+        border: 1px solid #00a6ca;
+        border-radius: 10px
+    }
+
+    .slick-dots li.slick-active button {
+        background: #00a6ca
+    }
+
+    @media (max-width: 767.98px) {
+        .rank-page .subscription-plans-section__wraper .subscription-plans-tabs .nav-tabs {
+            flex-wrap: nowrap;
+            margin-left: 0px;
+        }
+    }
+</style>
+<div class="rank-page">
+    <div class="subscription-plans-section">
+        <div class="container subscription-plans-section__wraper">
+            <p class="section-heading" id="subscription-plans-sections">Monitor your company’s creditworthiness and always be loan-ready</p>
+            <div class="subscription-plans subscription-plans-cards  hide-mob">
+                <!-- single plan | start  -->
+                <div class="subscription-plan">
+                    <div class="subscription-plan__header">
+                        <p class="plan-name">BASIC</p>
+                    </div>
+                    <div class="subscription-plan__body">
+                        <p class="plan-price">₹ 3,999</p>
+                        <a href="https://cibilrankccr.cibil.com/CreditView/enrollGSTN.page?enterprise=CIBILCOMM&offer=BAS02"
+                            class="cibil-btn">GET FOR ONE MONTH</a>
+                        <p class="price-details">@ ₹3,999 per month</p>
+                        <p class="highlighted-feature">One-time evaluation</p>
+                        <ul class="features">
+                            <li class="feature">Weekly refresh of CIBIL Rank and CCR for <b>1 month</b></li>
+                            <li class="feature">Access to dashboard</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- single plan | end  -->
+                <!-- single plan | start  -->
+                <div class="subscription-plan">
+                    <div class="subscription-plan__header">
+                        <p class="plan-name">STANDARD</p>
+                    </div>
+                    <div class="subscription-plan__body">
+                        <p class="plan-price">₹ 7,499</p>
+                        <a href="https://cibilrankccr.cibil.com/CreditView/enrollGSTN.page?enterprise=CIBILCOMM&offer=SKSTD01"
+                            class="cibil-btn">GET FOR 6 MONTHS</a>
+                        <p class="price-details">@ ₹1,250 per month</p>
+                        <p class="highlighted-feature">Stay updated on the payments and credit history</p>
+                        <ul class="features">
+                            <li class="feature">Weekly refresh of CIBIL Rank and CCR for <b>6 months</b></li>
+                            <li class="feature">Access to dashboard</li>
+                            <li class="feature">CIBIL Saksham</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- single plan | end  -->
+                <!-- single plan | start  -->
+                <div class="subscription-plan">
+                    <div class="subscription-plan__header">
+                        <p class="plan-name">PREMIUM</p>
+                    </div>
+                    <div class="subscription-plan__body">
+                        <p class="plan-price">₹ 14,999</p>
+                        <a href="https://cibilrankccr.cibil.com/CreditView/enrollGSTN.page?enterprise=CIBILCOMM&offer=SKPRM01"
+                            class="cibil-btn">GET FOR 12 MONTHS</a>
+                        <p class="price-details">@ ₹1,250 per month</p>
+                        <p class="highlighted-feature">Stay credit-ready by regularly monitoring your company’s credit health</p>
+                        <ul class="features">
+                            <li class="feature">Weekly refresh of CIBIL Rank and CCR for <b>12 months</b></li>
+                            <li class="feature">Access to dashboard</li>
+                            <li class="feature">CIBIL Saksham</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- single plan | end  -->
+                <!-- single plan | start  -->
+                <div class="subscription-plan">
+                    <div class="subscription-plan__header">
+                        <p class="plan-name">PREMIUM DUO</p>
+                    </div>
+                    <div class="subscription-plan__body">
+                        <p class="plan-price">₹ 19,999</p>
+                        <a href="https://cibilrankccr.cibil.com/CreditView/enrollGSTN.page?enterprise=CIBILCOMM&offer=PRMDUO"
+                            class="cibil-btn">GET FOR 12 MONTHS</a>
+                        <p class="price-details">@ ₹833 per month (2 users)</p>
+                        <p class="highlighted-feature">Monitor credit health for 2 users for 12 months</p>
+                        <ul class="features">
+                            <li class="feature">Weekly refresh of CIBIL Rank and CCR for <b>12 months</b> (2 users)</li>
+                            <li class="feature">Access to dashboard</li>
+                            <li class="feature">CIBIL Saksham</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- single plan | end  -->
+            </div>
+            <div class="subscription-plans subscription-plans-tabs hide-desk">
+                <ul id="myTabs" class="nav nav-tabs" role="tablist">
+                    <li class="nav-item active" href="#plan1" data-toggle="tab">BASIC</li>
+                    <li class="nav-item" href="#plan2" data-toggle="tab">STANDARD</li>
+                    <li class="nav-item" href="#plan3" data-toggle="tab">PREMIUM</li>
+                    <li class="nav-item" href="#plan4" data-toggle="tab">PREMIUM DUO</li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="plan1">
+                        <div class="subscription-plan__body">
+                            <p class="plan-price">₹ 3,999</p>
+                            <a href="https://cibilrankccr.cibil.com/CreditView/enrollGSTN.page?enterprise=CIBILCOMM&offer=BAS02"
+                                class="cibil-btn">GET FOR ONE MONTH</a>
+                            <p class="price-details">@ ₹3,999 per month</p>
+                            <p class="highlighted-feature">One-time evaluation</p>
+                            <ul class="features">
+                                <li class="feature">Weekly refresh of CIBIL Rank and CCR for <b class="highlight">1 month</b></li>
+                                <li class="feature">Access to dashboard</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="plan2">
+                        <div class="subscription-plan__body">
+                            <p class="plan-price">₹ 7,499</p>
+                            <a href="https://cibilrankccr.cibil.com/CreditView/enrollGSTN.page?enterprise=CIBILCOMM&offer=SKSTD01"
+                                class="cibil-btn">GET FOR 6 MONTHS</a>
+                            <p class="price-details">@ ₹1,250 per month</p>
+                            <p class="highlighted-feature">Stay updated on the payments and credit history</p>
+                            <ul class="features">
+                                <li class="feature">Weekly refresh of CIBIL Rank and CCR for <b class="highlight">6 months</b></li>
+                                <li class="feature">Access to dashboard</li>
+                                <li class="feature">CIBIL Saksham</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="plan3">
+                        <div class="subscription-plan__body">
+                            <p class="plan-price">₹ 14,999</p>
+                            <a href="https://cibilrankccr.cibil.com/CreditView/enrollGSTN.page?enterprise=CIBILCOMM&offer=SKPRM01"
+                                class="cibil-btn">GET FOR 12 MONTHS</a>
+                            <p class="price-details">@ ₹1,250 per month</p>
+                            <p class="highlighted-feature">Stay credit-ready by regularly monitoring your company’s credit health</p>
+                            <ul class="features">
+                                <li class="feature">Weekly refresh of CIBIL Rank and CCR for <b class="highlight">12 months</b></li>
+                                <li class="feature">Access to dashboard</li>
+                                <li class="feature">CIBIL Saksham</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="plan4">
+                        <div class="subscription-plan__body">
+                            <p class="plan-price">₹ 19,999</p>
+                            <a href="https://cibilrankccr.cibil.com/CreditView/enrollGSTN.page?enterprise=CIBILCOMM&offer=PRMDUO"
+                                class="cibil-btn">GET FOR 12 MONTHS</a>
+                            <p class="price-details">@ ₹833 per month (2 users)</p>
+                            <p class="highlighted-feature">Monitor credit health for 2 users for 12 months</p>
+                            <ul class="features">
+                                <li class="feature">Weekly refresh of CIBIL Rank and CCR for <b class="highlight">12 months</b> (2 users)</li>
+                                <li class="feature">Access to dashboard</li>
+                                <li class="feature">CIBIL Saksham</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="bottom-text hide-desk">*T&amp;C apply. GST report is available only for users who opt for GSTIN
+                based authentication.</p>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        $('.nav-item').on('click', function () {
+            $('.nav-item').removeClass('active');
+            $(this).addClass('active');
+            $('.tab-pane').removeClass('active');
+            $(this.attributes.href.value).addClass('active');
+        });
+    });
+</script>
