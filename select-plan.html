@@ -171,6 +171,7 @@
   color: #2c2c2c;
   text-transform: uppercase;
   background-color: #FCD800;
+  border: 2px solid #FCD800;
   border-radius: 25px;
   text-decoration: none;
   transition: all 0.2s ease-in;
@@ -272,19 +273,16 @@
 .pricingTable--body-top .top p {
   margin-bottom: 0;
 }
-.pricingTable--body-top .top .popularChips {
+.popularChips {
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+  padding: 10px;
+  border-radius: 20px;
   font-family: "Intro";
   font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 16px;
-  background-color: #FFF9D9;
-  color: #6F4116;
-  padding: 8px;
-  border-radius: 40px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
+  line-height: 12px;
+  font-weight: 600;
 }
 .pricingTable--body-name {
   font-family: "Intro";
@@ -1196,20 +1194,6 @@
 .plan-accordion-card-top .top p {
   margin-bottom: 0;
 }
-.plan-accordion-card-top .top .popularChips {
-  font-family: "Intro";
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 16px;
-  background-color: #FFF9D9;
-  color: #6F4116;
-  padding: 8px;
-  border-radius: 40px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
 .plan-accordion-card.premium {
   border: 1px solid #005F8D;
   position: relative;
@@ -1520,10 +1504,10 @@
                 <div class="pricingTable--body-top">
                   <p class="pricingTable--body-name">Standard</p>
                   <strike style='color:#00A6CA'>
-                    <p class="pricingTable--body-oldPrice">₹3,300</p>
+                    <p class="pricingTable--body-oldPrice">₹4,194</p>
                   </strike>
                   <p class="pricingTable--body-price">₹999</p>
-                  <p class="pricingTable--body-type withChips">/ 6 Months <span class="discountChips">Save 75%</span></p>
+                  <p class="pricingTable--body-type withChips">/ 6 Months <span class="discountChips">Save 76%</span></p>
                   <a href="https://myscore.cibil.com/CreditView/enrollShort_new.page?enterprise=CIBIL&offer=6M800RMS" class="customBtn customBtn--border">Subscribe Now</a>
                 </div>
                 <div class="pricingTable--body-features">
@@ -1623,10 +1607,10 @@
                 <div class="pricingTable--body-top">
                   <p class="pricingTable--body-name">Premium</p>
                   <strike style='color:#00A6CA'>
-                    <p class="pricingTable--body-oldPrice">₹6,600</p>
+                    <p class="pricingTable--body-oldPrice">₹8,388</p>
                   </strike>
                   <p class="pricingTable--body-price">₹1,499</p>
-                  <p class="pricingTable--body-type withChips">/ 12 Months <span class="discountChips">Save 81%</span></p>
+                  <p class="pricingTable--body-type withChips">/ 12 Months <span class="discountChips">Save 82%</span></p>
                   <a href="https://myscore.cibil.com/CreditView/enrollShort_new.page?enterprise=CIBIL&offer=1Y1200RMS" class="customBtn customBtn--border">Subscribe Now</a>
                 </div>
                 <div class="pricingTable--body-features">
@@ -1663,14 +1647,12 @@
             <div class="pricingTable--container">
               <div class="pricingTable--body popular">
                 <div class="pricingTable--body-top">
-                  <div class="top">
-                    <p class="pricingTable--body-name">Premium Duo</p>
-                  </div>
+                  <p class="pricingTable--body-name" style="display:flex;align-items:center;gap:8px;">Premium Duo <span class="popularChips">2 Users</span></p>
                   <strike style='color:#00A6CA'>
-                    <p class="pricingTable--body-oldPrice">₹13,200</p>
+                    <p class="pricingTable--body-oldPrice">₹16,776</p>
                   </strike>
                   <p class="pricingTable--body-price">₹1,999</p>
-                  <p class="pricingTable--body-type withChips">/ 2 × 12 Months <span class="discountChips">Save 81%</span></p>
+                  <p class="pricingTable--body-type withChips">/ 12 Months <span class="discountChips">Save 88%</span></p>
                   <a href="https://myscore.cibil.com/CreditView/enrollShort_new.page?enterprise=CIBIL&offer=PRMDUO" class="customBtn">Subscribe Now</a>
                 </div>
                 <div class="pricingTable--body-features">
@@ -1728,11 +1710,11 @@
           <div class="plan-accordion-card standard">
             <p class="plan-accordion-card-tag">Premium</p>
             <strike style='color:#00A6CA'>
-              <p class="pricingTable--body-oldPrice">₹6,600</p>
+              <p class="pricingTable--body-oldPrice">₹8,388</p>
             </strike>
             <div class="plan-accordion-card-pricing">
               <span class="price">₹1,499</span>
-              <span class="discountChips">Save 81%</span>
+              <span class="discountChips">Save 82%</span>
             </div>
             <p class="duration">/ 12 Months</p>
             <div class="plan-accordion-card-cta">
@@ -1756,11 +1738,11 @@
           <div class="plan-accordion-card standard">
             <p class="plan-accordion-card-tag">Standard</p>
             <strike style='color:#00A6CA'>
-              <p class="pricingTable--body-oldPrice">₹3,300</p>
+              <p class="pricingTable--body-oldPrice">₹4,194</p>
             </strike>
             <div class="plan-accordion-card-pricing">
               <span class="price">₹999</span>
-              <span class="discountChips">Save 75%</span>
+              <span class="discountChips">Save 76%</span>
             </div>
             <p class="duration">/ 6 Months</p>
             <div class="plan-accordion-card-cta">
@@ -1871,7 +1853,7 @@
             <p class="plan-accordion-card-tag">Basic</p>
             <div class="plan-accordion-card-pricing">
               <span class="price">₹699</span>
-              <!--<span class="discountChips">Save 75%</span>-->
+              <!--<span class="discountChips">Save 76%</span>-->
             </div>
             <p class="duration">/ 1 Months</p>
             <div class="plan-accordion-card-cta">
@@ -1979,16 +1961,16 @@
           <div class="plan-accordion-card premium">
             <div class="plan-accordion-card-top">
               <div class="top">
-                <p class="plan-accordion-card-tag">Premium Duo</p>
+                <p class="plan-accordion-card-tag" style="display:flex;align-items:center;gap:8px;">Premium Duo <span class="popularChips">2 Users</span></p>
               </div>
               <strike style='color:#00A6CA'>
-                <p class="pricingTable--body-oldPrice">₹13,200</p>
+                <p class="pricingTable--body-oldPrice">₹16,776</p>
               </strike>
               <div class="plan-accordion-card-pricing">
                 <span class="price">₹1,999</span>
-                <span class="discountChips">Save 81%</span>
+                <span class="discountChips">Save 88%</span>
               </div>
-              <p class="duration">/ 2 × 12 Months</p>
+              <p class="duration">/ 12 Months</p>
               <div class="plan-accordion-card-cta">
                 <a class="customBtn" href="https://myscore.cibil.com/CreditView/enrollShort_new.page?enterprise=CIBIL&offer=PRMDUO">Subscribe Now</a>
               </div>
