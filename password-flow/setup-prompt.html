@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Please Setup a Password — CIBIL</title>
+<link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body>
+
+<header class="pf-header">
+  <img src="./images/cibil-logo.png" alt="CIBIL — Part of TransUnion" class="pf-logo"/>
+  <div class="pf-lang">
+    <div class="pf-lang-icon"><span>A</span><span>अ</span></div>
+    <span class="pf-lang-text">English</span>
+    <svg class="pf-lang-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 1L6 6L11 1" stroke="#2C2C2C" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+  </div>
+</header>
+
+<div class="pf-yellow-bar"></div>
+
+<main class="pf-main">
+  <footer class="pf-footer">
+    <p>© Copyright 2024 TransUnion CIBIL Limited (Formerly: Credit Information Bureau (India) Limited). All Rights Reserved.</p>
+  </footer>
+</main>
+
+<dialog class="spp-modal" id="setupPrompt" aria-labelledby="sppTitle">
+  <button type="button" class="spp-close" aria-label="Close">
+    <img src="./images/close.svg" alt="" width="24" height="24"/>
+  </button>
+
+  <div class="spp-content">
+    <div class="spp-illustration" aria-hidden="true">
+      <img src="./images/sp-user-card.svg" alt="" class="spp-ill-card"/>
+      <span class="spp-ill-field"></span>
+      <img src="./images/sp-stars.svg" alt="" class="spp-ill-stars"/>
+      <img src="./images/sp-alert.svg" alt="" class="spp-ill-alert"/>
+    </div>
+
+    <div class="spp-text">
+      <h2 class="spp-title" id="sppTitle">Please setup a password</h2>
+      <div class="spp-steps">
+        <p>Follow these 3 simple steps:</p>
+        <ol>
+          <li>Click “<strong>Set up password</strong>” to get started.</li>
+          <li><strong>Check your email</strong> for a secure link and create your password.</li>
+          <li>Return here and <strong>log in with your new password</strong> to continue.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <a href="#" class="pf-btn">Setup Password</a>
+</dialog>
+
+<script>
+  const setupPrompt = document.getElementById('setupPrompt');
+  setupPrompt.showModal();
+  setupPrompt.querySelector('.spp-close').addEventListener('click', () => setupPrompt.close());
+  setupPrompt.addEventListener('click', (e) => { if (e.target === setupPrompt) setupPrompt.close(); });
+</script>
+
+</body>
+</html>
